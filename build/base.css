@@ -37,3 +37,19 @@ a{color:inherit}
 @media(max-width:640px){.fl select,.fl input{min-width:0;width:100%}.fl{flex:1 1 45%}}
 @media(max-width:640px){nav{flex-wrap:wrap!important;margin-left:0!important}nav button{padding:6px 10px!important;font-size:13px!important}
  #satsel{scrollbar-width:none}.satinfo h1{font-size:30px!important}}
+
+/* nomi canali scalabili */
+:root{--fs:1}.cn{font-size:calc(var(--fs) * 1em);line-height:1.2}
+.card,.tile,.row,.pubrow{transition:none}
+/* controlli dimensione testo */
+#fontctl{display:inline-flex;align-items:center;gap:2px;background:#111;border:1px solid #333;border-radius:12px;padding:3px;z-index:30;flex:none}
+#fontctl button{border:0;background:none;color:inherit;min-width:36px;height:32px;border-radius:9px;font-weight:700;font-size:14px;padding:0 6px}
+#fontctl button:hover:not(:disabled){background:#262626}#fontctl button:disabled{opacity:.35;cursor:default}
+#fontctl #fs-reset{font-weight:500;font-size:12px;min-width:48px;opacity:.8}
+#fontctl.float{position:fixed;right:16px;bottom:16px;box-shadow:0 8px 30px #000a}
+/* torna su */
+#totop{position:fixed;right:16px;bottom:16px;z-index:29;width:46px;height:46px;border-radius:50%;border:1px solid #333;background:#151515;color:#fff;font-size:20px;
+ display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s;box-shadow:0 8px 30px #000a}
+#totop.show{opacity:1;pointer-events:auto;transform:none}
+body.fc-float #totop{bottom:70px}
+@media(max-width:640px){#fontctl.float{right:10px;bottom:10px}#totop{right:10px;bottom:10px}body.fc-float #totop{bottom:62px}}

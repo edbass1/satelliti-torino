@@ -47,7 +47,7 @@ function defaultCard(c, agg){
   const x = agg || c;
   return `<article class="card${x.s===2?' is-part':''}${x.hard?' is-hard':''}" style="--h:${hue(x.n)}">
     <div class="logo">${esc(initials(x.n))}</div>
-    <div class="info"><h3>${esc(x.n)}</h3>
+    <div class="info"><h3><span class="cn">${esc(x.n)}</span></h3>
       <div class="meta">${[x.c, x.g, x.l.slice(0,3).join(', ')].filter(Boolean).map(esc).join(' · ')||'—'}${(c&&c.o)?' · <em>'+esc(c.o)+'</em>':''}</div>
       ${x.pub?`<div class="pubtag">🏛 Servizio pubblico · ${esc(x.pub[1])}</div>`:''}
       ${sats}</div>
@@ -129,7 +129,7 @@ function viewPub(){
   let body = keys.length ? '' : '<p class="empty">Seleziona uno o più paesi qui sopra.</p>';
   for(const k of keys){ const arr=groups.get(k).sort((x,y)=>x.a.n.localeCompare(y.a.n,'it'));
     body += `<section class="grp"><h2 class="gh">${esc(k)} <small>${arr.length} canali</small></h2><div class="publist">${arr.map(({a,its})=>
-      (SKIN.pubRow? SKIN.pubRow(a,its) : `<div class="pubrow" style="--h:${hue(a.n)}"><div class="pn"><span class="logo sm">${esc(initials(a.n))}</span><div><b>${esc(a.n)}</b><small>${esc(a.pub[1])}${a.g?' · '+esc(a.g):''}</small></div></div><div class="ps">${its.map(x=>badgeSat(x,true)).join('')}</div></div>`)).join('')}</div></section>`; }
+      (SKIN.pubRow? SKIN.pubRow(a,its) : `<div class="pubrow" style="--h:${hue(a.n)}"><div class="pn"><span class="logo sm">${esc(initials(a.n))}</span><div><b class="cn">${esc(a.n)}</b><small>${esc(a.pub[1])}${a.g?' · '+esc(a.g):''}</small></div></div><div class="ps">${its.map(x=>badgeSat(x,true)).join('')}</div></div>`)).join('')}</div></section>`; }
   return { controls, head:`<div class="satinfo"><div><h1>Canali pubblici europei</h1><p>Per ogni canale: i satelliti dove è <b>in chiaro</b> (badge tratteggiato = parzialmente in chiaro)</p></div></div>`, body };
 }
 function viewNews(){
@@ -144,7 +144,7 @@ function viewNews(){
   if(!evs.length) body='<p class="empty">Nessuna novità per questa selezione nel periodo coperto dai dati.</p>';
   body += '<div class="timeline">';
   evs.forEach(e=>{ const T=TYPES[e.t]; if(e.d!==last){ last=e.d; body+=`<h3 class="tday">${new Date(e.d+'T12:00').toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</h3>`; }
-    body += SKIN.newsRow ? SKIN.newsRow(e,T) : `<div class="ev ev-${T[1]}"><span class="evt">${T[1]==='in'?'▲':'▼'} ${esc(T[0])}</span><b class="evn">${esc(e.n)}</b>${e.r?resBadge(e.r):''}<span class="evm">${esc(SAT[e.p].nome)}${e.c?' · '+esc(e.c):''}${e.b?' · '+esc(e.b):''}</span>${e.il?'<span class="bdg b-fta">ora in lista</span>':''}</div>`; });
+    body += SKIN.newsRow ? SKIN.newsRow(e,T) : `<div class="ev ev-${T[1]}"><span class="evt">${T[1]==='in'?'▲':'▼'} ${esc(T[0])}</span><b class="evn cn">${esc(e.n)}</b>${e.r?resBadge(e.r):''}<span class="evm">${esc(SAT[e.p].nome)}${e.c?' · '+esc(e.c):''}${e.b?' · '+esc(e.b):''}</span>${e.il?'<span class="bdg b-fta">ora in lista</span>':''}</div>`; });
   body += '</div>';
   return { controls, head:`<div class="satinfo"><div><h1>Novità</h1><p>Canali in chiaro arrivati, tornati, usciti o diventati criptati · dati KingOfSat fino al ${esc(D.meta.aggiornato)}</p></div><ul class="kpi"><li><b>${D.ev.filter(e=>TYPES[e.t][1]==='in').length}</b><span>arrivi</span></li><li><b>${D.ev.filter(e=>TYPES[e.t][1]==='out').length}</b><span>uscite</span></li></ul></div>`, body };
 }
@@ -182,5 +182,24 @@ let qt; document.addEventListener('input', e=>{ const t=e.target;
   if(t.id==='q'){ clearTimeout(qt); qt=setTimeout(()=>{ st.q=t.value.trim(); st.limit=240; if(st.q && st.view==='sat') {} render(); }, 160); }
   if(t.id==='pub-text'){ const s=resolveCountries(t.value); if(s.size){ st.pubSel=s; const v=t.value; render(); const n=$('#pub-text'); n.value=v; n.focus(); } } });
 document.addEventListener('keydown', e=>{ if(e.key==='/' && document.activeElement.tagName!=='INPUT'){ e.preventDefault(); $('#q')?.focus(); } });
-document.addEventListener('DOMContentLoaded', ()=>{ const m=$('#meta'); if(m) m.innerHTML=`Dati: ${esc(D.meta.fonte)} · aggiornati il ${esc(D.meta.aggiornato)} · ${CH.length} presenze, ${AGG.size} canali unici`; if(SKIN.init) SKIN.init(api); render(); });
+// --- dimensione nomi canali (A− / A+) e pulsante "torna su" ---
+const FS_STEPS=[0.8,0.9,1,1.1,1.25,1.4,1.6,1.8,2]; const FS_KEY='satTorino.fontScale';
+let fsIdx = (()=>{ try{ const v=parseFloat(localStorage.getItem(FS_KEY)); const i=FS_STEPS.indexOf(v); return i>=0?i:2; }catch(_){ return 2; } })();
+function applyFs(){ const v=FS_STEPS[fsIdx]; document.documentElement.style.setProperty('--fs', v); try{ localStorage.setItem(FS_KEY, v); }catch(_){}
+  const p=$('#fs-val'); if(p) p.textContent=Math.round(v*100)+'%';
+  const m=$('#fs-minus'), pl=$('#fs-plus'); if(m) m.disabled=fsIdx===0; if(pl) pl.disabled=fsIdx===FS_STEPS.length-1; }
+api.fontScale = ()=>FS_STEPS[fsIdx];
+function mountTools(){
+  const fc=document.createElement('div'); fc.id='fontctl'; fc.setAttribute('role','group'); fc.setAttribute('aria-label','Dimensione nomi dei canali');
+  fc.innerHTML='<button id="fs-minus" title="Rimpicciolisci i nomi dei canali" aria-label="Rimpicciolisci testo">A−</button><button id="fs-reset" title="Dimensione normale (100%)"><span id="fs-val">100%</span></button><button id="fs-plus" title="Ingrandisci i nomi dei canali" aria-label="Ingrandisci testo">A+</button>';
+  const slot=$('#fontslot'); if(slot){ slot.appendChild(fc); } else { fc.classList.add('float'); document.body.appendChild(fc); }
+  const tt=document.createElement('button'); tt.id='totop'; tt.title='Torna su'; tt.setAttribute('aria-label','Torna su'); tt.innerHTML='<span>↑</span>';
+  if(!slot) document.body.classList.add('fc-float'); document.body.appendChild(tt);
+  fc.addEventListener('click', e=>{ const b=e.target.closest('button'); if(!b) return;
+    if(b.id==='fs-minus' && fsIdx>0) fsIdx--; else if(b.id==='fs-plus' && fsIdx<FS_STEPS.length-1) fsIdx++; else if(b.id==='fs-reset') fsIdx=2; applyFs(); });
+  tt.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+  const onScroll=()=>tt.classList.toggle('show', window.scrollY>500); window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  applyFs();
+}
+document.addEventListener('DOMContentLoaded', ()=>{ mountTools(); const m=$('#meta'); if(m) m.innerHTML=`Dati: ${esc(D.meta.fonte)} · aggiornati il ${esc(D.meta.aggiornato)} · ${CH.length} presenze, ${AGG.size} canali unici`; if(SKIN.init) SKIN.init(api); render(); });
 })();

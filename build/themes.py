@@ -26,8 +26,10 @@ body:not([data-view=sat]) #satsel{display:none}
 .card .tags{display:flex;flex-direction:column;gap:4px;align-items:flex-end}.card .b-fta{display:none}
 .logo{border-radius:12px;background:#1d1d1f;color:#f5f5f7}
 footer{color:#6e6e73;font-size:12px;text-align:center;padding:30px}
+#fontslot #fontctl{background:#1d1d1f;border:0;border-radius:10px}#fontctl button{color:#f5f5f7}#fontctl button:hover:not(:disabled){background:#3a3a3c}
+#totop{background:rgba(29,29,31,.85);backdrop-filter:blur(20px);border:0}
 ''',
-body=f'''<header><div class="bar"><div class="brand">Satelliti <span>da Torino</span></div>{SEARCH}<nav class="seg">{NAV}</nav></div></header>
+body=f'''<header><div class="bar"><div class="brand">Satelliti <span>da Torino</span></div>{SEARCH}<nav class="seg">{NAV}</nav><div id="fontslot"></div></div></header>
 <main><div id="satsel"></div><div id="head"></div><div id="controls"></div><div id="results"></div></main><footer id="meta"></footer>''', js='')
 
 # 2 NEON ---------------------------------------------------------------
@@ -65,6 +67,9 @@ body:not([data-view=sat]) .win{display:none}
 .sbdg{border-radius:0;background:#000;border-color:#ff00e666}.sbdg b{color:#00f0ff}
 footer{color:#7cf8;font-size:11px;text-align:center;padding:30px}
 .tday{color:#00f0ff}.ev{border-color:#1a0024}
+#fontctl{background:#05000a;border:1px solid #00f0ff;border-radius:0;box-shadow:0 0 16px #00f0ff66}#fontctl button{color:#00f0ff;border-radius:0;font-family:inherit}#fontctl button:hover:not(:disabled){background:#00f0ff22}
+#fontctl #fs-reset{color:#ff8bf2}
+#totop{border-radius:0;background:#000;border:1px solid #ff00e6;color:#ff8bf2;box-shadow:0 0 18px #ff00e6;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);width:54px}
 ''',
 body=f'''<header><div class="tag">// ricevibili da torino //</div><div class="logo-t">SAT<em>NEON</em>.TV</div><div class="top">{SEARCH}<nav>{NAV}</nav></div></header>
 <main><div class="win"><label>&gt; FINESTRELLA SATELLITE</label><div id="satsel"></div></div><div id="head"></div><div id="controls"></div><div id="results"></div></main><footer id="meta"></footer>''',
@@ -99,9 +104,11 @@ aside nav button:hover,.satbtn:hover{background:#16161a}aside nav button.on,.sat
 .card .tags{display:flex;gap:4px;justify-content:flex-end}
 @media(max-width:820px){.app{grid-template-columns:1fr}aside{position:static;height:auto}#satsel{flex-direction:row;flex-wrap:wrap}.satbtn{width:auto}.card{grid-template-columns:30px 1fr auto}.card .meta{grid-column:2/4}}
 footer{color:#666;font-size:12px;padding:20px 0}
+#fontslot #fontctl{background:#0f0f12;border-color:#26262b;border-radius:8px}#fontctl button:hover:not(:disabled){background:#14532d}
+#totop{background:#14532d;border-color:#22c55e;color:#dcfce7;border-radius:10px}
 ''',
 body=f'''<div class="app"><aside><div class="brand"><i></i>SatDash Torino</div><div class="side-h">Sezioni</div><nav>{NAV}</nav><div class="side-h">Satelliti</div><div id="satsel"></div></aside>
-<div class="content"><div class="topbar">{SEARCH}</div><div id="head"></div><div id="controls"></div><div id="results"></div><footer id="meta"></footer></div></div>''', js='')
+<div class="content"><div class="topbar">{SEARCH}<div id="fontslot"></div></div><div id="head"></div><div id="controls"></div><div id="results"></div><footer id="meta"></footer></div></div>''', js='')
 
 # 4 CARD GRID ----------------------------------------------------------
 T[4] = dict(title='Griglia a schede', desc='Griglia di grandi schede colorate con le iniziali del canale come logo, satelliti come schede in alto.',
@@ -130,10 +137,13 @@ body:not([data-view=sat]) #satsel{display:none}
 .publist{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:10px}
 @media(max-width:640px){#satsel{flex-wrap:nowrap;overflow-x:auto}.satbtn{flex:none}.list{grid-template-columns:repeat(2,1fr)}.publist{grid-template-columns:1fr}}.pubrow{background:#0e0e0e;border-radius:14px;padding:12px;border:1px solid #1d1d1d}
 footer{color:#666;font-size:12px;text-align:center;padding:30px}
+#fontctl{background:#141414;border:2px solid #222;border-radius:16px}#fontctl button{border-radius:12px}#fontctl button:hover:not(:disabled){background:#fff;color:#000}
+#totop{background:linear-gradient(135deg,#f43f5e,#f59e0b);border:0;color:#000;font-weight:900;border-radius:16px}
+.tile .big{font-size:calc(40px * var(--fs))}
 ''',
 body=f'''<header><div class="brand">Sat<b>Grid</b> · Torino</div><nav>{NAV}</nav>{SEARCH}</header>
 <main><div id="satsel"></div><div id="head"></div><div id="controls"></div><div id="results"></div></main><footer id="meta"></footer>''',
-js='''window.SKIN={card(c,agg){const A=window.SATAPP,x=agg||c,e=A.esc;return `<article class="tile" style="--h:${A.hue(x.n)}"><div class="big">${e(A.initials(x.n))}<div class="tags">${A.resBadge(x.r)}${x.s===2?'<span class="bdg b-part" title="Parzialmente in chiaro">PARZ.</span>':''}${(!agg&&c.hard)?'<span class="bdg b-hard" title="Ricezione difficile da Torino">⚠</span>':''}</div></div><div class="tx"><h3>${e(x.n)}</h3><div class="meta">${[x.c,x.g,x.l.slice(0,2).join(', ')].filter(Boolean).map(e).join(' · ')}</div>${agg?'<div class="sats">'+agg.items.map(i=>A.badgeSat(i,false)).join('')+'</div>':''}</div></article>`;}};''')
+js='''window.SKIN={card(c,agg){const A=window.SATAPP,x=agg||c,e=A.esc;return `<article class="tile" style="--h:${A.hue(x.n)}"><div class="big">${e(A.initials(x.n))}<div class="tags">${A.resBadge(x.r)}${x.s===2?'<span class="bdg b-part" title="Parzialmente in chiaro">PARZ.</span>':''}${(!agg&&c.hard)?'<span class="bdg b-hard" title="Ricezione difficile da Torino">⚠</span>':''}</div></div><div class="tx"><h3><span class="cn">${e(x.n)}</span></h3><div class="meta">${[x.c,x.g,x.l.slice(0,2).join(', ')].filter(Boolean).map(e).join(' · ')}</div>${agg?'<div class="sats">'+agg.items.map(i=>A.badgeSat(i,false)).join('')+'</div>':''}</div></article>`;}};''')
 
 # 5 ORBITAL ------------------------------------------------------------
 T[5] = dict(title='Orbitale', desc='Tema spaziale con cielo stellato: i satelliti sono disposti sull’arco orbitale come visti da Torino, clicca un satellite per aprirne la sezione.',
@@ -161,6 +171,8 @@ body:not([data-view=sat]) #satsel{opacity:.35}
 .card .info{flex:1;min-width:0}.card h3{margin:0;font-size:14.5px;font-weight:600}.card .meta{color:#94a3b8;font-size:12px}
 .card .tags{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
 footer{color:#64748b;font-size:12px;text-align:center;padding:30px}
+#fontctl{background:#0b1220cc;border:1px solid #7dd3fc55;border-radius:999px;backdrop-filter:blur(8px)}#fontctl button{border-radius:999px;color:#cbd5e1}#fontctl button:hover:not(:disabled){background:#7dd3fc;color:#001}
+#totop{background:radial-gradient(circle at 30% 30%,#7dd3fc,#0b3a5a);border:0;color:#001;box-shadow:0 0 20px #7dd3fc88}
 ''',
 body=f'''<div id="stars"></div><header><div class="brand">Orbita <b>Torino</b></div><nav>{NAV}</nav>{SEARCH}</header>
 <main><div id="satsel"></div><div id="head"></div><div id="controls"></div><div id="results"></div></main><footer id="meta"></footer>''',
@@ -206,13 +218,18 @@ body:not([data-view=sat]) #satsel{display:none}
 @media(max-width:760px){.row{grid-template-columns:46px 1fr 90px}.row .g,.row .l,.row .c{display:none}.row .sats{grid-column:2/4}}
 footer{color:#00ffff;padding:20px 0;font-size:15px}
 .tday{color:#ffff00;font-size:20px}.ev{font-size:17px}.evt{border-radius:0}
+
+.ttbar{position:sticky;top:0;z-index:10}#fontslot #fontctl{background:#000;border:0;border-radius:0;padding:0;gap:4px}#fontctl button{border-radius:0;font-family:inherit;font-size:17px;height:26px;background:#ffff00;color:#000}
+#fontctl #fs-reset{background:#00ffff;color:#000;font-size:15px;opacity:1}#fontctl button:hover:not(:disabled){background:#fff}
+#totop{border-radius:0;background:#ff0000;border:2px solid #fff;color:#fff;font-family:inherit}
+@media(max-width:640px){.ttbar{gap:6px}.ttbar .t{display:none}}
 ''',
-body=f'''<div class="tt"><div class="ttbar"><span class="p">P100</span><span>SATELLITI DA TORINO</span><span class="t" id="clock"></span></div>
+body=f'''<div class="tt"><div class="ttbar"><span class="p">P100</span><span>SATELLITI DA TORINO</span><span class="t" id="clock"></span><div id="fontslot"></div></div>
 <h1 class="big"><span>SAT</span>VIDEO <em>TORINO</em></h1><nav>{NAV}</nav>{SEARCH}<div id="satsel"></div><div id="head"></div><div id="controls"></div><div id="results"></div><footer id="meta"></footer></div>''',
 js='''let rowN=0;window.SKIN={
  init(){const c=()=>{const d=new Date();document.getElementById('clock').textContent=d.toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'short'}).toUpperCase()+' '+d.toLocaleTimeString('it-IT');};c();setInterval(c,1000);},
  renderSatSelector(el,sats,cur,api){if(!el)return;el.innerHTML=sats.map((s,i)=>`<button class="satbtn${s.pos===cur?' on':''}" data-sat="${s.pos}"><span class="pg">${201+i}</span>${s.nome}<small>${s.canali}</small></button>`).join('');},
- card(c,agg){const A=window.SATAPP,x=agg||c,e=A.esc;rowN++;return `<div class="row"><span class="num">${String(rowN).padStart(3,'0')}</span><span class="nm">${e(x.n)}</span><span class="g">${e(x.g||'-')}</span><span class="l">${e(x.l.slice(0,2).join(', ')||'-')}</span><span class="c">${e(x.c||'-')}</span><span class="q">${A.resBadge(x.r)} ${x.s===2?'<span class="bdg b-part" title="Parzialmente in chiaro">PARZ</span>':''}${(!agg&&c.hard)?'<span class="bdg b-hard" title="Ricezione difficile da Torino">⚠</span>':''}</span>${agg?'<div class="sats">'+agg.items.map(i=>A.badgeSat(i,true)).join('')+'</div>':''}</div>`;},
+ card(c,agg){const A=window.SATAPP,x=agg||c,e=A.esc;rowN++;return `<div class="row"><span class="num">${String(rowN).padStart(3,'0')}</span><span class="nm cn">${e(x.n)}</span><span class="g">${e(x.g||'-')}</span><span class="l">${e(x.l.slice(0,2).join(', ')||'-')}</span><span class="c">${e(x.c||'-')}</span><span class="q">${A.resBadge(x.r)} ${x.s===2?'<span class="bdg b-part" title="Parzialmente in chiaro">PARZ</span>':''}${(!agg&&c.hard)?'<span class="bdg b-hard" title="Ricezione difficile da Torino">⚠</span>':''}</span>${agg?'<div class="sats">'+agg.items.map(i=>A.badgeSat(i,true)).join('')+'</div>':''}</div>`;},
  after(){rowN=0;}};
 const _r=()=>{rowN=0};document.addEventListener('click',_r,true);document.addEventListener('change',_r,true);document.addEventListener('input',_r,true);''')
 
@@ -246,6 +263,8 @@ main{max-width:1200px;margin:auto;padding:0 16px 60px}
 .satbtn b{display:block}.satbtn small{color:#aaa}.satbtn.on{background:linear-gradient(135deg,#7c3aed99,#0ea5e999)}
 .curs{font-size:13px;opacity:.75}
 footer{color:#888;font-size:12px;text-align:center;padding:30px}
+#fontctl{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px)}#fontctl button{border-radius:12px}#fontctl button:hover:not(:disabled){background:rgba(255,255,255,.16)}
+#totop{background:linear-gradient(135deg,#7c3aedcc,#0ea5e9cc);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(14px)}
 ''',
 body=f'''<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 <header class="glass"><div class="brand">Vetro<span>Sat</span></div><button class="open" id="opensat">🛰 Scegli satellite</button><span class="curs" id="cursat"></span><nav>{NAV}</nav>{SEARCH}</header>
