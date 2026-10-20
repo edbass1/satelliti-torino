@@ -28,11 +28,20 @@ body:not([data-view=sat]) #satsel{display:none}
 footer{color:#6e6e73;font-size:12px;text-align:center;padding:30px}
 #fontslot #fontctl{background:#1d1d1f;border:0;border-radius:10px}#fontctl button{color:#f5f5f7}#fontctl button:hover:not(:disabled){background:#3a3a3c}
 #totop{background:rgba(29,29,31,.85);backdrop-filter:blur(20px);border:0}
+.upd{padding:14px 0 0;color:#86868b;font-size:12.5px;display:flex;align-items:center;gap:8px}.upd span:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#30d158;margin-right:7px;vertical-align:1px}
+.contbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 0 2px}
+.contbar .ctl-l{font-size:12px;color:#86868b;margin-right:4px}
+.cont{display:inline-flex;align-items:center;gap:6px;border:1px solid #2c2c2e;background:#111;border-radius:999px;padding:6px 13px;font-size:13.5px;color:#6e6e73;transition:background .15s,color .15s}
+.cont .ci{font-size:15px;filter:grayscale(1);opacity:.55}.cont small{color:#6e6e73;font-size:11.5px}
+.cont.on{background:#f5f5f7;color:#000;border-color:#f5f5f7}.cont.on .ci{filter:none;opacity:1}.cont.on small{color:#555}
+.cont:not(.on){text-decoration:line-through;text-decoration-color:#6e6e73}
+footer p{margin:6px 0 0}footer a{color:#8ab4ff;text-decoration:none}
+.card .flag{margin:0 2px}.pubrow .flag{margin-right:2px}.ev .flag{vertical-align:middle}
 ''',
 body=f'''<header><div class="bar"><div class="brand">Satelliti <span>da Torino</span></div>{SEARCH}<nav class="seg">{NAV}</nav><div id="fontslot"></div></div></header>
-<main><div id="satsel"></div><div id="head"></div><div id="controls"></div><div id="results"></div></main><footer id="meta"></footer>''', js='')
+<main><div class="upd"><span id="lastupd"></span></div><div id="contsel" class="contbar" role="group" aria-label="Filtra per continente"></div><div id="satsel"></div><div id="head"></div><div id="controls"></div><div id="results"></div></main>
+<footer><div id="meta"></div><p><a href="scelta-versioni.html">Altre versioni del design</a> · Bandiere: flag-icons (MIT)</p></footer>''', js='window.SKIN={continents:true,flags:true};', flags=True)
 
-# 2 NEON ---------------------------------------------------------------
 T[2] = dict(title='Neon Cyberpunk', desc='Luci al neon magenta/ciano, font monospazio, satellite scelto da una tendina “finestrella”.',
 css='''
 

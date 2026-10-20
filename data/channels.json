@@ -2,7 +2,8 @@
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
   "aggiornato": "2026-10-20 16:29",
-  "luogo": "Torino (45.07°N, 7.69°E)"
+  "luogo": "Torino (45.07°N, 7.69°E)",
+  "fuso": "Europe/Rome"
  },
  "satelliti": [
   {

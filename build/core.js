@@ -17,20 +17,23 @@ function point(lonSat){ // azimut/elevazione da Torino
 }
 D.sats.forEach(s => Object.assign(s, point(s.lon)));
 // canali: espansione formato compatto
-const CH = D.ch.map((a,i) => ({i, n:a[0], p:a[1], c:a[2], g:a[3]||'', l:a[4]||[], r:a[5], s:a[6], hard:!!a[7], o:a[8]||'', pub:a[9]||null, k:a[10], b:a[11]||''}));
+const CH = D.ch.map((a,i) => ({i, n:a[0], p:a[1], c:a[2], g:a[3]||'', l:a[4]||[], r:a[5], s:a[6], hard:!!a[7], o:a[8]||'', pub:a[9]||null, k:a[10], b:a[11]||'', iso:a[12]||'', cont:a[13]||'Non specificato'}));
 CH.forEach(c => c.f = fold(c.n + ' ' + c.c + ' ' + c.g + ' ' + c.l.join(' ') + ' ' + c.b + ' ' + (c.pub ? c.pub[0]+' '+c.pub[1] : '')));
 // aggregazione per canale (stesso canale su più satelliti)
 const AGG = new Map();
 CH.forEach(c => { let a = AGG.get(c.k); if(!a){ a = {k:c.k, n:c.n, items:[]}; AGG.set(c.k, a);} a.items.push(c); if(c.n.length < a.n.length) a.n = c.n; });
-AGG.forEach(a => { a.items.sort((x,y)=>SAT[y.p].lon - SAT[x.p].lon); const f=a.items[0]; a.c=f.c; a.g=f.g; a.pub=a.items.find(x=>x.pub)?.pub||null;
+AGG.forEach(a => { a.items.sort((x,y)=>SAT[y.p].lon - SAT[x.p].lon); const f=a.items[0]; a.c=f.c; a.g=f.g; a.pub=a.items.find(x=>x.pub)?.pub||null; a.iso=f.iso; a.cont=f.cont;
   a.l=[...new Set(a.items.flatMap(x=>x.l))]; a.r = a.items.some(x=>x.r==='UHD')?'UHD':a.items.some(x=>x.r==='HD')?'HD':'SD';
   a.s = a.items.some(x=>x.s===1)?1:2; a.hard = a.items.every(x=>x.hard); a.f = a.items.map(x=>x.f).join(' '); });
 const GENRES = [...new Set(CH.map(c=>c.g).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'it'));
 const LANGS = (()=>{const m={}; CH.forEach(c=>c.l.forEach(l=>m[l]=(m[l]||0)+1)); return Object.keys(m).sort((a,b)=>m[b]-m[a]);})();
-const TYPES = {arrivo:['Nuovo arrivo','in'], tornato:['Tornato','in'], ora_chiaro:['Ora in chiaro','in'], uscita:['Uscito dal satellite','out'], chiuso:['Chiuso (non più in Europa)','out'], ora_criptato:['Ora criptato','out']};
+const TYPES = {entrata:['Entrata','in'], uscita:['Uscita','out']};
 const PUBC = [...new Set(CH.filter(c=>c.pub).map(c=>c.pub[0]))].sort((a,b)=>a.localeCompare(b,'it'));
 const ADJ = {franc:'Francia',tedesc:'Germania',german:'Germania',ital:'Italia',spagn:'Spagna',ingles:'Regno Unito',britann:'Regno Unito',ingl:'Regno Unito',uk:'Regno Unito',austr:'Austria',svizz:'Svizzera',portog:'Portogallo',polac:'Polonia',ceco:'Repubblica Ceca',cechi:'Repubblica Ceca',ceca:'Repubblica Ceca',slovacc:'Slovacchia',ungher:'Ungheria',sloven:'Slovenia',croat:'Croazia',serb:'Serbia',bosn:'Bosnia ed Erzegovina',monten:'Montenegro',kosov:'Kosovo',alban:'Albania',grec:'Grecia',cipr:'Cipro',bulgar:'Bulgaria',romen:'Romania',rumen:'Romania',moldav:'Moldavia',ucrain:'Ucraina',turc:'Turchia',lituan:'Lituania',lussemb:'Lussemburgo',moneg:'Monaco',belg:'Paesi Bassi / Belgio',oland:'Paesi Bassi / Belgio',fiamming:'Paesi Bassi / Belgio',sammarin:'San Marino',vatican:'Vaticano',europe:'Unione Europea',ue:'Unione Europea',internaz:'Internazionale'};
-const st = {view:'sat', sat:(D.sats.find(s=>s.pos==='13E')||D.sats[0]).pos, q:'', genre:'', lang:'', res:'', stato:'', hideHard:false, group:'genere', limit:240,
+const CONTS = [['Europa','🌍'],['Asia','🌏'],['Africa','🌍'],['America','🌎'],['Oceania','🌏'],['Non specificato','🌐']];
+const CONT_KEY='satTorino.continenti';
+const useCont = !!SKIN.continents, useFlags = !!SKIN.flags;
+const st = {conts:(()=>{ try{ const v=JSON.parse(localStorage.getItem(CONT_KEY)); if(Array.isArray(v)) return new Set(v.filter(x=>CONTS.some(c=>c[0]===x))); }catch(_){} return new Set(CONTS.map(c=>c[0])); })(), view:'sat', sat:(D.sats.find(s=>s.pos==='13E')||D.sats[0]).pos, q:'', genre:'', lang:'', res:'', stato:'', hideHard:false, group:'genere', limit:240,
   pubSel:new Set(['Italia','Francia','Germania']), pubPart:true, nSat:'', nType:'', nDays:''};
 const api = {st, D, SAT, CH, AGG, esc, setSat, setView, render, badgeSat, resBadge, statoBadge};
 window.SATAPP = api;
@@ -42,11 +45,14 @@ function initials(n){ const w = n.replace(/[^\p{L}\p{N} ]/gu,' ').split(/\s+/).f
 function hue(s){ let h=0; for(const ch of s) h=(h*31+ch.charCodeAt(0))%360; return h; }
 api.initials = initials; api.hue = hue;
 
+function flagHTML(x, cls){ if(!useFlags) return `<div class="logo${cls?' '+cls:''}">${esc(initials(x.n))}</div>`;
+  return `<span class="flag${cls?' '+cls:''} flg-${x.iso||'none'}" role="img" aria-label="${esc(x.c||'Paese non specificato')}" title="${esc(x.c||'Paese non specificato / internazionale')}"></span>`; }
+api.flagHTML = flagHTML;
 function defaultCard(c, agg){
   const sats = agg ? `<div class="sats">${agg.items.map(x=>badgeSat(x,true)).join('')}</div>` : '';
   const x = agg || c;
   return `<article class="card${x.s===2?' is-part':''}${x.hard?' is-hard':''}" style="--h:${hue(x.n)}">
-    <div class="logo">${esc(initials(x.n))}</div>
+    ${flagHTML(x)}
     <div class="info"><h3><span class="cn">${esc(x.n)}</span></h3>
       <div class="meta">${[x.c, x.g, x.l.slice(0,3).join(', ')].filter(Boolean).map(esc).join(' · ')||'—'}${(c&&c.o)?' · <em>'+esc(c.o)+'</em>':''}</div>
       ${x.pub?`<div class="pubtag">🏛 Servizio pubblico · ${esc(x.pub[1])}</div>`:''}
@@ -68,7 +74,10 @@ function filtersHTML(){
    ${(st.genre||st.lang||st.res||st.stato||st.hideHard)?'<button class="reset" id="f-reset">Azzera filtri</button>':''}
   </div>`;
 }
+function contOK(x){ return !useCont || st.conts.has(x.cont || 'Non specificato'); }
+api.contOK = contOK;
 function pass(x){
+  if(!contOK(x)) return false;
   if(st.genre && x.g!==st.genre) return false;
   if(st.lang && !x.l.includes(st.lang)) return false;
   if(st.res==='HD' && x.r==='SD') return false;
@@ -94,7 +103,7 @@ function listHTML(items, isAgg){
   return html;
 }
 function satInfoHTML(s){
-  const ch = CH.filter(c=>c.p===s.pos);
+  const ch = CH.filter(c=>c.p===s.pos && contOK(c));
   return `<div class="satinfo"><div><h1>${esc(s.nome)}</h1><p>${esc(s.satelliti)}</p></div>
    <ul class="kpi"><li><b>${ch.length}</b><span>canali in chiaro</span></li><li><b>${ch.filter(c=>c.r==='HD').length}</b><span>HD</span></li><li><b>${ch.filter(c=>c.r==='UHD').length}</b><span>4K</span></li><li><b>${ch.filter(c=>c.s===2).length}</b><span>parziali</span></li>
    <li title="Puntamento indicativo da Torino"><b>${s.az}° / ${s.el}°</b><span>azimut / elevazione da Torino</span></li></ul></div>`;
@@ -116,7 +125,7 @@ function resolveCountries(text){
 }
 function viewPub(){
   const groups = new Map();
-  AGG.forEach(a=>{ if(!a.pub || !st.pubSel.has(a.pub[0])) return; if(st.q && !fold(a.f).includes(fold(st.q))) return;
+  AGG.forEach(a=>{ if(!a.pub || !st.pubSel.has(a.pub[0]) || !contOK(a)) return; if(st.q && !fold(a.f).includes(fold(st.q))) return;
     const its = a.items.filter(x=>x.pub && (st.pubPart || x.s===1) && (!st.hideHard || !x.hard)); if(!its.length) return;
     const k=a.pub[0]; if(!groups.has(k)) groups.set(k,[]); groups.get(k).push({a,its}); });
   const controls = `<div class="pubctl">
@@ -129,24 +138,31 @@ function viewPub(){
   let body = keys.length ? '' : '<p class="empty">Seleziona uno o più paesi qui sopra.</p>';
   for(const k of keys){ const arr=groups.get(k).sort((x,y)=>x.a.n.localeCompare(y.a.n,'it'));
     body += `<section class="grp"><h2 class="gh">${esc(k)} <small>${arr.length} canali</small></h2><div class="publist">${arr.map(({a,its})=>
-      (SKIN.pubRow? SKIN.pubRow(a,its) : `<div class="pubrow" style="--h:${hue(a.n)}"><div class="pn"><span class="logo sm">${esc(initials(a.n))}</span><div><b class="cn">${esc(a.n)}</b><small>${esc(a.pub[1])}${a.g?' · '+esc(a.g):''}</small></div></div><div class="ps">${its.map(x=>badgeSat(x,true)).join('')}</div></div>`)).join('')}</div></section>`; }
+      (SKIN.pubRow? SKIN.pubRow(a,its) : `<div class="pubrow" style="--h:${hue(a.n)}"><div class="pn">${flagHTML(a,"sm")}<div><b class="cn">${esc(a.n)}</b><small>${esc(a.pub[1])}${a.g?' · '+esc(a.g):''}</small></div></div><div class="ps">${its.map(x=>badgeSat(x,true)).join('')}</div></div>`)).join('')}</div></section>`; }
   return { controls, head:`<div class="satinfo"><div><h1>Canali pubblici europei</h1><p>Per ogni canale: i satelliti dove è <b>in chiaro</b> (badge tratteggiato = parzialmente in chiaro)</p></div></div>`, body };
 }
 function viewNews(){
-  const evs = D.ev.filter(e=> (!st.nSat || e.p===st.nSat) && (!st.nType || TYPES[e.t][1]===st.nType || e.t===st.nType) && (!st.q || fold(e.n+' '+e.c).includes(fold(st.q))) &&
+  const base = D.ev.filter(e=> contOK({cont:e.co}) && (!st.q || fold(e.n+' '+e.c).includes(fold(st.q))) &&
     (!st.nDays || (Date.parse(D.meta.aggiornato.slice(0,10)) - Date.parse(e.d))/864e5 <= +st.nDays));
-  const satsWithEv = D.sats.filter(s=>D.ev.some(e=>e.p===s.pos));
+  const evs = base.filter(e=> (!st.nSat || e.p===st.nSat) && (!st.nType || e.t===st.nType));
   const controls = `<div class="filters">
-    <div class="chips">${['',...D.sats.map(s=>s.pos)].map(p=>`<button class="chip${st.nSat===p?' on':''}" data-nsat="${p}">${p?esc(SAT[p].nome):'Tutti i satelliti'} <small>${p?D.ev.filter(e=>e.p===p).length:D.ev.length}</small></button>`).join('')}</div>
-    <label class="fl"><span>Tipo</span><select id="n-type">${opt('','Tutte le novità',st.nType)}${opt('in','Arrivi / tornati / ora in chiaro',st.nType)}${opt('out','Uscite / chiusure / criptati',st.nType)}${Object.entries(TYPES).map(([k,v])=>opt(k,v[0],st.nType)).join('')}</select></label>
+    <div class="chips">${['',...D.sats.map(s=>s.pos)].map(p=>`<button class="chip${st.nSat===p?' on':''}" data-nsat="${p}">${p?esc(SAT[p].nome):'Tutti i satelliti'} <small>${p?base.filter(e=>e.p===p).length:base.length}</small></button>`).join('')}</div>
+    <label class="fl"><span>Tipo</span><select id="n-type">${opt('','Entrate e uscite',st.nType)}${opt('entrata','Solo entrate',st.nType)}${opt('uscita','Solo uscite',st.nType)}</select></label>
     <label class="fl"><span>Periodo</span><select id="n-days">${opt('','Tutto (≈ ultimo mese)',st.nDays)}${opt('7','Ultimi 7 giorni',st.nDays)}${opt('14','Ultimi 14 giorni',st.nDays)}</select></label></div>`;
   let body='', last='';
-  if(!evs.length) body='<p class="empty">Nessuna novità per questa selezione nel periodo coperto dai dati.</p>';
+  if(!evs.length) body='<p class="empty">Nessuna entrata o uscita per questa selezione nel periodo coperto dai dati.</p>';
   body += '<div class="timeline">';
   evs.forEach(e=>{ const T=TYPES[e.t]; if(e.d!==last){ last=e.d; body+=`<h3 class="tday">${new Date(e.d+'T12:00').toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</h3>`; }
-    body += SKIN.newsRow ? SKIN.newsRow(e,T) : `<div class="ev ev-${T[1]}"><span class="evt">${T[1]==='in'?'▲':'▼'} ${esc(T[0])}</span><b class="evn cn">${esc(e.n)}</b>${e.r?resBadge(e.r):''}<span class="evm">${esc(SAT[e.p].nome)}${e.c?' · '+esc(e.c):''}${e.b?' · '+esc(e.b):''}</span>${e.il?'<span class="bdg b-fta">ora in lista</span>':''}</div>`; });
+    const fx = {n:e.n, c:e.c, iso:e.iso};
+    body += SKIN.newsRow ? SKIN.newsRow(e,T) : `<div class="ev ev-${T[1]}"><span class="evt">${T[1]==='in'?'▲':'▼'} ${esc(T[0])}</span>${useFlags?flagHTML(fx,'xs'):''}<b class="evn cn">${esc(e.n)}</b>${e.r?resBadge(e.r):''}<span class="evm">${esc(SAT[e.p].nome)}${e.c?' · '+esc(e.c):''}${e.ch?' · non più trasmesso in Europa':''}</span></div>`; });
   body += '</div>';
-  return { controls, head:`<div class="satinfo"><div><h1>Novità</h1><p>Canali in chiaro arrivati, tornati, usciti o diventati criptati · dati KingOfSat fino al ${esc(D.meta.aggiornato)}</p></div><ul class="kpi"><li><b>${D.ev.filter(e=>TYPES[e.t][1]==='in').length}</b><span>arrivi</span></li><li><b>${D.ev.filter(e=>TYPES[e.t][1]==='out').length}</b><span>uscite</span></li></ul></div>`, body };
+  return { controls, head:`<div class="satinfo"><div><h1>Novità</h1><p>Solo canali <b>in chiaro</b> entrati o usciti dai satelliti · dati KingOfSat fino al ${esc(fmtDate(D.meta.aggiornato))}</p></div><ul class="kpi"><li><b>${base.filter(e=>e.t==='entrata').length}</b><span>entrate</span></li><li><b>${base.filter(e=>e.t==='uscita').length}</b><span>uscite</span></li></ul></div>`, body };
+}
+function fmtDate(s){ const m=/^(\d{4})-(\d\d)-(\d\d)(?: (\d\d:\d\d))?/.exec(s||''); if(!m) return s||'';
+  const d=new Date(+m[1], +m[2]-1, +m[3]); return d.toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'})+(m[4]?', ore '+m[4]:''); }
+function contBar(){ const el=$('#contsel'); if(!el || !useCont) return;
+  const cnt={}; AGG.forEach(a=>{ cnt[a.cont]=(cnt[a.cont]||0)+1; });
+  el.innerHTML = `<span class="ctl-l">Continenti</span>` + CONTS.map(([c,ic])=>`<button class="cont${st.conts.has(c)?' on':''}" data-cont="${esc(c)}" aria-pressed="${st.conts.has(c)}" title="${st.conts.has(c)?'Nascondi':'Mostra'} i canali di ${c==='Non specificato'?'paese non specificato / internazionali':esc(c)}"><span class="ci">${ic}</span>${c==='Non specificato'?'Internaz. / n.d.':esc(c)} <small>${cnt[c]||0}</small></button>`).join('');
 }
 function render(){
   const v = st.view==='sat' && st.q ? viewAll() : ({sat:viewSat, all:viewAll, pub:viewPub, news:viewNews}[st.view])();
@@ -154,15 +170,17 @@ function render(){
   if(ctl) ctl.innerHTML = v.controls; if(head) head.innerHTML = v.head; if(res) res.innerHTML = v.body;
   document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('on', b.dataset.view===st.view));
   document.body.dataset.view = st.view;
+  contBar();
   if(SKIN.renderSatSelector) SKIN.renderSatSelector($('#satsel'), D.sats, st.sat, api); else defaultSatSel();
   if(SKIN.after) SKIN.after(api);
 }
 function defaultSatSel(){ const el=$('#satsel'); if(!el) return;
-  el.innerHTML = D.sats.map(s=>`<button class="satbtn${s.pos===st.sat&&st.view==='sat'?' on':''}" data-sat="${s.pos}"><b>${esc(s.nome)}</b><small>${s.canali} canali</small></button>`).join(''); }
+  el.innerHTML = D.sats.map(s=>`<button class="satbtn${s.pos===st.sat&&st.view==='sat'?' on':''}" data-sat="${s.pos}"><b>${esc(s.nome)}</b><small>${CH.filter(c=>c.p===s.pos && contOK(c)).length} canali</small></button>`).join(''); }
 function setSat(p){ st.sat=p; st.view='sat'; st.limit=240; st.q=''; const q=$('#q'); if(q) q.value=''; render(); window.scrollTo({top:0,behavior:'smooth'}); }
 function setView(v){ st.view=v; st.limit=240; render(); }
 document.addEventListener('click', e=>{
-  const t = e.target.closest('[data-sat],[data-gosat],[data-view],[data-pubc],[data-pubset],[data-nsat],#more,#f-reset,[data-jump]'); if(!t) return;
+  const t = e.target.closest('[data-cont],[data-sat],[data-gosat],[data-view],[data-pubc],[data-pubset],[data-nsat],#more,#f-reset,[data-jump]'); if(!t) return;
+  if(t.dataset.cont){ const c=t.dataset.cont; st.conts.has(c)?st.conts.delete(c):st.conts.add(c); try{ localStorage.setItem(CONT_KEY, JSON.stringify([...st.conts])); }catch(_){} st.limit=240; render(); return; }
   if(t.dataset.jump!==undefined){ e.preventDefault(); const el=document.getElementById('g-'+encodeURIComponent(t.dataset.jump)); if(el) el.scrollIntoView({behavior:'smooth'}); return; }
   if(t.dataset.sat){ setSat(t.dataset.sat); return; }
   if(t.dataset.gosat){ setSat(t.dataset.gosat); return; }
@@ -201,5 +219,5 @@ function mountTools(){
   const onScroll=()=>tt.classList.toggle('show', window.scrollY>500); window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
   applyFs();
 }
-document.addEventListener('DOMContentLoaded', ()=>{ mountTools(); const m=$('#meta'); if(m) m.innerHTML=`Dati: ${esc(D.meta.fonte)} · aggiornati il ${esc(D.meta.aggiornato)} · ${CH.length} presenze, ${AGG.size} canali unici`; if(SKIN.init) SKIN.init(api); render(); });
+document.addEventListener('DOMContentLoaded', ()=>{ mountTools(); const m=$('#meta'); if(m) m.innerHTML=`Dati: ${esc(D.meta.fonte)} · aggiornati il ${esc(fmtDate(D.meta.aggiornato))} (ora di Roma) · ${CH.length} presenze, ${AGG.size} canali unici`; const lu=$('#lastupd'); if(lu) lu.textContent='Ultimo aggiornamento: '+fmtDate(D.meta.aggiornato)+' (ora di Roma)'; if(SKIN.init) SKIN.init(api); render(); });
 })();

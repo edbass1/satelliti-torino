@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Scraper KingOfSat -> channels.json / novita.json  (solo TV in chiaro / parzialmente in chiaro)
+"""Scraper KingOfSat -> channels.json / novita.json
+channels.json: canali TV in chiaro / parzialmente in chiaro.
+novita.json:   SOLO entrate e uscite di canali in chiaro (FTA puro): niente cambi di codifica, rinomini,
+               cambi di frequenza, rientri dopo interruzioni o canali parzialmente in chiaro.
+Se KingOfSat non risponde o i dati sembrano incompleti, esce con codice 2 SENZA toccare i file in data/.
 Uso:  python3 scrape.py            (scarica di nuovo le pagine e rigenera i dati)
       python3 scrape.py --offline  (usa le pagine già scaricate in ../raw)
 """
@@ -42,12 +46,23 @@ GENRE = {'General':'Generalista','News':'Notizie','Sport':'Sport','Movies':'Film
  'Arts':'Arte','Teleshopping':'Televendite','Children':'Bambini','Youth':'Giovani','Movies & Series':'Film','Dating':'Incontri','Documentaries':'Documentari','Cultural':'Cultura','Presentations':'Presentazioni','Politics':'Politica e istituzioni','Racing':'Ippica e corse','Game':'Giochi','Talk shows':'Talk show','Chat':'Chat','Real TV':'Reality','Theater':'Teatro'}
 SKIPLANG = {'audio originale','Audio Description','AC3 (Dolby Digital 5.1)','Dolby Digital Plus','non definito','mis','und','Multilingue'}
 
+class FetchError(Exception): pass
+DELAY = 3  # secondi tra una richiesta e l'altra (cortesia verso KingOfSat)
 def fetch(name, url):
     p = os.path.join(RAW, name)
     if '--offline' not in sys.argv:
-        req = urllib.request.Request(url, headers={'User-Agent': UA})
-        data = urllib.request.urlopen(req, timeout=60).read()
-        open(p, 'wb').write(data); time.sleep(2)
+        last = None
+        for attempt in range(3):
+            try:
+                req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Language': 'it-IT,it;q=0.9'})
+                data = urllib.request.urlopen(req, timeout=60).read()
+                if len(data) < 2000: raise FetchError('risposta troppo corta (%d byte)' % len(data))
+                open(p, 'wb').write(data); time.sleep(DELAY)
+                break
+            except Exception as e:
+                last = e; time.sleep(DELAY * (attempt + 2))
+        else:
+            raise FetchError('%s: %s' % (url, last))
     return open(p, encoding='utf-8', errors='replace').read()
 
 def txt(s): return html.unescape(re.sub(r'<[^>]+>', ' ', s)).replace('\xa0',' ').strip()
@@ -139,6 +154,7 @@ def parse_news(pos, s):
             bq = mm.group(1); body = line[mm.end():]
         tipo = nome = None; paese = ''
         fta_txt = 'In chiaro - FTA' in body
+        partial = bool(re.search(r'In chiaro - FTA\s*&|&\s*In chiaro - FTA', body))
         m = re.match(r'Un nuovo canale in DVB-S2? : (.+?) \(([^)]*)\), su', body)
         if m: tipo, nome, paese = 'arrivo', m.group(1), m.group(2)
         if not tipo:
@@ -162,8 +178,34 @@ def parse_news(pos, s):
         if not tipo: continue
         res = 'UHD' if ('4K' in nome or 'UHD' in nome) else ('HD' if re.search(r'\bHD\b', nome) else '')
         ev.append(dict(data=date, pos=pos, satellite=sat.split(',')[0], tipo=tipo, nome=nome.strip(), paese=paese,
-                       bouquet=bq, fta=fta_txt, ris=res, key=norm(nome)))
+                       bouquet=bq, fta=fta_txt, partial=partial, ris=res, key=norm(nome)))
     return ev
+
+def novita_pos(pos, ch, fta_news, all_news):
+    """Solo ENTRATE e USCITE di canali in chiaro (FTA puro)."""
+    def d(x): return datetime.date.fromisoformat(x)
+    stato = {c['key']: c['stato'] for c in ch}
+    cand, seen = [], set()
+    # pagina news "solo in chiaro" + eventuali nuovi canali FTA presenti solo nella pagina news completa
+    for e in fta_news + [e for e in all_news if e['tipo'] in ('arrivo', 'nuova_freq') and e['fta']]:
+        sig = (e['data'], e['tipo'], e['nome'])
+        if sig not in seen: seen.add(sig); cand.append(e)
+    out = []
+    for e in cand:
+        t = e['tipo']
+        if t not in ('arrivo', 'nuova_freq', 'uscita', 'chiuso'): continue      # niente codifiche / rientri / altro
+        if e['partial'] or stato.get(e['key']) == 'parziale': continue          # niente parzialmente in chiaro
+        if t in ('arrivo', 'nuova_freq') and not e['fta'] and e not in fta_news: continue
+        near = lambda types: any(o['tipo'] in types and o['key'] == e['key'] and abs((d(o['data']) - d(e['data'])).days) <= 3 for o in cand)
+        if t in ('uscita', 'nuova_freq') and near({'nuova_freq', 'tornato'} if t == 'uscita' else {'uscita'}): continue  # cambio frequenza / interruzione
+        if t == 'uscita' and near({'arrivo'}) and stato.get(e['key']) == 'chiaro': continue
+        tipo = 'entrata' if t in ('arrivo', 'nuova_freq') else 'uscita'
+        if tipo == 'entrata' and e['key'] not in stato and d(e['data']) < datetime.date.today() - datetime.timedelta(days=3):
+            pass  # entrato e poi sparito: l'uscita (se FTA) compare come evento separato
+        out.append(dict(data=e['data'], pos=pos, satellite=e['satellite'], tipo=tipo, chiuso=(t == 'chiuso'), nome=e['nome'],
+                        paese=e['paese'] or next((c['paese'] for c in ch if c['key'] == e['key'] and c['paese']), ''),
+                        bouquet=e['bouquet'], ris=e['ris'], key=e['key'], in_lista=e['key'] in stato))
+    return out
 
 def main():
     os.makedirs(RAW, exist_ok=True); os.makedirs(DATA, exist_ok=True)
@@ -180,46 +222,43 @@ def main():
                          parziali=sum(c['stato']=='parziale' for c in ch)))
         fta_news = parse_news(pos, fetch('news_%s.html' % pos, BASE + 'news.php?filtre=Clear&pos=' + pos))
         all_news = parse_news(pos, fetch('newsall_%s.html' % pos, BASE + 'news' + pos))
-        keys_fta_now = {c['key'] for c in ch}
-        seen = set(); evs = []
-        for e in fta_news + [e for e in all_news if e['fta'] or e['tipo'] in ('ora_criptato','ora_chiaro') or (e['key'] in keys_fta_now and e['tipo'] in ('arrivo','tornato','nuova_freq'))]:
-            sig = (e['data'], e['tipo'], e['nome'])
-            if sig in seen: continue
-            seen.add(sig); evs.append(e)
-        # "ha lasciato" + "nuova frequenza" dello stesso canale entro 3 giorni = semplice cambio frequenza -> ignorato
-        def d(x): return datetime.date.fromisoformat(x)
-        final = []
-        for e in evs:
-            if e['tipo'] in ('uscita','nuova_freq'):
-                other = 'nuova_freq' if e['tipo']=='uscita' else 'uscita'
-                if any(o['tipo'] in (other,'tornato') and o['key']==e['key'] and abs((d(o['data'])-d(e['data'])).days)<=3 for o in evs):
-                    continue
-                if e['tipo']=='nuova_freq': e['tipo']='arrivo'
-            if e['tipo']=='tornato' and any(o['tipo']=='uscita' and o['key']==e['key'] and abs((d(o['data'])-d(e['data'])).days)<=3 for o in evs):
-                continue
-            if e['tipo']=='uscita' and any(o['tipo']=='tornato' and o['key']==e['key'] and 0<=(d(o['data'])-d(e['data'])).days<=3 for o in evs):
-                continue
-            final.append(e)
-        events += final
-    # stesso giorno 'ora criptato' + 'ora in chiaro': tieni solo quello coerente con lo stato attuale
-    cur = {(c['pos'], c['key']) for c in channels}
-    def keep(e):
-        if e['tipo'] in ('ora_chiaro','ora_criptato'):
-            twin = any(o is not e and o['pos']==e['pos'] and o['key']==e['key'] and o['data']==e['data'] and o['tipo'] in ('ora_chiaro','ora_criptato') and o['tipo']!=e['tipo'] for o in events)
-            if twin: return (e['tipo']=='ora_chiaro') == ((e['pos'], e['key']) in cur)
-        return True
-    events = [e for e in events if keep(e)]
+        events += novita_pos(pos, ch, fta_news, all_news)
+    # garanzia: SOLO canali in chiaro o parzialmente in chiaro (nessun canale solo criptato)
+    for c in channels:
+        assert c['stato'] in ('chiaro', 'parziale'), c
+        assert c['stato'] == 'parziale' or not c['cas'], c
     for e in events:
-        e.pop('fta', None); e['in_lista'] = (e['pos'], e['key']) in cur
-        if not e['paese']:
-            m = [c['paese'] for c in channels if c['key']==e['key'] and c['paese']]
-            if m: e['paese'] = m[0]
+        assert e['tipo'] in ('entrata', 'uscita'), e
+    # controlli di sanità: se KingOfSat ha restituito pagine vuote/incomplete non sovrascrivere i dati
+    prev = {}
+    try:
+        old = json.load(open(os.path.join(DATA, 'channels.json')))
+        prev = {x['pos']: x['canali'] for x in old['satelliti']}
+    except Exception: old = None
+    bad = [x['pos'] for x in sats if x['canali'] == 0 or (prev.get(x['pos'], 0) >= 20 and x['canali'] < prev[x['pos']] * 0.5)]
+    if bad or len(channels) < 500:
+        print('ERRORE: dati sospetti (posizioni %s, totale %d): file in data/ NON modificati' % (bad, len(channels)), file=sys.stderr)
+        sys.exit(2)
     events.sort(key=lambda e: e['data'], reverse=True)
-    now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
-    meta = dict(fonte='KingOfSat (it.kingofsat.net)', aggiornato=now, luogo='Torino (45.07°N, 7.69°E)')
+    try:
+        from zoneinfo import ZoneInfo
+        now = datetime.datetime.now(ZoneInfo('Europe/Rome')).strftime('%Y-%m-%d %H:%M')
+    except Exception:
+        now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+    # se i contenuti non sono cambiati (o si lavora --offline) si conserva la data precedente: nessun commit inutile
+    if old is not None:
+        try:
+            old_ev = json.load(open(os.path.join(DATA, 'novita.json')))['eventi']
+            if '--offline' in sys.argv or (old['canali'] == channels and old['satelliti'] == sats and old_ev == events):
+                now = old['meta'].get('aggiornato', now)
+        except Exception: pass
+    meta = dict(fonte='KingOfSat (it.kingofsat.net)', aggiornato=now, luogo='Torino (45.07°N, 7.69°E)', fuso='Europe/Rome')
     json.dump(dict(meta=meta, satelliti=sats, canali=channels), open(os.path.join(DATA, 'channels.json'), 'w'), ensure_ascii=False, indent=1)
     json.dump(dict(meta=meta, eventi=events), open(os.path.join(DATA, 'novita.json'), 'w'), ensure_ascii=False, indent=1)
     for s_ in sats: print(s_)
     print('canali', len(channels), 'eventi', len(events), collections.Counter(e['tipo'] for e in events))
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    try: main()
+    except FetchError as e:
+        print('ERRORE: KingOfSat non raggiungibile (%s): file in data/ NON modificati' % e, file=sys.stderr); sys.exit(2)

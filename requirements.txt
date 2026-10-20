@@ -1,0 +1,2 @@
+# Dipendenze per l'aggiornamento automatico (scraper + build usano solo la libreria standard di Python 3.9+)
+tzdata>=2024.1  # fuso orario Europe/Rome per zoneinfo

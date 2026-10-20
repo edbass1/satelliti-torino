@@ -1,0 +1,54 @@
+name: Aggiorna canali (ogni 12 ore)
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'   # 00:00 e 12:00 UTC (02:00 / 14:00 ora di Roma d'estate)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aggiorna-dati
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installa dipendenze
+        run: pip install -r requirements.txt
+
+      - name: Scarica i dati da KingOfSat e rigenera il sito
+        id: scrape
+        env:
+          TZ: Europe/Rome
+        run: |
+          if python3 scraper/scrape.py; then
+            python3 build/build.py
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::KingOfSat non raggiungibile o dati incompleti: dati e pagine NON modificati"
+            git checkout -- data/ || true
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit e push se qualcosa è cambiato
+        if: steps.scrape.outputs.ok == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ index.html opzione-*.html scelta-versioni.html
+          if git diff --cached --quiet; then
+            echo "Nessuna variazione nei dati: nessun commit."
+          else
+            git commit -m "Aggiornamento automatico canali ($(TZ=Europe/Rome date '+%d/%m/%Y %H:%M'))"
+            git push
+          fi
