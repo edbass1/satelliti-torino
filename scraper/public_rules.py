@@ -1,0 +1,67 @@
+# Regole per riconoscere le emittenti pubbliche europee (servizio pubblico) dal nome canale
+# (paese, ente, regex sul nome, paesi KingOfSat ammessi o None)
+import re
+RULES = [
+ ('Italia','RAI', r'^rai\b', None),
+ ('Italia','Parlamento italiano', r'^(camera dei deputati|senato italiano)', None),
+ ('San Marino','San Marino RTV', r'^smtv san marino', None),
+ ('Vaticano','Vatican Media', r'^vatican media', None),
+ ('Francia','France Télévisions', r'^(france [2345]\b|franceinfo|france info)', None),
+ ('Francia','France Médias Monde', r'^france 24', None),
+ ('Francia','LCP / Public Sénat', r'^(lcp|public s[ée]nat)', None),
+ ('Internazionale','TV5Monde', r'^tv5 ?monde', None),
+ ('Internazionale','ARTE', r'^arte\b(?! italia)', None),
+ ('Germania','ARD', r'^(das erste|ard[- ]alpha|tagesschau ?24|one hd|one$|phoenix hd|phoenix$|kika|bayerisches fernsehen|br fernsehen|mdr |ndr |radio bremen|sr fernsehen|s[üu]dwest fernsehen|swr|wdr|hr[- ]fernsehen|rbb )', ['Germania','']),
+ ('Germania','ZDF', r'^(zdf|3sat)', None),
+ ('Germania','Deutsche Welle', r'^dw\b', None),
+ ('Austria','ORF', r'^orf\b', None),
+ ('Svizzera','SRG SSR', r'^(srf|rsi|rts (un|deux|1|2)\b)', None),
+ ('Spagna','RTVE', r'^(la 1\b|la 2\b|24 horas|tve internacional|clan tve|teledeporte)', None),
+ ('Spagna','Emittenti regionali pubbliche', r'^(arag[oó]n (tv|sat)|canal sur|television castilla|cmm|tv3|3cat|etb|tvg|telemadrid|[àa] punt|ib3|canal extremadura|televisi[oó]n canaria|tpa)\b', None),
+ ('Portogallo','RTP', r'^rtp\b', None),
+ ('Regno Unito','BBC', r'^bbc\b|^cbbc|^cbeebies', None),
+ ('Regno Unito','S4C', r'^s4c', None),
+ ('Irlanda','RTÉ / TG4', r'^(rt[ée]\b|tg4)', None),
+ ('Paesi Bassi / Belgio','BVN (NPO/VRT)', r'^bvn\b', None),
+ ('Paesi Bassi','NPO', r'^npo', None),
+ ('Belgio','VRT / RTBF', r'^(vrt|een\b|canvas|ketnet|la une|tipik|la trois)', None),
+ ('Unione Europea','Europe by Satellite (EBS)', r'^ebs\+?\b', None),
+ ('Lussemburgo','Chamber TV', r'^chamber tv', None),
+ ('Monaco','TV Monaco', r'^tv monaco', None),
+ ('Polonia','TVP', r'^(tvp|belsat)', None),
+ ('Repubblica Ceca','Česká televize', r'^(ct|čt) ?(1|2|24|sport|art|:d)\b', None),
+ ('Slovacchia','STVR (RTVS)', r'^(rtvs|stvr|jednotka|dvojka|:24)', None),
+ ('Ungheria','MTVA', r'^(m1|m2|m4 sport|m5|duna)\b', ['Ungheria']),
+ ('Slovenia','RTV Slovenija', r'^slo ?[123]\b|^tv slo', None),
+ ('Croazia','HRT', r'^hrt\b', ['Croazia','']),
+ ('Serbia','RTS', r'^rts (svet|1|2|sat)\b', None),
+ ('Bosnia ed Erzegovina','BHRT / RTRS / FTV', r'^(bht|rtrs|ftv)\b', None),
+ ('Montenegro','RTCG', r'^tvcg', None),
+ ('Kosovo','RTK', r'^rtk\b', None),
+ ('Macedonia del Nord','MRT', r'^mrt\b', None),
+ ('Albania','RTSH', r'^rtsh', None),
+ ('Grecia','ERT', r'^ert\b', None),
+ ('Grecia','Parlamento greco (Vouli TV)', r'^(kanali voulis|vouli)', None),
+ ('Cipro','RIK', r'^rik\b', None),
+ ('Bulgaria','BNT', r'^bnt\b', None),
+ ('Romania','TVR', r'^tvr\b(?! teleitalia)', None),
+ ('Moldavia','TRM (Moldova 1)', r'^moldova 1', None),
+ ('Ucraina','Suspilne / Rada', r'^(suspilne|ua:? ?pershyi|rada$)', None),
+ ('Turchia','TRT', r'^trt\b', None),
+ ('Turchia','TBMM TV', r'^tbmm', None),
+ ('Malta','PBS (TVM)', r'^tvm\b', None),
+ ('Lituania','LRT', r'^lrt\b', None),
+ ('Lettonia','LTV', r'^ltv ?[17]\b', None),
+ ('Estonia','ERR', r'^etv\b', ['Estonia']),
+ ('Norvegia','NRK', r'^nrk', None),
+ ('Svezia','SVT', r'^svt', None),
+ ('Danimarca','DR', r'^dr ?(1|2|ramasjang)\b', None),
+ ('Finlandia','Yle', r'^yle', None),
+]
+_C = [(p, e, re.compile(r, re.I), a) for p, e, r, a in RULES]
+def classify(name, kos_country):
+    n = name.strip()
+    for p, e, r, allowed in _C:
+        if r.search(n) and (allowed is None or kos_country in allowed):
+            return {'paese': p, 'ente': e}
+    return None

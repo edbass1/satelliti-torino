@@ -1,0 +1,39 @@
+*{box-sizing:border-box}html,body{margin:0;background:#000;color:#eee}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}select,input{font:inherit}
+a{color:inherit}
+.bdg{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 6px;border-radius:5px;line-height:1.4;white-space:nowrap}
+.b-hd{background:#1d4ed8;color:#fff}.b-4k{background:linear-gradient(90deg,#f59e0b,#ef4444);color:#fff}.b-sd{background:#2a2a2a;color:#999}
+.b-fta{background:#064e3b;color:#6ee7b7}.b-part{background:#3b2a00;color:#fbbf24;border:1px dashed #fbbf24}.b-hard{background:#3a0d0d;color:#fca5a5}
+.sbdg{display:inline-flex;gap:4px;align-items:center;font-size:11.5px;padding:3px 8px;border-radius:999px;border:1px solid #2f2f2f;background:#111;margin:2px 4px 2px 0;white-space:nowrap}
+.sbdg b{font-weight:700;color:#8ab4ff}.sbdg i{font-style:normal;font-size:10px;font-weight:800;background:#1d4ed8;color:#fff;border-radius:4px;padding:0 4px}
+.sbdg.part{border-style:dashed;border-color:#b58900}.sbdg.part i:last-child{background:#3b2a00;color:#fbbf24}.sbdg.hard{opacity:.6}
+.sbdg:hover{border-color:#8ab4ff}
+.filters,.pubctl{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end}
+.fl{display:flex;flex-direction:column;gap:4px;font-size:12px;color:#999}.fl.wide{flex:1 1 100%}
+.fl select,.fl input{background:#111;color:#eee;border:1px solid #333;border-radius:8px;padding:7px 10px;min-width:150px}
+.chk{font-size:13px;color:#bbb;display:flex;align-items:center;gap:6px}
+.reset,.more{background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:7px 12px;font-size:13px}
+.more{display:block;margin:24px auto;padding:10px 22px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 100%}
+.chip{background:#111;border:1px solid #333;border-radius:999px;padding:5px 11px;font-size:12.5px}.chip.on{background:#eee;color:#000;border-color:#eee}
+.chip small{opacity:.6}
+.pubctl .row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.gjump{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 18px}.gjump a{font-size:12px;text-decoration:none;padding:3px 9px;border-radius:999px;background:#151515;border:1px solid #262626}
+.gjump small{opacity:.55}
+.gh small{opacity:.5;font-weight:400;font-size:.7em;margin-left:6px}
+.count{color:#888;font-size:13px}.empty{color:#888;padding:30px 0;text-align:center}
+.satinfo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-end}
+.satinfo h1{margin:0}.satinfo p{margin:4px 0 0;color:#999}
+.kpi{display:flex;flex-wrap:wrap;gap:18px;list-style:none;margin:0;padding:0}.kpi li{display:flex;flex-direction:column}.kpi b{font-size:22px}.kpi span{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.06em}
+.pubrow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #1c1c1c}
+.pubrow .pn{display:flex;gap:10px;align-items:center;min-width:240px}.pubrow small{display:block;color:#888;font-size:12px}
+.logo{display:grid;place-items:center;font-weight:800;border-radius:10px;background:hsl(var(--h) 60% 22%);color:hsl(var(--h) 90% 80%);width:46px;height:46px;flex:none;font-size:15px}
+.logo.sm{width:34px;height:34px;font-size:12px;border-radius:8px}
+.ev{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:9px 0;border-bottom:1px solid #1a1a1a}
+.evt{font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px}.ev-in .evt{background:#052e1c;color:#4ade80}.ev-out .evt{background:#2e0505;color:#f87171}
+.evm{color:#888;font-size:13px}.tday{text-transform:capitalize;font-size:14px;color:#aaa;margin:22px 0 4px}
+.pubtag{font-size:11.5px;color:#a5b4fc;margin-top:3px}
+@media(max-width:640px){.fl select,.fl input{min-width:0;width:100%}.fl{flex:1 1 45%}}
+@media(max-width:640px){nav{flex-wrap:wrap!important;margin-left:0!important}nav button{padding:6px 10px!important;font-size:13px!important}
+ #satsel{scrollbar-width:none}.satinfo h1{font-size:30px!important}}
