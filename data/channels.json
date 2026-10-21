@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-21 02:25",
+  "aggiornato": "2026-10-21 14:29",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -3861,6 +3861,50 @@
    "pos": "42E"
   },
   {
+   "id": "25927",
+   "nome": "0 Sifir TV",
+   "key": "0 sifir tv",
+   "paese": "Turchia",
+   "genere": "Sport",
+   "lingue": [
+    "Turco"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Digitürk"
+   ],
+   "sito": "",
+   "agg": "2026-08-16",
+   "ricezione": "difficile",
+   "nota": "",
+   "pubblico": null,
+   "pos": "42E"
+  },
+  {
+   "id": "16698",
+   "nome": "beIN Sports Haber HD",
+   "key": "bein sports haber",
+   "paese": "Turchia",
+   "genere": "Sport",
+   "lingue": [
+    "Turco"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Digitürk"
+   ],
+   "sito": "",
+   "agg": "2026-08-16",
+   "ricezione": "difficile",
+   "nota": "",
+   "pubblico": null,
+   "pos": "42E"
+  },
+  {
    "id": "19143",
    "nome": "TGRT Haber HD",
    "key": "tgrt haber",
@@ -3919,50 +3963,6 @@
    "sito": "",
    "agg": "2025-06-04",
    "ricezione": "buona",
-   "nota": "",
-   "pubblico": null,
-   "pos": "42E"
-  },
-  {
-   "id": "25927",
-   "nome": "0 Sifir TV",
-   "key": "0 sifir tv",
-   "paese": "Turchia",
-   "genere": "Sport",
-   "lingue": [
-    "Turco"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Digitürk"
-   ],
-   "sito": "",
-   "agg": "2026-08-16",
-   "ricezione": "difficile",
-   "nota": "",
-   "pubblico": null,
-   "pos": "42E"
-  },
-  {
-   "id": "16698",
-   "nome": "beIN Sports Haber HD",
-   "key": "bein sports haber",
-   "paese": "Turchia",
-   "genere": "Sport",
-   "lingue": [
-    "Turco"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Digitürk"
-   ],
-   "sito": "",
-   "agg": "2026-08-16",
-   "ricezione": "difficile",
    "nota": "",
    "pubblico": null,
    "pos": "42E"
