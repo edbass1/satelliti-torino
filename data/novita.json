@@ -1,11 +1,63 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-21 14:29",
+  "aggiornato": "2026-10-21 19:23",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-21",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Home TV Polska",
+   "paese": "Polonia",
+   "bouquet": "Platforma Canal+",
+   "ris": "",
+   "key": "home tv polska",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-21",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Nuta Gold",
+   "paese": "Polonia",
+   "bouquet": "",
+   "ris": "",
+   "key": "nuta gold",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-21",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Nuta TV",
+   "paese": "Polonia",
+   "bouquet": "",
+   "ris": "",
+   "key": "nuta tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-21",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Power TV (Poland)",
+   "paese": "Polonia",
+   "bouquet": "Platforma Canal+",
+   "ris": "",
+   "key": "power tv poland",
+   "in_lista": true
+  },
   {
    "data": "2026-10-18",
    "pos": "42E",

@@ -5,7 +5,7 @@ from countries import info as cinfo
 import base64, glob
 ch = json.load(open(os.path.join(ROOT, 'data/channels.json'))); nv = json.load(open(os.path.join(ROOT, 'data/novita.json')))
 comp = [[c['nome'], c['pos'], c['paese'], c['genere'], c['lingue'], c['ris'], 2 if c['stato']=='parziale' else 1,
-         1 if c['ricezione']=='difficile' else 0, c['nota'], [c['pubblico']['paese'], c['pubblico']['ente']] if c['pubblico'] else 0, c['key'], (c['bouquet'] or [''])[0], cinfo(c['paese'])[0] or '', cinfo(c['paese'])[1]] for c in ch['canali']]
+         1 if c['ricezione']=='difficile' else 0, c['nota'], [c['pubblico']['paese'], c['pubblico']['ente']] if c['pubblico'] else 0, c['key'], (c['bouquet'] or [''])[0], cinfo(c['paese'])[0] or '', cinfo(c['paese'])[1], c.get('ms',''), c.get('isi'), c.get('pls','')] for c in ch['canali']]
 ev = [dict(d=e['data'], p=e['pos'], t=e['tipo'], n=e['nome'], c=e['paese'], b=e['bouquet'], r=e['ris'], il=e['in_lista'], ch=e.get('chiuso', False), iso=cinfo(e['paese'])[0] or '', co=cinfo(e['paese'])[1]) for e in nv['eventi']]
 data = dict(meta=ch['meta'], sats=ch['satelliti'], ch=comp, ev=ev)
 DJ = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')

@@ -1,9 +1,12 @@
 import asyncio, os
 from playwright.async_api import async_playwright
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+async def launch(p):
+    try: return await p.chromium.launch()
+    except Exception: return await p.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--headless=new'])
 async def main():
     async with async_playwright() as p:
-        b = await p.chromium.launch(); pg = await b.new_page(viewport={'width':1440,'height':900})
+        b = await launch(p); pg = await b.new_page(viewport={'width':1440,'height':900})
         errs = []; pg.on('pageerror', lambda e: errs.append(str(e))); pg.on('console', lambda m: errs.append(m.text) if m.type=='error' else None)
         await pg.goto(f'file://{ROOT}/index.html'); await pg.evaluate('localStorage.clear()'); await pg.reload(); await pg.wait_for_timeout(500)
         r = {}
@@ -47,6 +50,21 @@ async def main():
         await pg.screenshot(path=f'{ROOT}/screens/opzione-1.png')
         await pg.set_viewport_size({'width':390,'height':844}); await pg.wait_for_timeout(300)
         await pg.screenshot(path=f'{ROOT}/screens/opzione-1-mobile.png')
+        await pg.set_viewport_size({'width':1440,'height':900})
+        await pg.evaluate("SATAPP.setSat('9E')"); await pg.wait_for_timeout(300)
+        r['9E_cards'] = await cnt()
+        r['9E_badges'] = await pg.evaluate("({ms:document.querySelectorAll('#results .b-ms').length, ok:document.querySelectorAll('#results .b-msok').length})")
+        await pg.select_option('#f-group',''); await pg.wait_for_timeout(200)
+        await pg.evaluate("document.querySelector('#results .b-msok')?.scrollIntoView({block:'center'})"); await pg.wait_for_timeout(300)
+        await pg.screenshot(path=f'{ROOT}/screens/opzione-1-multistream.png')
+        await pg.evaluate("scrollTo(0,0)"); await pg.click('#f-ms'); await pg.wait_for_timeout(300)
+        r['9E_hide_ms'] = await cnt()
+        await pg.click('#f-hard'); await pg.wait_for_timeout(200); r['f_hard_works'] = await pg.evaluate('SATAPP.st.hideHard'); await pg.click('#f-hard'); await pg.wait_for_timeout(200)
+        await pg.evaluate("SATAPP.setSat('5W')"); await pg.wait_for_timeout(300)
+        r['5W_t2mi_after_hide'] = await pg.evaluate("document.querySelectorAll('#results .b-t2mi,#results .b-ms').length")
+        await pg.click('#f-ms'); await pg.wait_for_timeout(300)
+        r['5W_t2mi'] = await pg.evaluate("document.querySelectorAll('#results .b-t2mi').length")
+        r['no_freq_text'] = await pg.evaluate("!/\\b1[0-2]\\d{3}([.,]\\d+)?\\s?(MHz|[HV]\\b)/.test(document.body.innerText)")
         for k,v in r.items(): print(k, v)
         print('ERR', errs); await b.close()
 asyncio.run(main())

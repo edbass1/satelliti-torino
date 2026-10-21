@@ -40,7 +40,7 @@ footer p{margin:6px 0 0}footer a{color:#8ab4ff;text-decoration:none}
 ''',
 body=f'''<header><div class="bar"><div class="brand">Satelliti <span>da Torino</span></div>{SEARCH}<nav class="seg">{NAV}</nav><div id="fontslot"></div></div></header>
 <main><div class="upd"><span id="lastupd"></span></div><div id="contsel" class="contbar" role="group" aria-label="Filtra per continente"></div><div id="satsel"></div><div id="head"></div><div id="controls"></div><div id="results"></div></main>
-<footer><div id="meta"></div><p><a href="scelta-versioni.html">Altre versioni del design</a> · Bandiere: flag-icons (MIT)</p></footer>''', js='window.SKIN={continents:true,flags:true};', flags=True)
+<footer><div id="meta"></div><p><a href="scelta-versioni.html">Altre versioni del design</a> · Bandiere: flag-icons (MIT)</p></footer>''', js='window.SKIN={continents:true,flags:true,ms:true};', flags=True)
 
 T[2] = dict(title='Neon Cyberpunk', desc='Luci al neon magenta/ciano, font monospazio, satellite scelto da una tendina “finestrella”.',
 css='''

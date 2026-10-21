@@ -73,6 +73,42 @@ def norm(n):
     n = re.sub(r'[^a-z0-9àèéìòùäöüçñşğıé]+', ' ', n)
     return ' '.join(n.split())
 
+MS_RANK = {'': 0, 'def': 1, 'mis': 2, 't2mi': 3}   # 0 = più facile da ricevere
+def stream_info(part):
+    """Analizza un transponder KingOfSat: tipo di flusso, stream (ISI), PLS, blocchi T2-MI.
+    Restituisce (info_transponder, lista di (chunk_html, isi, t2mi))."""
+    toks = re.split(r'(<table class="frq kos-stream-summary">.*?</table>)', part, flags=re.S)
+    head = None; streams = {}; chunks = []; isi = None; t2 = False
+    for tk in toks:
+        if tk.startswith('<table class="frq kos-stream-summary">'):
+            t = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' | ', tk)))
+            idt = re.search(r'NID (\d+) - TSID (\d+)', t)
+            m = re.search(r'\|\s*Stream (\d+)\s*\|', t)
+            if m:
+                isi = int(m.group(1)); t2 = False; streams[isi] = idt.groups() if idt else None
+            elif 'T2-MI' in t: t2 = True
+            elif head is None and 'Stream' in t:
+                head = dict(tipo=t, mis=' - MIS - ' in t, id=idt.groups() if idt else None)
+        else:
+            chunks.append((tk, isi, t2))
+    pls = re.search(r'PLS: ([^<]+)<', part)
+    pls = pls.group(1).strip() if pls else ''
+    head = head or dict(tipo='', mis=False, id=None)
+    mis = head['mis'] or len(streams) >= 2
+    default = None
+    if mis and streams and head['id']:
+        low = min(streams)
+        if streams[low] == head['id']: default = low   # stream che KingOfSat riceve come flusso principale = ISI più basso
+    return dict(mis=mis, pls=pls, pls_default=pls in ('', 'Root+1', 'Gold+0'), default=default, n=len(streams)), chunks
+
+def ms_class(ti, isi, t2):
+    """'' = normale, 'def' = multistream ma flusso principale, 'mis' = serve tuner multistream/PLS, 't2mi' = T2-MI"""
+    if t2: return 't2mi'
+    if not ti['pls_default']: return 'mis'
+    if not ti['mis']: return ''
+    if isi is not None and ti['default'] is not None and isi == ti['default']: return 'def'
+    return 'mis'
+
 def parse_pos(pos, s, tempfta_ids):
     out = {}
     hard = HARD_BEAMS.get(pos, set())
@@ -82,8 +118,9 @@ def parse_pos(pos, s, tempfta_ids):
     for part in parts:
         m = re.search(r'href="beams\.php\?[^"]*">([^<]+)</a>', part)
         if m and 'frequency-row' in part[:400]: beam = html.unescape(m.group(1))
-        for row in re.findall(r'<tr data-channel-id="(\d*)">(.*?)</tr>', part, re.S):
-            cid, r = row
+        ti, chunks = stream_info(part)
+        rows = [(cid, r, isi, t2) for ch_, isi, t2 in chunks for cid, r in re.findall(r'<tr data-channel-id="(\d*)">(.*?)</tr>', ch_, re.S)]
+        for cid, r, isi, t2 in rows:
             vrd = re.search(r'<td class="vrd[^"]*">(.*?)</td>', r, re.S)
             if not vrd or not re.search(r'zap\.gif|tv\.gif', vrd.group(1)): continue  # solo TV
             name = txt(re.search(r'<td class="ch">(.*?)</td>', r, re.S).group(1))
@@ -114,12 +151,15 @@ def parse_pos(pos, s, tempfta_ids):
                      genere=GENRE.get(genre, genre) if genre else '', lingue=langs, ris=res, stato=status,
                      cas=cas, bouquet=[html.unescape(x) for x in pk], sito=site.group(1) if site else '',
                      agg=upd.group(1) if upd else '', ricezione=rec, nota=nota)
+            c['ms'] = ms_class(ti, isi, t2); c['isi'] = isi if (ti['mis'] or t2) else None
+            c['pls'] = '' if ti['pls_default'] else ti['pls']
             c['pubblico'] = classify(name, c['paese'])
             k = (c['nome'].lower())
             if k in out:  # stesso canale su più frequenze: tieni il "migliore"
                 o = out[k]
                 if o['stato']=='parziale' and c['stato']=='chiaro': o['stato']='chiaro'; o['cas']=[]
                 if o['ricezione']=='difficile' and rec=='buona': o['ricezione']='buona'
+                if MS_RANK[c['ms']] < MS_RANK[o['ms']]: o['ms'], o['isi'], o['pls'] = c['ms'], c['isi'], c['pls']
                 for l in langs:
                     if l not in o['lingue']: o['lingue'].append(l)
             else: out[k] = c
@@ -227,6 +267,7 @@ def main():
     for c in channels:
         assert c['stato'] in ('chiaro', 'parziale'), c
         assert c['stato'] == 'parziale' or not c['cas'], c
+        assert c['ms'] in MS_RANK, c
     for e in events:
         assert e['tipo'] in ('entrata', 'uscita'), e
     # controlli di sanità: se KingOfSat ha restituito pagine vuote/incomplete non sovrascrivere i dati

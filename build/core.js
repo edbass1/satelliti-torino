@@ -17,12 +17,12 @@ function point(lonSat){ // azimut/elevazione da Torino
 }
 D.sats.forEach(s => Object.assign(s, point(s.lon)));
 // canali: espansione formato compatto
-const CH = D.ch.map((a,i) => ({i, n:a[0], p:a[1], c:a[2], g:a[3]||'', l:a[4]||[], r:a[5], s:a[6], hard:!!a[7], o:a[8]||'', pub:a[9]||null, k:a[10], b:a[11]||'', iso:a[12]||'', cont:a[13]||'Non specificato'}));
+const CH = D.ch.map((a,i) => ({i, n:a[0], p:a[1], c:a[2], g:a[3]||'', l:a[4]||[], r:a[5], s:a[6], hard:!!a[7], o:a[8]||'', pub:a[9]||null, k:a[10], b:a[11]||'', iso:a[12]||'', cont:a[13]||'Non specificato', ms:a[14]||'', isi:a[15], pls:a[16]||''}));
 CH.forEach(c => c.f = fold(c.n + ' ' + c.c + ' ' + c.g + ' ' + c.l.join(' ') + ' ' + c.b + ' ' + (c.pub ? c.pub[0]+' '+c.pub[1] : '')));
 // aggregazione per canale (stesso canale su più satelliti)
 const AGG = new Map();
 CH.forEach(c => { let a = AGG.get(c.k); if(!a){ a = {k:c.k, n:c.n, items:[]}; AGG.set(c.k, a);} a.items.push(c); if(c.n.length < a.n.length) a.n = c.n; });
-AGG.forEach(a => { a.items.sort((x,y)=>SAT[y.p].lon - SAT[x.p].lon); const f=a.items[0]; a.c=f.c; a.g=f.g; a.pub=a.items.find(x=>x.pub)?.pub||null; a.iso=f.iso; a.cont=f.cont;
+AGG.forEach(a => { a.items.sort((x,y)=>SAT[y.p].lon - SAT[x.p].lon); const f=a.items[0]; a.c=f.c; a.g=f.g; a.pub=a.items.find(x=>x.pub)?.pub||null; a.iso=f.iso; a.cont=f.cont; const RK={'':0,def:1,mis:2,t2mi:3}; a.ms=a.items.reduce((m,x)=>RK[x.ms]<RK[m]?x.ms:m, a.items[0].ms);
   a.l=[...new Set(a.items.flatMap(x=>x.l))]; a.r = a.items.some(x=>x.r==='UHD')?'UHD':a.items.some(x=>x.r==='HD')?'HD':'SD';
   a.s = a.items.some(x=>x.s===1)?1:2; a.hard = a.items.every(x=>x.hard); a.f = a.items.map(x=>x.f).join(' '); });
 const GENRES = [...new Set(CH.map(c=>c.g).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'it'));
@@ -32,15 +32,15 @@ const PUBC = [...new Set(CH.filter(c=>c.pub).map(c=>c.pub[0]))].sort((a,b)=>a.lo
 const ADJ = {franc:'Francia',tedesc:'Germania',german:'Germania',ital:'Italia',spagn:'Spagna',ingles:'Regno Unito',britann:'Regno Unito',ingl:'Regno Unito',uk:'Regno Unito',austr:'Austria',svizz:'Svizzera',portog:'Portogallo',polac:'Polonia',ceco:'Repubblica Ceca',cechi:'Repubblica Ceca',ceca:'Repubblica Ceca',slovacc:'Slovacchia',ungher:'Ungheria',sloven:'Slovenia',croat:'Croazia',serb:'Serbia',bosn:'Bosnia ed Erzegovina',monten:'Montenegro',kosov:'Kosovo',alban:'Albania',grec:'Grecia',cipr:'Cipro',bulgar:'Bulgaria',romen:'Romania',rumen:'Romania',moldav:'Moldavia',ucrain:'Ucraina',turc:'Turchia',lituan:'Lituania',lussemb:'Lussemburgo',moneg:'Monaco',belg:'Paesi Bassi / Belgio',oland:'Paesi Bassi / Belgio',fiamming:'Paesi Bassi / Belgio',sammarin:'San Marino',vatican:'Vaticano',europe:'Unione Europea',ue:'Unione Europea',internaz:'Internazionale'};
 const CONTS = [['Europa','🌍'],['Asia','🌏'],['Africa','🌍'],['America','🌎'],['Oceania','🌏'],['Non specificato','🌐']];
 const CONT_KEY='satTorino.continenti';
-const useCont = !!SKIN.continents, useFlags = !!SKIN.flags;
+const useCont = !!SKIN.continents, useFlags = !!SKIN.flags, useMs = !!SKIN.ms;
 const st = {conts:(()=>{ try{ const v=JSON.parse(localStorage.getItem(CONT_KEY)); if(Array.isArray(v)) return new Set(v.filter(x=>CONTS.some(c=>c[0]===x))); }catch(_){} return new Set(CONTS.map(c=>c[0])); })(), view:'sat', sat:(D.sats.find(s=>s.pos==='13E')||D.sats[0]).pos, q:'', genre:'', lang:'', res:'', stato:'', hideHard:false, group:'genere', limit:240,
-  pubSel:new Set(['Italia','Francia','Germania']), pubPart:true, nSat:'', nType:'', nDays:''};
+  hideMs:false, pubSel:new Set(['Italia','Francia','Germania']), pubPart:true, nSat:'', nType:'', nDays:''};
 const api = {st, D, SAT, CH, AGG, esc, setSat, setView, render, badgeSat, resBadge, statoBadge};
 window.SATAPP = api;
 
 function resBadge(r){ return r==='UHD' ? '<span class="bdg b-4k" title="Ultra HD 4K">4K</span>' : r==='HD' ? '<span class="bdg b-hd" title="Alta definizione">HD</span>' : '<span class="bdg b-sd" title="Definizione standard">SD</span>'; }
 function statoBadge(s){ return s===2 ? '<span class="bdg b-part" title="Parzialmente in chiaro: in alcuni periodi/eventi può essere criptato (o è temporaneamente in chiaro)">PARZIALE</span>' : '<span class="bdg b-fta" title="In chiaro">IN CHIARO</span>'; }
-function badgeSat(c, withRes){ const s=SAT[c.p]; return `<button class="sbdg${c.s===2?' part':''}${c.hard?' hard':''}" data-gosat="${c.p}" title="${esc(s.nome)}${c.s===2?' · parzialmente in chiaro':''}${c.hard?' · fascio non diretto sull\u2019Italia (ricezione difficile da Torino)':''}">${esc(s.nome.replace(/ \d.*$/,''))} <b>${esc(s.pos.replace('E','°E').replace('W','°W'))}</b>${withRes&&c.r!=='SD'?' <i>'+(c.r==='UHD'?'4K':'HD')+'</i>':''}${c.s===2?' <i>parz.</i>':''}</button>`; }
+function badgeSat(c, withRes){ const s=SAT[c.p]; return `<button class="sbdg${c.s===2?' part':''}${c.hard?' hard':''}" data-gosat="${c.p}" title="${esc(s.nome)}${c.s===2?' · parzialmente in chiaro':''}${c.hard?' · fascio non diretto sull\u2019Italia (ricezione difficile da Torino)':''}">${esc(s.nome.replace(/ \d.*$/,''))} <b>${esc(s.pos.replace('E','°E').replace('W','°W'))}</b>${withRes&&c.r!=='SD'?' <i>'+(c.r==='UHD'?'4K':'HD')+'</i>':''}${c.s===2?' <i>parz.</i>':''}${useMs&&c.ms==='mis'?' <i class="ms" title="Serve tuner multistream">MS</i>':''}${useMs&&c.ms==='t2mi'?' <i class="ms" title="T2-MI: serve plugin">T2-MI</i>':''}</button>`; }
 function initials(n){ const w = n.replace(/[^\p{L}\p{N} ]/gu,' ').split(/\s+/).filter(Boolean); return (w.length>1 ? w[0][0]+(/\d/.test(w[1][0])?w[1]:w[1][0]) : (w[0]||'?').slice(0,2)).toUpperCase().slice(0,3); }
 function hue(s){ let h=0; for(const ch of s) h=(h*31+ch.charCodeAt(0))%360; return h; }
 api.initials = initials; api.hue = hue;
@@ -57,7 +57,7 @@ function defaultCard(c, agg){
       <div class="meta">${[x.c, x.g, x.l.slice(0,3).join(', ')].filter(Boolean).map(esc).join(' · ')||'—'}${(c&&c.o)?' · <em>'+esc(c.o)+'</em>':''}</div>
       ${x.pub?`<div class="pubtag">🏛 Servizio pubblico · ${esc(x.pub[1])}</div>`:''}
       ${sats}</div>
-    <div class="tags">${resBadge(x.r)}${statoBadge(x.s)}${(!agg&&c.hard)?'<span class="bdg b-hard" title="Fascio non diretto sull\u2019Italia: da Torino serve una parabola grande o non è ricevibile">⚠ DIFFICILE</span>':''}</div>
+    <div class="tags">${resBadge(x.r)}${statoBadge(x.s)}${msBadge(x)}${(!agg&&c.hard)?'<span class="bdg b-hard" title="Fascio non diretto sull\u2019Italia: da Torino serve una parabola grande o non è ricevibile">⚠ DIFFICILE</span>':''}</div>
   </article>`;
 }
 const card = SKIN.card || defaultCard;
@@ -71,13 +71,20 @@ function filtersHTML(){
    <label class="fl"><span>Stato</span><select id="f-stato">${opt('','Chiaro + parziali',st.stato)}${opt('1','Solo in chiaro',st.stato)}${opt('2','Solo parzialmente in chiaro',st.stato)}</select></label>
    <label class="fl"><span>Raggruppa</span><select id="f-group">${opt('genere','Per genere',st.group)}${opt('lingua','Per lingua',st.group)}${opt('paese','Per paese',st.group)}${opt('','Nessun gruppo (A-Z)',st.group)}</select></label>
    <label class="chk"><input type="checkbox" id="f-hard"${st.hideHard?' checked':''}> Nascondi ricezione difficile da Torino</label>
-   ${(st.genre||st.lang||st.res||st.stato||st.hideHard)?'<button class="reset" id="f-reset">Azzera filtri</button>':''}
+   ${useMs?`<label class="chk" title="Nasconde i canali con badge MULTISTREAM o T2-MI, che una TV normale non riceve"><input type="checkbox" id="f-ms"${st.hideMs?' checked':''}> Nascondi canali che richiedono multistream / T2-MI</label>`:''}
+   ${(st.genre||st.lang||st.res||st.stato||st.hideHard||st.hideMs)?'<button class="reset" id="f-reset">Azzera filtri</button>':''}
   </div>`;
 }
+function msBadge(x){ if(!useMs || !x.ms) return '';
+  if(x.ms==='t2mi') return '<span class="bdg b-t2mi" title="Trasmesso in formato T2-MI (DVB-T2 incapsulato nel segnale satellitare): serve un ricevitore (es. Enigma2) con plugin T2-MI. Non visibile su una TV normale.">T2-MI</span>';
+  if(x.ms==='mis') return `<span class="bdg b-ms" title="Su un transponder multistream${x.pls?' con codice PLS':''}: serve un ricevitore con tuner multistream (MIS)${x.pls?' e impostazione PLS':''}. Un televisore normale di solito non lo riceve.${x.isi!=null?' Stream ID (ISI): '+x.isi+'.':''}">MULTISTREAM</span>`;
+  return '<span class="bdg b-msok" title="Il transponder è multistream, ma questo canale è nel flusso principale (quello che KingOfSat riceve di default, ISI più basso): di solito si vede anche con una TV o un decoder normale.">OK TV NORMALE</span>'; }
+api.msBadge = msBadge;
 function contOK(x){ return !useCont || st.conts.has(x.cont || 'Non specificato'); }
 api.contOK = contOK;
 function pass(x){
   if(!contOK(x)) return false;
+  if(useMs && st.hideMs && (x.ms==='mis' || x.ms==='t2mi')) return false;
   if(st.genre && x.g!==st.genre) return false;
   if(st.lang && !x.l.includes(st.lang)) return false;
   if(st.res==='HD' && x.r==='SD') return false;
@@ -105,7 +112,7 @@ function listHTML(items, isAgg){
 function satInfoHTML(s){
   const ch = CH.filter(c=>c.p===s.pos && contOK(c));
   return `<div class="satinfo"><div><h1>${esc(s.nome)}</h1><p>${esc(s.satelliti)}</p></div>
-   <ul class="kpi"><li><b>${ch.length}</b><span>canali in chiaro</span></li><li><b>${ch.filter(c=>c.r==='HD').length}</b><span>HD</span></li><li><b>${ch.filter(c=>c.r==='UHD').length}</b><span>4K</span></li><li><b>${ch.filter(c=>c.s===2).length}</b><span>parziali</span></li>
+   <ul class="kpi"><li><b>${ch.length}</b><span>canali in chiaro</span></li><li><b>${ch.filter(c=>c.r==='HD').length}</b><span>HD</span></li><li><b>${ch.filter(c=>c.r==='UHD').length}</b><span>4K</span></li><li><b>${ch.filter(c=>c.s===2).length}</b><span>parziali</span></li>${useMs&&ch.some(c=>c.ms==='mis'||c.ms==='t2mi')?`<li title="Canali che richiedono tuner multistream o plugin T2-MI"><b>${ch.filter(c=>c.ms==='mis'||c.ms==='t2mi').length}</b><span>multistream / T2-MI</span></li>`:''}
    <li title="Puntamento indicativo da Torino"><b>${s.az}° / ${s.el}°</b><span>azimut / elevazione da Torino</span></li></ul></div>`;
 }
 function viewSat(){
@@ -126,14 +133,15 @@ function resolveCountries(text){
 function viewPub(){
   const groups = new Map();
   AGG.forEach(a=>{ if(!a.pub || !st.pubSel.has(a.pub[0]) || !contOK(a)) return; if(st.q && !fold(a.f).includes(fold(st.q))) return;
-    const its = a.items.filter(x=>x.pub && (st.pubPart || x.s===1) && (!st.hideHard || !x.hard)); if(!its.length) return;
+    const its = a.items.filter(x=>x.pub && (st.pubPart || x.s===1) && (!st.hideHard || !x.hard) && !(useMs && st.hideMs && (x.ms==='mis'||x.ms==='t2mi'))); if(!its.length) return;
     const k=a.pub[0]; if(!groups.has(k)) groups.set(k,[]); groups.get(k).push({a,its}); });
   const controls = `<div class="pubctl">
     <label class="fl wide"><span>Scrivi i paesi (es. “canali francesi, tedeschi”)</span><input id="pub-text" placeholder="es. francesi, spagnoli, greci…" autocomplete="off"></label>
     <div class="chips">${PUBC.map(p=>`<button class="chip${st.pubSel.has(p)?' on':''}" data-pubc="${esc(p)}">${esc(p)}</button>`).join('')}</div>
     <div class="row"><button class="reset" data-pubset="all">Seleziona tutti</button><button class="reset" data-pubset="none">Nessuno</button>
     <label class="chk"><input type="checkbox" id="pub-part"${st.pubPart?' checked':''}> Conta anche i satelliti dove è solo parzialmente in chiaro</label>
-    <label class="chk"><input type="checkbox" id="f-hard"${st.hideHard?' checked':''}> Nascondi ricezione difficile da Torino</label></div></div>`;
+    <label class="chk"><input type="checkbox" id="f-hard"${st.hideHard?' checked':''}> Nascondi ricezione difficile da Torino</label>
+    ${useMs?`<label class="chk"><input type="checkbox" id="f-ms"${st.hideMs?' checked':''}> Nascondi canali che richiedono multistream / T2-MI</label>`:''}</div></div>`;
   const keys=[...groups.keys()].sort((a,b)=>a.localeCompare(b,'it'));
   let body = keys.length ? '' : '<p class="empty">Seleziona uno o più paesi qui sopra.</p>';
   for(const k of keys){ const arr=groups.get(k).sort((x,y)=>x.a.n.localeCompare(y.a.n,'it'));
@@ -179,7 +187,7 @@ function defaultSatSel(){ const el=$('#satsel'); if(!el) return;
 function setSat(p){ st.sat=p; st.view='sat'; st.limit=240; st.q=''; const q=$('#q'); if(q) q.value=''; render(); window.scrollTo({top:0,behavior:'smooth'}); }
 function setView(v){ st.view=v; st.limit=240; render(); }
 document.addEventListener('click', e=>{
-  const t = e.target.closest('[data-cont],[data-sat],[data-gosat],[data-view],[data-pubc],[data-pubset],[data-nsat],#more,#f-reset,[data-jump]'); if(!t) return;
+  const t = e.target.closest('[data-cont],[data-sat],[data-gosat],[data-view]:not(body),[data-pubc],[data-pubset],[data-nsat],#more,#f-reset,[data-jump]'); if(!t) return;
   if(t.dataset.cont){ const c=t.dataset.cont; st.conts.has(c)?st.conts.delete(c):st.conts.add(c); try{ localStorage.setItem(CONT_KEY, JSON.stringify([...st.conts])); }catch(_){} st.limit=240; render(); return; }
   if(t.dataset.jump!==undefined){ e.preventDefault(); const el=document.getElementById('g-'+encodeURIComponent(t.dataset.jump)); if(el) el.scrollIntoView({behavior:'smooth'}); return; }
   if(t.dataset.sat){ setSat(t.dataset.sat); return; }
@@ -189,11 +197,12 @@ document.addEventListener('click', e=>{
   if(t.dataset.pubset){ st.pubSel = t.dataset.pubset==='all'? new Set(PUBC) : new Set(); render(); return; }
   if(t.dataset.nsat!==undefined){ st.nSat=t.dataset.nsat; render(); return; }
   if(t.id==='more'){ st.limit+=400; render(); return; }
-  if(t.id==='f-reset'){ Object.assign(st,{genre:'',lang:'',res:'',stato:'',hideHard:false}); render(); }
+  if(t.id==='f-reset'){ Object.assign(st,{genre:'',lang:'',res:'',stato:'',hideHard:false,hideMs:false}); render(); }
 });
 document.addEventListener('change', e=>{ const t=e.target; const map={'f-genre':'genre','f-lang':'lang','f-res':'res','f-stato':'stato','f-group':'group','n-type':'nType','n-days':'nDays'};
   if(map[t.id]){ st[map[t.id]]=t.value; st.limit=240; render(); }
   else if(t.id==='f-hard'){ st.hideHard=t.checked; render(); }
+  else if(t.id==='f-ms'){ st.hideMs=t.checked; render(); }
   else if(t.id==='pub-part'){ st.pubPart=t.checked; render(); }
   else if(t.id==='satsel-select'){ setSat(t.value); } });
 let qt; document.addEventListener('input', e=>{ const t=e.target;

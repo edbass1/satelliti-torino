@@ -1,10 +1,12 @@
 import asyncio, os, sys
 from playwright.async_api import async_playwright
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+async def launch(p):
+    try: return await p.chromium.launch()
+    except Exception: return await p.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--headless=new'])
 async def main():
     async with async_playwright() as p:
-        try: b = await p.chromium.launch()
-        except Exception: b = await p.chromium.launch(executable_path='/usr/bin/google-chrome')
+        b = await launch(p)
         ok = True
         for n in range(1, 8):
             pg = await b.new_page(viewport={'width':1440,'height':900})

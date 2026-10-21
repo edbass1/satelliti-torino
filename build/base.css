@@ -53,3 +53,6 @@ a{color:inherit}
 #totop.show{opacity:1;pointer-events:auto;transform:none}
 body.fc-float #totop{bottom:70px}
 @media(max-width:640px){#fontctl.float{right:10px;bottom:10px}#totop{right:10px;bottom:10px}body.fc-float #totop{bottom:62px}}
+
+.b-ms{background:#3b0764;color:#e9d5ff;border:1px solid #a855f7}.b-msok{background:#052e16;color:#86efac;border:1px solid #16a34a}.b-t2mi{background:#431407;color:#fdba74;border:1px solid #f97316}
+.sbdg i.ms{background:#3b0764;color:#e9d5ff}
