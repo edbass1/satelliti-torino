@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-21 19:23",
+  "aggiornato": "2026-10-22 02:25",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -57,6 +57,19 @@
    "ris": "",
    "key": "power tv poland",
    "in_lista": true
+  },
+  {
+   "data": "2026-10-21",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Al Forat",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "al forat",
+   "in_lista": false
   },
   {
    "data": "2026-10-18",
@@ -611,11 +624,11 @@
    "tipo": "entrata",
    "chiuso": false,
    "nome": "Al Forat",
-   "paese": "Iraq",
+   "paese": "",
    "bouquet": "",
    "ris": "",
    "key": "al forat",
-   "in_lista": true
+   "in_lista": false
   },
   {
    "data": "2026-09-28",
@@ -674,6 +687,19 @@
    "pos": "42E",
    "satellite": "Türksat 4A",
    "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Ülke TV HD",
+   "paese": "Turchia",
+   "bouquet": "Digitürk",
+   "ris": "HD",
+   "key": "ulke tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-09-24",
+   "pos": "42E",
+   "satellite": "Türksat 4A",
+   "tipo": "uscita",
    "chiuso": true,
    "nome": "Kanal 7 HD",
    "paese": "",
@@ -707,110 +733,6 @@
    "ris": "",
    "key": "cittadella visual radio tv",
    "in_lista": false
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "9E",
-   "satellite": "Eutelsat 9B",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Club TV Italia",
-   "paese": "Italia",
-   "bouquet": "",
-   "ris": "",
-   "key": "club tv italia",
-   "in_lista": true
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "9E",
-   "satellite": "Eutelsat 9B",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "iL61",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "il61",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "KTV 1 HD",
-   "paese": "",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "ktv 1",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "Al-Akhbar",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "al akhbar",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "KTV 2 HD",
-   "paese": "",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "ktv 2",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "HD-KTV Sports",
-   "paese": "",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "ktv sports",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "KTV Sport Plus HD",
-   "paese": "",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "ktv sport plus",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-21",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "beIN Sports News",
-   "paese": "Qatar",
-   "bouquet": "",
-   "ris": "",
-   "key": "bein sports news",
-   "in_lista": true
   }
  ]
 }
