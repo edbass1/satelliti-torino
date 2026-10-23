@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-23 02:26",
+  "aggiornato": "2026-10-23 14:24",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -8039,22 +8039,20 @@
    "pos": "28.2E"
   },
   {
-   "id": "15344",
-   "nome": "5 Select",
-   "key": "5 select",
+   "id": "26170",
+   "nome": "5 Drama (UK)",
+   "key": "5 drama uk",
    "paese": "Regno Unito",
-   "genere": "Intrattenimento",
+   "genere": "Serie TV",
    "lingue": [
     "Inglese"
    ],
    "ris": "SD",
    "stato": "chiaro",
    "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
+   "bouquet": [],
    "sito": "",
-   "agg": "2023-09-19",
+   "agg": "2026-10-23",
    "ricezione": "difficile",
    "nota": "",
    "ms": "",
@@ -12219,9 +12217,7 @@
    "ris": "HD",
    "stato": "chiaro",
    "cas": [],
-   "bouquet": [
-    "SkyLink"
-   ],
+   "bouquet": [],
    "sito": "",
    "agg": "2024-09-29",
    "ricezione": "buona",

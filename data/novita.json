@@ -1,11 +1,37 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-23 02:26",
+  "aggiornato": "2026-10-23 14:24",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-23",
+   "pos": "28.2E",
+   "satellite": "Astra 2F",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "5 Drama (UK)",
+   "paese": "Regno Unito",
+   "bouquet": "",
+   "ris": "",
+   "key": "5 drama uk",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-23",
+   "pos": "28.2E",
+   "satellite": "Astra 2F",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "5 Select",
+   "paese": "",
+   "bouquet": "Sky Digital",
+   "ris": "",
+   "key": "5 select",
+   "in_lista": false
+  },
   {
    "data": "2026-10-22",
    "pos": "28.2E",
