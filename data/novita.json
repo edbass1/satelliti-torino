@@ -1,11 +1,37 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-22 02:25",
+  "aggiornato": "2026-10-23 02:26",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-22",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Bloomberg UK HD",
+   "paese": "Regno Unito",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "bloomberg uk",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-22",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "GB News HD",
+   "paese": "Regno Unito",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "gb news",
+   "in_lista": true
+  },
   {
    "data": "2026-10-21",
    "pos": "13E",
@@ -706,32 +732,6 @@
    "bouquet": "Digitürk",
    "ris": "HD",
    "key": "kanal 7",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-22",
-   "pos": "5W",
-   "satellite": "Eutelsat 5 West B",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Taranto TV",
-   "paese": "Italia",
-   "bouquet": "",
-   "ris": "",
-   "key": "taranto tv",
-   "in_lista": true
-  },
-  {
-   "data": "2026-09-22",
-   "pos": "5W",
-   "satellite": "Eutelsat 5 West B",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Cittadella Visual Radio TV",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "cittadella visual radio tv",
    "in_lista": false
   }
  ]

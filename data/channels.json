@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-22 02:25",
+  "aggiornato": "2026-10-23 02:26",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -7415,6 +7415,52 @@
    "pos": "28.2E"
   },
   {
+   "id": "15960",
+   "nome": "Bloomberg UK HD",
+   "key": "bloomberg uk",
+   "paese": "Regno Unito",
+   "genere": "Economia",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-22",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "21748",
+   "nome": "GB News HD",
+   "key": "gb news",
+   "paese": "Regno Unito",
+   "genere": "Notizie",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-22",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
    "id": "11294",
    "nome": "Arise News",
    "key": "arise news",
@@ -8418,206 +8464,6 @@
    "pos": "28.2E"
   },
   {
-   "id": "21016",
-   "nome": "ITV 1 Meridian East HD",
-   "key": "itv 1 meridian east",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2025-01-15",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "24849",
-   "nome": "ITV 1 Meridian Thames Valley HD",
-   "key": "itv 1 meridian thames valley",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2024-08-17",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "8387",
-   "nome": "ITV 1 Meridian South HD",
-   "key": "itv 1 meridian south",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "http://www.itv.com/",
-   "agg": "2024-12-27",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "24850",
-   "nome": "ITV 1 Yorkshire West HD",
-   "key": "itv 1 yorkshire west",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2024-08-17",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "8566",
-   "nome": "ITV 3 HD",
-   "key": "itv 3",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "http://www.itv.com/itv3/",
-   "agg": "2024-08-17",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "24330",
-   "nome": "ITV 1 Border Scotland HD",
-   "key": "itv 1 border scotland",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2024-08-17",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "21088",
-   "nome": "ITV 1 Anglia West HD",
-   "key": "itv 1 anglia west",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2024-08-17",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "21089",
-   "nome": "ITV 1 Central East HD",
-   "key": "itv 1 central east",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2024-08-17",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
    "id": "24254",
    "nome": "True Crime X",
    "key": "true crime x",
@@ -9134,6 +8980,206 @@
    ],
    "sito": "http://www.itv4.co.uk/",
    "agg": "2025-06-23",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "21016",
+   "nome": "ITV 1 Meridian East HD",
+   "key": "itv 1 meridian east",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "",
+   "agg": "2025-01-15",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "24849",
+   "nome": "ITV 1 Meridian Thames Valley HD",
+   "key": "itv 1 meridian thames valley",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "",
+   "agg": "2024-08-17",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "8387",
+   "nome": "ITV 1 Meridian South HD",
+   "key": "itv 1 meridian south",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "http://www.itv.com/",
+   "agg": "2024-12-27",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "24850",
+   "nome": "ITV 1 Yorkshire West HD",
+   "key": "itv 1 yorkshire west",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "",
+   "agg": "2024-08-17",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "8566",
+   "nome": "ITV 3 HD",
+   "key": "itv 3",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "http://www.itv.com/itv3/",
+   "agg": "2024-08-17",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "24330",
+   "nome": "ITV 1 Border Scotland HD",
+   "key": "itv 1 border scotland",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "",
+   "agg": "2024-08-17",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "21088",
+   "nome": "ITV 1 Anglia West HD",
+   "key": "itv 1 anglia west",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "",
+   "agg": "2024-08-17",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "21089",
+   "nome": "ITV 1 Central East HD",
+   "key": "itv 1 central east",
+   "paese": "Regno Unito",
+   "genere": "Generalista",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "",
+   "agg": "2024-08-17",
    "ricezione": "difficile",
    "nota": "",
    "ms": "",
@@ -10625,56 +10671,6 @@
    ],
    "sito": "http://www.tvcnews.tv/",
    "agg": "2023-09-11",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "21748",
-   "nome": "GB News HD",
-   "key": "gb news",
-   "paese": "Regno Unito",
-   "genere": "Notizie",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2023-11-08",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "15960",
-   "nome": "Bloomberg UK HD",
-   "key": "bloomberg uk",
-   "paese": "Regno Unito",
-   "genere": "Economia",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2024-04-09",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
