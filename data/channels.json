@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-24 02:28",
+  "aggiornato": "2026-10-24 14:24",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -92,7 +92,7 @@
    "satelliti": "Eutelsat 7C",
    "lon": 7.0,
    "canali": 25,
-   "hd": 19,
+   "hd": 18,
    "uhd": 0,
    "parziali": 0
   },
@@ -131,7 +131,7 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 419,
+   "canali": 421,
    "hd": 227,
    "uhd": 0,
    "parziali": 0
@@ -31708,20 +31708,20 @@
    "pos": "7E"
   },
   {
-   "id": "25874",
-   "nome": "Persiana Travel",
-   "key": "persiana travel",
-   "paese": "",
-   "genere": "Viaggi",
+   "id": "26171",
+   "nome": "Persiana Global",
+   "key": "persiana global",
+   "paese": "Francia",
+   "genere": "Generalista",
    "lingue": [
     "Farsi"
    ],
-   "ris": "HD",
+   "ris": "SD",
    "stato": "chiaro",
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-04-21",
+   "agg": "2026-10-24",
    "ricezione": "difficile",
    "nota": "",
    "ms": "",
@@ -37028,6 +37028,29 @@
    "pos": "7W"
   },
   {
+   "id": "4195",
+   "nome": "Al Salam",
+   "key": "al salam",
+   "paese": "Iraq",
+   "genere": "Generalista",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-24",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
    "id": "22999",
    "nome": "Al Mahrousah TV",
    "key": "al mahrousah tv",
@@ -40270,6 +40293,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-03-02",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "26172",
+   "nome": "AL24 News International",
+   "key": "al24 news international",
+   "paese": "Algeria",
+   "genere": "Notizie",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-24",
    "ricezione": "buona",
    "nota": "",
    "ms": "",

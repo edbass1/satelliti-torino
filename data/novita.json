@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-24 02:28",
+  "aggiornato": "2026-10-24 14:24",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -17,6 +17,45 @@
    "bouquet": "",
    "ris": "",
    "key": "tbn russia",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-24",
+   "pos": "7E",
+   "satellite": "Eutelsat 7C",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Persiana Global",
+   "paese": "Francia",
+   "bouquet": "",
+   "ris": "",
+   "key": "persiana global",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-24",
+   "pos": "7E",
+   "satellite": "Eutelsat 7C",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Persiana Travel",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "persiana travel",
+   "in_lista": false
+  },
+  {
+   "data": "2026-10-24",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Al Salam",
+   "paese": "Iraq",
+   "bouquet": "",
+   "ris": "",
+   "key": "al salam",
    "in_lista": true
   },
   {
