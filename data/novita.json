@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-23 14:24",
+  "aggiornato": "2026-10-24 02:28",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-24",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "TBN Russia",
+   "paese": "Russia",
+   "bouquet": "",
+   "ris": "",
+   "key": "tbn russia",
+   "in_lista": true
+  },
   {
    "data": "2026-10-23",
    "pos": "28.2E",
