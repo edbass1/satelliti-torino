@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-25 02:21",
+  "aggiornato": "2026-10-26 01:28",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -40308,7 +40308,8 @@
    "paese": "Algeria",
    "genere": "Notizie",
    "lingue": [
-    "Arabo"
+    "Inglese",
+    "Francese"
    ],
    "ris": "SD",
    "stato": "chiaro",

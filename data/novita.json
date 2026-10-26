@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-25 02:21",
+  "aggiornato": "2026-10-26 01:28",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -758,32 +758,6 @@
    "bouquet": "",
    "ris": "",
    "key": "telemax",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-25",
-   "pos": "28.2E",
-   "satellite": "Astra 2F",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "QVC Christmas",
-   "paese": "Regno Unito",
-   "bouquet": "Sky Digital",
-   "ris": "",
-   "key": "qvc christmas",
-   "in_lista": true
-  },
-  {
-   "data": "2026-09-25",
-   "pos": "28.2E",
-   "satellite": "Astra 2F",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "QVC Extra",
-   "paese": "",
-   "bouquet": "Sky Digital",
-   "ris": "",
-   "key": "qvc extra",
    "in_lista": false
   }
  ]
