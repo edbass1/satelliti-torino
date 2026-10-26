@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-26 01:28",
+  "aggiornato": "2026-10-26 15:34",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -31,8 +31,8 @@
    "nome": "Astra 28.2°E",
    "satelliti": "Astra 2E/2F/2G",
    "lon": 28.2,
-   "canali": 229,
-   "hd": 81,
+   "canali": 228,
+   "hd": 80,
    "uhd": 0,
    "parziali": 0
   },
@@ -231,7 +231,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-08-16",
+   "agg": "2026-10-26",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -6124,34 +6124,6 @@
    "pos": "28.2E"
   },
   {
-   "id": "23648",
-   "nome": "BBC One West HD",
-   "key": "bbc one west",
-   "paese": "Regno Unito",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2023-02-13",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": {
-    "paese": "Regno Unito",
-    "ente": "BBC"
-   },
-   "pos": "28.2E"
-  },
-  {
    "id": "11731",
    "nome": "BBC Red Button HD",
    "key": "bbc red button",
@@ -7290,22 +7262,20 @@
    "pos": "28.2E"
   },
   {
-   "id": "16214",
-   "nome": "New Vision TV",
-   "key": "new vision tv",
-   "paese": "Regno Unito",
-   "genere": "Religione",
+   "id": "2964",
+   "nome": "Ary One World",
+   "key": "ary one world",
+   "paese": "Pakistan",
+   "genere": "Notizie",
    "lingue": [
     "Inglese"
    ],
    "ris": "SD",
    "stato": "chiaro",
    "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2025-08-13",
+   "bouquet": [],
+   "sito": "http://www.arydigital.tv/",
+   "agg": "2026-10-26",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -27027,7 +26997,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-16",
+   "agg": "2026-10-26",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
