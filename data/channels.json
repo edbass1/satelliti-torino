@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-26 15:34",
+  "aggiornato": "2026-10-27 01:27",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -11,8 +11,8 @@
    "nome": "Türksat 42°E",
    "satelliti": "Türksat 3A/4A/5B/6A",
    "lon": 42.0,
-   "canali": 214,
-   "hd": 129,
+   "canali": 213,
+   "hd": 128,
    "uhd": 1,
    "parziali": 0
   },
@@ -142,7 +142,7 @@
    "satelliti": "Hispasat 30W-5/30W-6",
    "lon": -30.0,
    "canali": 13,
-   "hd": 9,
+   "hd": 8,
    "uhd": 0,
    "parziali": 0
   }
@@ -3255,29 +3255,6 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-08-16",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "42E"
-  },
-  {
-   "id": "2505",
-   "nome": "Al Ekhbaria",
-   "key": "al ekhbaria",
-   "paese": "Arabia Saudita",
-   "genere": "Notizie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "http://www.ekhbariya.tv/",
    "agg": "2026-08-16",
    "ricezione": "buona",
    "nota": "",
@@ -45858,12 +45835,12 @@
     "Inglese",
     "Spagnolo"
    ],
-   "ris": "HD",
+   "ris": "SD",
    "stato": "chiaro",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.jsm.org/",
-   "agg": "2023-05-07",
+   "agg": "2026-10-26",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -45909,7 +45886,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "http://www.recordnewstv.com.br/",
-   "agg": "2025-06-09",
+   "agg": "2026-10-26",
    "ricezione": "buona",
    "nota": "",
    "ms": "",

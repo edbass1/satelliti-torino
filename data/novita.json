@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-26 15:34",
+  "aggiornato": "2026-10-27 01:27",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-26",
+   "pos": "42E",
+   "satellite": "Turksat 6A",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Al Ekhbaria",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "al ekhbaria",
+   "in_lista": false
+  },
   {
    "data": "2026-10-26",
    "pos": "28.2E",
