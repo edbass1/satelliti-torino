@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-28 01:35",
+  "aggiornato": "2026-10-28 13:37",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -41,10 +41,10 @@
    "nome": "Astra 23.5°E",
    "satelliti": "Astra 3B/3C",
    "lon": 23.5,
-   "canali": 25,
-   "hd": 9,
+   "canali": 23,
+   "hd": 8,
    "uhd": 0,
-   "parziali": 2
+   "parziali": 0
   },
   {
    "pos": "19.2E",
@@ -12241,65 +12241,6 @@
    "isi": null,
    "pls": "",
    "pubblico": null,
-   "pos": "23.5E"
-  },
-  {
-   "id": "3536",
-   "nome": "Cinemax 2 Europe",
-   "key": "cinemax 2 europe",
-   "paese": "Ungheria",
-   "genere": "Film",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "parziale",
-   "cas": [
-    "Conax",
-    "Nagravision 3"
-   ],
-   "bouquet": [
-    "M:Sat TV"
-   ],
-   "sito": "http://www.cinemax-tv.com/",
-   "agg": "2026-06-12",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "23.5E"
-  },
-  {
-   "id": "5119",
-   "nome": "RTRS",
-   "key": "rtrs",
-   "paese": "Serbia",
-   "genere": "Regionale",
-   "lingue": [
-    "Bosniaco"
-   ],
-   "ris": "SD",
-   "stato": "parziale",
-   "cas": [
-    "Conax",
-    "Nagravision 3"
-   ],
-   "bouquet": [
-    "M:Sat TV"
-   ],
-   "sito": "http://www.rtrs.tv/",
-   "agg": "2026-06-12",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": {
-    "paese": "Bosnia ed Erzegovina",
-    "ente": "BHRT / RTRS / FTV"
-   },
    "pos": "23.5E"
   },
   {
