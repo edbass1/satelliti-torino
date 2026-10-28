@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-27 01:27",
+  "aggiornato": "2026-10-28 01:35",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -798,19 +798,6 @@
    "ris": "",
    "key": "mesat",
    "in_lista": true
-  },
-  {
-   "data": "2026-09-27",
-   "pos": "9E",
-   "satellite": "Eutelsat 9B",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Telemax",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "telemax",
-   "in_lista": false
   }
  ]
 }
