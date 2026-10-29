@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-28 13:37",
+  "aggiornato": "2026-10-29 01:35",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -785,19 +785,6 @@
    "ris": "",
    "key": "al forat",
    "in_lista": false
-  },
-  {
-   "data": "2026-09-28",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "MESat",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "mesat",
-   "in_lista": true
   }
  ]
 }
