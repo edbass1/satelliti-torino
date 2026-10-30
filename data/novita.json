@@ -1,11 +1,37 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-30 01:36",
+  "aggiornato": "2026-10-30 13:38",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-30",
+   "pos": "19.2E",
+   "satellite": "Astra 1N",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Hot Babes TV",
+   "paese": "Germania",
+   "bouquet": "",
+   "ris": "",
+   "key": "hot babes tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-30",
+   "pos": "19.2E",
+   "satellite": "Astra 1N",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Erotika TV",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "erotika tv",
+   "in_lista": true
+  },
   {
    "data": "2026-10-29",
    "pos": "13E",

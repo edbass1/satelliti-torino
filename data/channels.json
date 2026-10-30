@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-30 01:36",
+  "aggiornato": "2026-10-30 13:38",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -51,7 +51,7 @@
    "nome": "Astra 19.2°E",
    "satelliti": "Astra 1M/1N/1P",
    "lon": 19.2,
-   "canali": 210,
+   "canali": 212,
    "hd": 104,
    "uhd": 1,
    "parziali": 4
@@ -74,7 +74,7 @@
    "canali": 235,
    "hd": 137,
    "uhd": 1,
-   "parziali": 6
+   "parziali": 5
   },
   {
    "pos": "9E",
@@ -17177,6 +17177,52 @@
    "pos": "19.2E"
   },
   {
+   "id": "24527",
+   "nome": "Hot Babes TV",
+   "key": "hot babes tv",
+   "paese": "Germania",
+   "genere": "Adulti",
+   "lingue": [
+    "Tedesco"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-30",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
+   "id": "15608",
+   "nome": "Erotika TV",
+   "key": "erotika tv",
+   "paese": "",
+   "genere": "Adulti",
+   "lingue": [
+    "Tedesco"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-30",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
    "id": "24663",
    "nome": "Telegold",
    "key": "telegold",
@@ -21559,7 +21605,7 @@
     "Polacco"
    ],
    "ris": "HD",
-   "stato": "parziale",
+   "stato": "chiaro",
    "cas": [],
    "bouquet": [
     "Orange Polska",
