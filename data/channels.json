@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-29 13:38",
+  "aggiornato": "2026-10-30 01:36",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -71,7 +71,7 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 234,
+   "canali": 235,
    "hd": 137,
    "uhd": 1,
    "parziali": 6
@@ -22970,6 +22970,32 @@
    "isi": null,
    "pls": "",
    "pubblico": null,
+   "pos": "13E"
+  },
+  {
+   "id": "26178",
+   "nome": "TV5 Monde Info",
+   "key": "tv5 monde info",
+   "paese": "Francia",
+   "genere": "Notizie",
+   "lingue": [
+    "Francese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-29",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": {
+    "paese": "Internazionale",
+    "ente": "TV5Monde"
+   },
    "pos": "13E"
   },
   {

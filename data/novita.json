@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-29 13:38",
+  "aggiornato": "2026-10-30 01:36",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-29",
+   "pos": "13E",
+   "satellite": "Hot Bird 13F",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "TV5 Monde Info",
+   "paese": "Francia",
+   "bouquet": "",
+   "ris": "",
+   "key": "tv5 monde info",
+   "in_lista": true
+  },
   {
    "data": "2026-10-26",
    "pos": "42E",
@@ -759,32 +772,6 @@
    "ris": "",
    "key": "tv8 sk",
    "in_lista": true
-  },
-  {
-   "data": "2026-09-29",
-   "pos": "42E",
-   "satellite": "Türksat 4A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "ASFTV",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "asftv",
-   "in_lista": false
-  },
-  {
-   "data": "2026-09-29",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Al Forat",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "al forat",
-   "in_lista": false
   }
  ]
 }
