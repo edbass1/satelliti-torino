@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-30 13:38",
+  "aggiornato": "2026-10-31 01:40",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -131,8 +131,8 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 421,
-   "hd": 227,
+   "canali": 425,
+   "hd": 231,
    "uhd": 0,
    "parziali": 0
   },
@@ -22271,7 +22271,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-24",
+   "agg": "2026-10-30",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -26987,7 +26987,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-26",
+   "agg": "2026-10-30",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
@@ -27926,7 +27926,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2023-01-24",
+   "agg": "2026-10-30",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
@@ -29959,7 +29959,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-16",
+   "agg": "2026-10-30",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
@@ -38425,6 +38425,32 @@
    "pos": "7W"
   },
   {
+   "id": "26179",
+   "nome": "TV5 Monde Chefs",
+   "key": "tv5 monde chefs",
+   "paese": "Francia",
+   "genere": "Cucina",
+   "lingue": [
+    "Francese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-30",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": {
+    "paese": "Internazionale",
+    "ente": "TV5Monde"
+   },
+   "pos": "7W"
+  },
+  {
    "id": "25034",
    "nome": "Sports First",
    "key": "sports first",
@@ -38506,6 +38532,81 @@
    "isi": null,
    "pls": "",
    "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "26180",
+   "nome": "Red Bull TV",
+   "key": "red bull tv",
+   "paese": "",
+   "genere": "Sport",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-30",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "26178",
+   "nome": "TV5 Monde Info",
+   "key": "tv5 monde info",
+   "paese": "Francia",
+   "genere": "Notizie",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-30",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": {
+    "paese": "Internazionale",
+    "ente": "TV5Monde"
+   },
+   "pos": "7W"
+  },
+  {
+   "id": "26181",
+   "nome": "TV5 Monde Voyage",
+   "key": "tv5 monde voyage",
+   "paese": "Francia",
+   "genere": "Viaggi",
+   "lingue": [
+    "Francese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-10-30",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": {
+    "paese": "Internazionale",
+    "ente": "TV5Monde"
+   },
    "pos": "7W"
   },
   {
@@ -43803,9 +43904,9 @@
    "pos": "7W"
   },
   {
-   "id": "26068",
-   "nome": "Taqwa Rawhaniat",
-   "key": "taqwa rawhaniat",
+   "id": "26182",
+   "nome": "Alburhan Roukia TV",
+   "key": "alburhan roukia tv",
    "paese": "",
    "genere": "Varie",
    "lingue": [
@@ -43816,7 +43917,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-08-04",
+   "agg": "2026-10-30",
    "ricezione": "difficile",
    "nota": "",
    "ms": "",

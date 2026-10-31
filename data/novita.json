@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-30 13:38",
+  "aggiornato": "2026-10-31 01:40",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -31,6 +31,84 @@
    "ris": "",
    "key": "erotika tv",
    "in_lista": true
+  },
+  {
+   "data": "2026-10-30",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "TV5 Monde Chefs",
+   "paese": "Francia",
+   "bouquet": "",
+   "ris": "",
+   "key": "tv5 monde chefs",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-30",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Red Bull TV",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "red bull tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-30",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "TV5 Monde Info",
+   "paese": "Francia",
+   "bouquet": "",
+   "ris": "",
+   "key": "tv5 monde info",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-30",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "TV5 Monde Voyage",
+   "paese": "Francia",
+   "bouquet": "",
+   "ris": "",
+   "key": "tv5 monde voyage",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-30",
+   "pos": "7W",
+   "satellite": "Nilesat 201",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Alburhan Roukia TV",
+   "paese": "non definito",
+   "bouquet": "",
+   "ris": "",
+   "key": "alburhan roukia tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-30",
+   "pos": "7W",
+   "satellite": "Nilesat 201",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Taqwa Rawhaniat",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "taqwa rawhaniat",
+   "in_lista": false
   },
   {
    "data": "2026-10-29",
@@ -785,19 +863,6 @@
    "ris": "HD",
    "key": "shehab tv",
    "in_lista": false
-  },
-  {
-   "data": "2026-09-30",
-   "pos": "23.5E",
-   "satellite": "Astra 3C",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "TV8.SK",
-   "paese": "Slovacchia",
-   "bouquet": "",
-   "ris": "",
-   "key": "tv8 sk",
-   "in_lista": true
   }
  ]
 }
