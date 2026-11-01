@@ -1,11 +1,37 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-10-31 01:40",
+  "aggiornato": "2026-11-01 01:40",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-10-31",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "GB News HD",
+   "paese": "Regno Unito",
+   "bouquet": "Sky Digital",
+   "ris": "HD",
+   "key": "gb news",
+   "in_lista": true
+  },
+  {
+   "data": "2026-10-31",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Bloomberg UK HD",
+   "paese": "Regno Unito",
+   "bouquet": "Sky Digital",
+   "ris": "HD",
+   "key": "bloomberg uk",
+   "in_lista": true
+  },
   {
    "data": "2026-10-30",
    "pos": "19.2E",
@@ -733,136 +759,6 @@
    "ris": "",
    "key": "italiana",
    "in_lista": true
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "42E",
-   "satellite": "Türksat 4A",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Teknofest Güneydoĝu",
-   "paese": "Turchia",
-   "bouquet": "",
-   "ris": "",
-   "key": "teknofest guneydogu",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "19.2E",
-   "satellite": "Astra 1N",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "EWTN Europe",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "ewtn europe",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "13E",
-   "satellite": "Hot Bird 13F",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Somaliland National TV",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "somaliland national tv",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "13E",
-   "satellite": "Hot Bird 13G",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "Telecupole",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "telecupole",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "13E",
-   "satellite": "Hot Bird 13G",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "Jordan TV",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "jordan tv",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "4.8E",
-   "satellite": "Astra 4A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "ATR T",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "atr t",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "4.8E",
-   "satellite": "Astra 4A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Sonata TV",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "sonata tv",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "5W",
-   "satellite": "Eutelsat 5 West B",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Italiana",
-   "paese": "Italia",
-   "bouquet": "",
-   "ris": "",
-   "key": "italiana",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "5W",
-   "satellite": "Eutelsat 5 West B",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "Rai Scuola HD",
-   "paese": "",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "rai scuola",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-01",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Shehab TV HD",
-   "paese": "",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "shehab tv",
-   "in_lista": false
   }
  ]
 }
