@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-01 01:40",
+  "aggiornato": "2026-11-01 13:36",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -71,8 +71,8 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 235,
-   "hd": 137,
+   "canali": 233,
+   "hd": 136,
    "uhd": 1,
    "parziali": 5
   },
@@ -22027,29 +22027,6 @@
    "pos": "13E"
   },
   {
-   "id": "13754",
-   "nome": "TRM Network",
-   "key": "trm network",
-   "paese": "Italia",
-   "genere": "Varie",
-   "lingue": [
-    "Italiano"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2023-10-21",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
    "id": "2413",
    "nome": "Tele Padre Pio",
    "key": "tele padre pio",
@@ -23704,29 +23681,6 @@
    "bouquet": [],
    "sito": "http://www.jsm.org/",
    "agg": "2023-09-11",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
-   "id": "11867",
-   "nome": "Dubai TV HD",
-   "key": "dubai tv",
-   "paese": "Emirati del Dubai",
-   "genere": "Generalista",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-09-28",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -34811,11 +34765,11 @@
     "RAI"
    ],
    "sito": "",
-   "agg": "2024-08-29",
+   "agg": "2026-11-01",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -34840,11 +34794,11 @@
     "RAI"
    ],
    "sito": "",
-   "agg": "2024-08-29",
+   "agg": "2026-11-01",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -34872,7 +34826,7 @@
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -34900,7 +34854,7 @@
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -34929,7 +34883,7 @@
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -34958,7 +34912,7 @@
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -34987,7 +34941,7 @@
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -35015,7 +34969,7 @@
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": null,
    "pos": "5W"
@@ -35036,11 +34990,11 @@
     "RAI"
    ],
    "sito": "",
-   "agg": "2024-09-06",
+   "agg": "2026-11-01",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
@@ -35064,11 +35018,11 @@
     "RAI"
    ],
    "sito": "",
-   "agg": "2024-09-06",
+   "agg": "2026-11-01",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
-   "isi": null,
+   "isi": 4,
    "pls": "Gold+131070",
    "pubblico": {
     "paese": "Italia",
