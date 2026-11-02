@@ -1,11 +1,76 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-01 13:36",
+  "aggiornato": "2026-11-02 01:42",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-01",
+   "pos": "16E",
+   "satellite": "Eutelsat 16D",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Team:Media: TV Duga Plus",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "team media tv duga plus",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-01",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Al Jazeera Live",
+   "paese": "Qatar",
+   "bouquet": "",
+   "ris": "",
+   "key": "al jazeera live",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-01",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Al Jazeera Now HD",
+   "paese": "Qatar",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "al jazeera now",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-01",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Al Jazeera Live HD",
+   "paese": "Qatar",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "al jazeera live",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-01",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Al Jazeera Mubasher",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "al jazeera mubasher",
+   "in_lista": false
+  },
   {
    "data": "2026-11-01",
    "pos": "13E",
@@ -707,84 +772,6 @@
    "ris": "",
    "key": "smile tv cyprus",
    "in_lista": false
-  },
-  {
-   "data": "2026-10-02",
-   "pos": "19.2E",
-   "satellite": "Astra 1P",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "CGTN HD",
-   "paese": "Cina",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "cgtn",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-02",
-   "pos": "19.2E",
-   "satellite": "Astra 1P",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "CGTN Documentary HD",
-   "paese": "Cina",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "cgtn documentary",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-02",
-   "pos": "19.2E",
-   "satellite": "Astra 1P",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "CGTN Français HD",
-   "paese": "Cina",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "cgtn francais",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-02",
-   "pos": "13E",
-   "satellite": "Hot Bird 13G",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Italiana",
-   "paese": "Italia",
-   "bouquet": "",
-   "ris": "",
-   "key": "italiana",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-02",
-   "pos": "13E",
-   "satellite": "Hot Bird 13G",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Rai Scuola HD",
-   "paese": "",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "rai scuola",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-02",
-   "pos": "5W",
-   "satellite": "Eutelsat 5 West B",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Italiana",
-   "paese": "Italia",
-   "bouquet": "RAI",
-   "ris": "",
-   "key": "italiana",
-   "in_lista": true
   }
  ]
 }

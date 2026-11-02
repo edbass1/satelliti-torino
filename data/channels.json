@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-01 13:36",
+  "aggiornato": "2026-11-02 01:42",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -61,7 +61,7 @@
    "nome": "Eutelsat 16°E",
    "satelliti": "Eutelsat 16A/16D",
    "lon": 16.0,
-   "canali": 64,
+   "canali": 63,
    "hd": 33,
    "uhd": 0,
    "parziali": 2
@@ -71,8 +71,8 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 233,
-   "hd": 136,
+   "canali": 235,
+   "hd": 138,
    "uhd": 1,
    "parziali": 5
   },
@@ -17557,31 +17557,6 @@
    "pos": "16E"
   },
   {
-   "id": "16966",
-   "nome": "TV Duga Plus",
-   "key": "tv duga plus",
-   "paese": "Serbia",
-   "genere": "Generalista",
-   "lingue": [
-    "Bosniaco"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Team:Media"
-   ],
-   "sito": "",
-   "agg": "2020-05-14",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "16E"
-  },
-  {
    "id": "20049",
    "nome": "O Kanal",
    "key": "o kanal",
@@ -23222,9 +23197,9 @@
    "pos": "13E"
   },
   {
-   "id": "3238",
-   "nome": "Al Jazeera Mubasher",
-   "key": "al jazeera mubasher",
+   "id": "26194",
+   "nome": "Al Jazeera Live",
+   "key": "al jazeera live",
    "paese": "Qatar",
    "genere": "Notizie",
    "lingue": [
@@ -23234,8 +23209,8 @@
    "stato": "chiaro",
    "cas": [],
    "bouquet": [],
-   "sito": "http://mubasher.aljazeera.net/",
-   "agg": "2023-06-01",
+   "sito": "",
+   "agg": "2026-11-01",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -24402,6 +24377,52 @@
    "bouquet": [],
    "sito": "",
    "agg": "2023-06-01",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
+   "id": "26185",
+   "nome": "Al Jazeera Now HD",
+   "key": "al jazeera now",
+   "paese": "Qatar",
+   "genere": "Notizie",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-01",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
+   "id": "26186",
+   "nome": "Al Jazeera Live HD",
+   "key": "al jazeera live",
+   "paese": "Qatar",
+   "genere": "Notizie",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-01",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
