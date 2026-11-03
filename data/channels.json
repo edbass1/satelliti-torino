@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-03 01:43",
+  "aggiornato": "2026-11-03 13:50",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -71,7 +71,7 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 235,
+   "canali": 236,
    "hd": 138,
    "uhd": 1,
    "parziali": 5
@@ -131,8 +131,8 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 425,
-   "hd": 231,
+   "canali": 419,
+   "hd": 225,
    "uhd": 0,
    "parziali": 0
   },
@@ -21048,6 +21048,29 @@
    "pos": "13E"
   },
   {
+   "id": "19215",
+   "nome": "Telecupole",
+   "key": "telecupole",
+   "paese": "Italia",
+   "genere": "Varie",
+   "lingue": [
+    "Italiano"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-02",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
    "id": "22031",
    "nome": "SoloCalcio",
    "key": "solocalcio",
@@ -37167,18 +37190,20 @@
    "pos": "7W"
   },
   {
-   "id": "12779",
-   "nome": "Al Nojaba TV",
-   "key": "al nojaba tv",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [],
+   "id": "26195",
+   "nome": "NTV Iraq",
+   "key": "ntv iraq",
+   "paese": "Iraq",
+   "genere": "Generalista",
+   "lingue": [
+    "Arabo"
+   ],
    "ris": "SD",
    "stato": "chiaro",
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-05-25",
+   "agg": "2026-11-02",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -37232,29 +37257,6 @@
    "pos": "7W"
   },
   {
-   "id": "16700",
-   "nome": "Al Ayam TV",
-   "key": "al ayam tv",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-03-02",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
    "id": "22028",
    "nome": "Al Rabiaa Iraq",
    "key": "al rabiaa iraq",
@@ -37269,29 +37271,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-03-02",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "16461",
-   "nome": "Dijlah HD",
-   "key": "dijlah",
-   "paese": "Iraq",
-   "genere": "Varie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-05-07",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -38052,27 +38031,6 @@
    "pos": "7W"
   },
   {
-   "id": "9124",
-   "nome": "Al Shabab TV",
-   "key": "al shabab tv",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-04-12",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
    "id": "14631",
    "nome": "Alkofiya",
    "key": "alkofiya",
@@ -38721,10 +38679,10 @@
    "pos": "7W"
   },
   {
-   "id": "22280",
-   "nome": "Aden Almustakilla",
-   "key": "aden almustakilla",
-   "paese": "",
+   "id": "16461",
+   "nome": "Dijlah HD",
+   "key": "dijlah",
+   "paese": "Iraq",
    "genere": "Varie",
    "lingue": [
     "Arabo"
@@ -38734,7 +38692,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-03-02",
+   "agg": "2026-10-17",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -38744,30 +38702,9 @@
    "pos": "7W"
   },
   {
-   "id": "23390",
-   "nome": "FR HD",
-   "key": "fr",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-03-02",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "15844",
-   "nome": "Al Taleaa TV",
-   "key": "al taleaa tv",
+   "id": "22280",
+   "nome": "Aden Almustakilla",
+   "key": "aden almustakilla",
    "paese": "",
    "genere": "Varie",
    "lingue": [
@@ -39234,52 +39171,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-03-02",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "22741",
-   "nome": "Dijlah Zaman HD",
-   "key": "dijlah zaman",
-   "paese": "Iraq",
-   "genere": "Varie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-03-02",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "18076",
-   "nome": "AL Mawqef",
-   "key": "al mawqef",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-04-12",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
