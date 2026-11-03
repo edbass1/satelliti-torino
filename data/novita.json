@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-02 01:42",
+  "aggiornato": "2026-11-03 01:43",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -758,19 +758,6 @@
    "bouquet": "Bulsatcom",
    "ris": "",
    "key": "the voice bulgaria",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-03",
-   "pos": "39E",
-   "satellite": "Hellas Sat 4",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Smile TV Cyprus",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "smile tv cyprus",
    "in_lista": false
   }
  ]
