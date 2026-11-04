@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-04 01:41",
+  "aggiornato": "2026-11-04 13:49",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-04",
+   "pos": "28.2E",
+   "satellite": "Astra 2E",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Quest Red",
+   "paese": "Regno Unito",
+   "bouquet": "",
+   "ris": "",
+   "key": "quest red",
+   "in_lista": true
+  },
   {
    "data": "2026-11-03",
    "pos": "7W",
