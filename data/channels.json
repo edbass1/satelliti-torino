@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-04 13:49",
+  "aggiornato": "2026-11-05 01:46",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -51,8 +51,8 @@
    "nome": "Astra 19.2°E",
    "satelliti": "Astra 1M/1N/1P",
    "lon": 19.2,
-   "canali": 212,
-   "hd": 104,
+   "canali": 213,
+   "hd": 105,
    "uhd": 1,
    "parziali": 4
   },
@@ -12944,6 +12944,29 @@
    "pos": "19.2E"
   },
   {
+   "id": "23042",
+   "nome": "Telesur English",
+   "key": "telesur english",
+   "paese": "Venezuela",
+   "genere": "Notizie",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-04",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
    "id": "22454",
    "nome": "Sachsen Eins",
    "key": "sachsen eins",
@@ -12981,6 +13004,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2025-02-13",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
+   "id": "14412",
+   "nome": "Daystar HD",
+   "key": "daystar",
+   "paese": "U.S.A.",
+   "genere": "Religione",
+   "lingue": [
+    "Spagnolo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-04",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -13801,29 +13847,6 @@
    "genere": "Religione",
    "lingue": [
     "Spagnolo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2025-02-13",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "19.2E"
-  },
-  {
-   "id": "23042",
-   "nome": "Telesur English",
-   "key": "telesur english",
-   "paese": "Venezuela",
-   "genere": "Notizie",
-   "lingue": [
-    "Inglese"
    ],
    "ris": "HD",
    "stato": "chiaro",
