@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-05 13:54",
+  "aggiornato": "2026-11-06 01:46",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -51,8 +51,8 @@
    "nome": "Astra 19.2°E",
    "satelliti": "Astra 1M/1N/1P",
    "lon": 19.2,
-   "canali": 213,
-   "hd": 105,
+   "canali": 212,
+   "hd": 104,
    "uhd": 1,
    "parziali": 4
   },
@@ -71,7 +71,7 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 236,
+   "canali": 234,
    "hd": 138,
    "uhd": 1,
    "parziali": 5
@@ -131,7 +131,7 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 419,
+   "canali": 420,
    "hd": 225,
    "uhd": 0,
    "parziali": 0
@@ -6888,8 +6888,7 @@
    "paese": "Regno Unito",
    "genere": "Generalista",
    "lingue": [
-    "Gaelic",
-    "Inglese"
+    "Gaelic"
    ],
    "ris": "HD",
    "stato": "chiaro",
@@ -12944,29 +12943,6 @@
    "pos": "19.2E"
   },
   {
-   "id": "23042",
-   "nome": "Telesur English",
-   "key": "telesur english",
-   "paese": "Venezuela",
-   "genere": "Notizie",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-11-04",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "19.2E"
-  },
-  {
    "id": "22454",
    "nome": "Sachsen Eins",
    "key": "sachsen eins",
@@ -13004,29 +12980,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2025-02-13",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "19.2E"
-  },
-  {
-   "id": "14412",
-   "nome": "Daystar HD",
-   "key": "daystar",
-   "paese": "U.S.A.",
-   "genere": "Religione",
-   "lingue": [
-    "Spagnolo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-11-04",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -13854,6 +13807,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-11-05",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
+   "id": "23042",
+   "nome": "Telesur English",
+   "key": "telesur english",
+   "paese": "Venezuela",
+   "genere": "Notizie",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2025-02-13",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -20937,29 +20913,6 @@
    "pos": "13E"
   },
   {
-   "id": "9804",
-   "nome": "Hadi TV 3",
-   "key": "hadi tv 3",
-   "paese": "",
-   "genere": "Religione",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2025-12-07",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
    "id": "16957",
    "nome": "Canale Italia 83",
    "key": "canale italia 83",
@@ -21131,29 +21084,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2024-12-18",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
-   "id": "24912",
-   "nome": "Iran E Aryee",
-   "key": "iran e aryee",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [
-    "Farsi"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2024-09-12",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -44858,6 +44788,29 @@
    "sito": "",
    "agg": "2025-04-12",
    "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "18842",
+   "nome": "OSN",
+   "key": "osn",
+   "paese": "Emirati Arabi Uniti",
+   "genere": "Presentazioni",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "https://www.osn.com/",
+   "agg": "2026-11-05",
+   "ricezione": "buona",
    "nota": "",
    "ms": "",
    "isi": null,

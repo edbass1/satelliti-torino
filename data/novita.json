@@ -1,11 +1,63 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-05 13:54",
+  "aggiornato": "2026-11-06 01:46",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-05",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "BBC Alba HD",
+   "paese": "Regno Unito",
+   "bouquet": "Sky Digital",
+   "ris": "HD",
+   "key": "bbc alba",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-05",
+   "pos": "13E",
+   "satellite": "Hot Bird 13F",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Iran E Aryee",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "iran e aryee",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-05",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Hadi TV 3",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "hadi tv 3",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-05",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "OSN",
+   "paese": "Emirati Arabi Uniti",
+   "bouquet": "",
+   "ris": "",
+   "key": "osn",
+   "in_lista": true
+  },
   {
    "data": "2026-11-04",
    "pos": "28.2E",
@@ -30,19 +82,6 @@
    "bouquet": "",
    "ris": "",
    "key": "telesur english",
-   "in_lista": true
-  },
-  {
-   "data": "2026-11-04",
-   "pos": "19.2E",
-   "satellite": "Astra 1P",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Daystar HD",
-   "paese": "U.S.A.",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "daystar",
    "in_lista": true
   },
   {
@@ -836,71 +875,6 @@
    "bouquet": "",
    "ris": "",
    "key": "al nahrain tv",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-06",
-   "pos": "42E",
-   "satellite": "Türksat 4A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "HT Spor",
-   "paese": "Turchia",
-   "bouquet": "",
-   "ris": "",
-   "key": "ht spor",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-06",
-   "pos": "7E",
-   "satellite": "Eutelsat 7C",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "Project Leon",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "project leon",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-06",
-   "pos": "7E",
-   "satellite": "Eutelsat 7C",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Now!",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "now",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-06",
-   "pos": "5W",
-   "satellite": "Eutelsat 5 West B",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Rai 1 HD",
-   "paese": "Italia",
-   "bouquet": "RAI",
-   "ris": "HD",
-   "key": "rai 1",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-06",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Zaytoona",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "zaytoona",
    "in_lista": false
   }
  ]
