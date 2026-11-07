@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-07 01:42",
+  "aggiornato": "2026-11-07 13:38",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -11,8 +11,8 @@
    "nome": "Türksat 42°E",
    "satelliti": "Türksat 3A/4A/5B/6A",
    "lon": 42.0,
-   "canali": 213,
-   "hd": 128,
+   "canali": 209,
+   "hd": 124,
    "uhd": 1,
    "parziali": 0
   },
@@ -41,7 +41,7 @@
    "nome": "Astra 23.5°E",
    "satelliti": "Astra 3B/3C",
    "lon": 23.5,
-   "canali": 23,
+   "canali": 24,
    "hd": 8,
    "uhd": 0,
    "parziali": 0
@@ -51,10 +51,10 @@
    "nome": "Astra 19.2°E",
    "satelliti": "Astra 1M/1N/1P",
    "lon": 19.2,
-   "canali": 212,
-   "hd": 104,
-   "uhd": 1,
-   "parziali": 4
+   "canali": 211,
+   "hd": 103,
+   "uhd": 0,
+   "parziali": 2
   },
   {
    "pos": "16E",
@@ -1412,102 +1412,6 @@
     "paese": "Turchia",
     "ente": "TRT"
    },
-   "pos": "42E"
-  },
-  {
-   "id": "20324",
-   "nome": "Nat Geo Wild HD Turkey",
-   "key": "nat geo wild turkey",
-   "paese": "Turchia",
-   "genere": "Documentari",
-   "lingue": [
-    "Turco",
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-08-18",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "42E"
-  },
-  {
-   "id": "20325",
-   "nome": "National Geographic HD Turkey",
-   "key": "national geographic turkey",
-   "paese": "Turchia",
-   "genere": "Documentari",
-   "lingue": [
-    "Turco",
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-08-18",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "42E"
-  },
-  {
-   "id": "9731",
-   "nome": "FX HD Turkey",
-   "key": "fx turkey",
-   "paese": "Turchia",
-   "genere": "Intrattenimento",
-   "lingue": [
-    "Turco",
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-08-18",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "42E"
-  },
-  {
-   "id": "18000",
-   "nome": "Disney Junior Turkey",
-   "key": "disney junior turkey",
-   "paese": "Turchia",
-   "genere": "Bambini",
-   "lingue": [
-    "Turco",
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-08-18",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
    "pos": "42E"
   },
   {
@@ -11894,6 +11798,32 @@
    "pos": "23.5E"
   },
   {
+   "id": "5566",
+   "nome": "Man-X",
+   "key": "man x",
+   "paese": "Paesi Bassi",
+   "genere": "Adulti",
+   "lingue": [
+    "Olandese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Canal Digitaal",
+    "TV Vlaanderen"
+   ],
+   "sito": "",
+   "agg": "2026-11-07",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "23.5E"
+  },
+  {
    "id": "7761",
    "nome": "TV8.SK",
    "key": "tv8 sk",
@@ -12989,6 +12919,75 @@
    "pos": "19.2E"
   },
   {
+   "id": "50",
+   "nome": "CNBC Europe",
+   "key": "cnbc europe",
+   "paese": "Regno Unito",
+   "genere": "Economia",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "http://www.cnbceurope.com/",
+   "agg": "2026-11-06",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
+   "id": "14412",
+   "nome": "Daystar HD",
+   "key": "daystar",
+   "paese": "U.S.A.",
+   "genere": "Religione",
+   "lingue": [
+    "Spagnolo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-06",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
+   "id": "23042",
+   "nome": "Telesur English",
+   "key": "telesur english",
+   "paese": "Venezuela",
+   "genere": "Notizie",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-06",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "19.2E"
+  },
+  {
    "id": "17037",
    "nome": "n-tv Austria",
    "key": "n tv austria",
@@ -13807,29 +13806,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-11-05",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "19.2E"
-  },
-  {
-   "id": "23042",
-   "nome": "Telesur English",
-   "key": "telesur english",
-   "paese": "Venezuela",
-   "genere": "Notizie",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2025-02-13",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -15241,89 +15217,6 @@
    ],
    "sito": "http://www.nick.de/",
    "agg": "2025-06-18",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "19.2E"
-  },
-  {
-   "id": "179",
-   "nome": "Canal+",
-   "key": "canal",
-   "paese": "Francia",
-   "genere": "Generalista",
-   "lingue": [
-    "Francese",
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "parziale",
-   "cas": [
-    "Nagravision 3"
-   ],
-   "bouquet": [
-    "Canal+ France"
-   ],
-   "sito": "http://www.canalplus.fr",
-   "agg": "2025-03-20",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "19.2E"
-  },
-  {
-   "id": "8157",
-   "nome": "Canal+ Sport HD",
-   "key": "canal sport",
-   "paese": "Francia",
-   "genere": "Sport",
-   "lingue": [
-    "Francese",
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "parziale",
-   "cas": [
-    "Nagravision 3",
-    "Viaccess 3.0",
-    "Viaccess 4.0"
-   ],
-   "bouquet": [
-    "Canal+ France"
-   ],
-   "sito": "",
-   "agg": "2025-03-20",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "19.2E"
-  },
-  {
-   "id": "14115",
-   "nome": "Canal+ UHD",
-   "key": "canal",
-   "paese": "Francia",
-   "genere": "Generalista",
-   "lingue": [
-    "Francese"
-   ],
-   "ris": "UHD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Canal+ France"
-   ],
-   "sito": "",
-   "agg": "2025-12-02",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -22199,7 +22092,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-30",
+   "agg": "2026-11-07",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -26938,7 +26831,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-30",
+   "agg": "2026-11-07",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
@@ -29910,7 +29803,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-30",
+   "agg": "2026-11-07",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
