@@ -1,11 +1,76 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-06 01:46",
+  "aggiornato": "2026-11-07 01:42",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-06",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Eko-TV",
+   "paese": "Ucraina",
+   "bouquet": "",
+   "ris": "",
+   "key": "eko tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-06",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Milady Television",
+   "paese": "Ucraina",
+   "bouquet": "",
+   "ris": "",
+   "key": "milady television",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-06",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Natali",
+   "paese": "Ucraina",
+   "bouquet": "",
+   "ris": "",
+   "key": "natali",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-06",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Provence",
+   "paese": "Ucraina",
+   "bouquet": "",
+   "ris": "",
+   "key": "provence",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-06",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Karavan TV",
+   "paese": "Ucraina",
+   "bouquet": "",
+   "ris": "",
+   "key": "karavan tv",
+   "in_lista": true
+  },
   {
    "data": "2026-11-05",
    "pos": "28.2E",
