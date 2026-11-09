@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-08 01:41",
+  "aggiornato": "2026-11-09 01:44",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -131,7 +131,7 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 426,
+   "canali": 427,
    "hd": 232,
    "uhd": 0,
    "parziali": 0
@@ -45437,6 +45437,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-08-12",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "26214",
+   "nome": "Injaz TV",
+   "key": "injaz tv",
+   "paese": "",
+   "genere": "Varie",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-08",
    "ricezione": "buona",
    "nota": "",
    "ms": "",

@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-08 01:41",
+  "aggiornato": "2026-11-09 01:44",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-08",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Injaz TV",
+   "paese": "non definito",
+   "bouquet": "",
+   "ris": "",
+   "key": "injaz tv",
+   "in_lista": true
+  },
   {
    "data": "2026-11-07",
    "pos": "42E",
@@ -1096,32 +1109,6 @@
    "bouquet": "",
    "ris": "",
    "key": "cnn international europe",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-09",
-   "pos": "42E",
-   "satellite": "Turksat 6A",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Meltem TV",
-   "paese": "Turchia",
-   "bouquet": "",
-   "ris": "",
-   "key": "meltem tv",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-09",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "MESat",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "mesat",
    "in_lista": true
   }
  ]
