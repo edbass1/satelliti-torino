@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-10 01:41",
+  "aggiornato": "2026-11-10 20:20",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -131,8 +131,8 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 427,
-   "hd": 232,
+   "canali": 430,
+   "hd": 235,
    "uhd": 0,
    "parziali": 0
   },
@@ -36739,6 +36739,52 @@
    "pos": "7W"
   },
   {
+   "id": "23660",
+   "nome": "Alkass Nine HD",
+   "key": "alkass nine",
+   "paese": "Qatar",
+   "genere": "Generalista",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-10",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "23661",
+   "nome": "Alkass Ten HD",
+   "key": "alkass ten",
+   "paese": "Qatar",
+   "genere": "Generalista",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-10",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
    "id": "5346",
    "nome": "Al Rahma TV",
    "key": "al rahma tv",
@@ -37094,6 +37140,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-04-12",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "5704",
+   "nome": "Dijla",
+   "key": "dijla",
+   "paese": "Iraq",
+   "genere": "Generalista",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-10",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
