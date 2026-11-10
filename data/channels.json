@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-09 01:44",
+  "aggiornato": "2026-11-10 01:41",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -11229,31 +11229,6 @@
    "pos": "28.2E"
   },
   {
-   "id": "24178",
-   "nome": "Sky Mix HD",
-   "key": "sky mix",
-   "paese": "Regno Unito",
-   "genere": "Intrattenimento",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2023-10-18",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
    "id": "18695",
    "nome": "CNBC Europe HD",
    "key": "cnbc europe",
@@ -11320,6 +11295,31 @@
    ],
    "sito": "",
    "agg": "2022-09-27",
+   "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "24178",
+   "nome": "Sky Mix HD",
+   "key": "sky mix",
+   "paese": "Regno Unito",
+   "genere": "Intrattenimento",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "",
+   "agg": "2025-05-24",
    "ricezione": "difficile",
    "nota": "",
    "ms": "",
