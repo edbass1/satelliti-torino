@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-10 20:20",
+  "aggiornato": "2026-11-11 05:42",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -71,7 +71,7 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 233,
+   "canali": 234,
    "hd": 138,
    "uhd": 1,
    "parziali": 5
@@ -132,7 +132,7 @@
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
    "canali": 430,
-   "hd": 235,
+   "hd": 236,
    "uhd": 0,
    "parziali": 0
   },
@@ -20829,6 +20829,29 @@
    "pos": "13E"
   },
   {
+   "id": "9804",
+   "nome": "Hadi TV 3",
+   "key": "hadi tv 3",
+   "paese": "",
+   "genere": "Religione",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-10",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
    "id": "16957",
    "nome": "Canale Italia 83",
    "key": "canale italia 83",
@@ -36358,29 +36381,6 @@
    "pos": "7W"
   },
   {
-   "id": "26147",
-   "nome": "OSM Wasit",
-   "key": "osm wasit",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-09-18",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
    "id": "23527",
    "nome": "1 Iraq TV",
    "key": "1 iraq tv",
@@ -45575,6 +45575,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-11-07",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
+   "id": "26098",
+   "nome": "Libya G+",
+   "key": "libya g",
+   "paese": "Libia",
+   "genere": "Generalista",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-10",
    "ricezione": "buona",
    "nota": "",
    "ms": "",

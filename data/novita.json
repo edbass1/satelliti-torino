@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-10 20:20",
+  "aggiornato": "2026-11-11 05:42",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -21,6 +21,19 @@
   },
   {
    "data": "2026-11-10",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Hadi TV 3",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "hadi tv 3",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-10",
    "pos": "7W",
    "satellite": "Eutelsat 7 West A",
    "tipo": "entrata",
@@ -31,6 +44,32 @@
    "ris": "",
    "key": "dijla",
    "in_lista": true
+  },
+  {
+   "data": "2026-11-10",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Libya G+",
+   "paese": "Libia",
+   "bouquet": "",
+   "ris": "",
+   "key": "libya g",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-10",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "OSM Wasit",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "osm wasit",
+   "in_lista": false
   },
   {
    "data": "2026-11-09",
@@ -394,7 +433,7 @@
    "bouquet": "",
    "ris": "",
    "key": "hadi tv 3",
-   "in_lista": false
+   "in_lista": true
   },
   {
    "data": "2026-11-05",
