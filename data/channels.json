@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-11 05:42",
+  "aggiornato": "2026-11-11 20:16",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -11739,7 +11739,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2025-02-10",
+   "agg": "2026-11-11",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -36861,7 +36861,8 @@
    "paese": "Tunisia",
    "genere": "Generalista",
    "lingue": [
-    "Arabo"
+    "Arabo",
+    "Francese"
    ],
    "ris": "HD",
    "stato": "chiaro",
