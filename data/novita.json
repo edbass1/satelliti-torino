@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-11 20:16",
+  "aggiornato": "2026-11-13 06:02",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-12",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "GNC",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "gnc",
+   "in_lista": true
+  },
   {
    "data": "2026-11-10",
    "pos": "28.2E",
@@ -1174,19 +1187,6 @@
    "bouquet": "Sky Digital",
    "ris": "HD",
    "key": "ideal world",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-13",
-   "pos": "19.2E",
-   "satellite": "Astra 1P",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "CNN International Europe",
-   "paese": "Regno Unito",
-   "bouquet": "",
-   "ris": "",
-   "key": "cnn international europe",
    "in_lista": true
   }
  ]

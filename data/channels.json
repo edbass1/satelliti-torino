@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-11 20:16",
+  "aggiornato": "2026-11-13 06:02",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -61,10 +61,10 @@
    "nome": "Eutelsat 16°E",
    "satelliti": "Eutelsat 16A/16D",
    "lon": 16.0,
-   "canali": 63,
-   "hd": 33,
+   "canali": 62,
+   "hd": 31,
    "uhd": 0,
-   "parziali": 2
+   "parziali": 3
   },
   {
    "pos": "13E",
@@ -72,7 +72,7 @@
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
    "canali": 234,
-   "hd": 138,
+   "hd": 139,
    "uhd": 1,
    "parziali": 5
   },
@@ -18085,31 +18085,6 @@
    "pos": "16E"
   },
   {
-   "id": "18840",
-   "nome": "Nova S HD",
-   "key": "nova s",
-   "paese": "Serbia",
-   "genere": "Intrattenimento",
-   "lingue": [
-    "Serbo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Total TV"
-   ],
-   "sito": "",
-   "agg": "2025-04-18",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "16E"
-  },
-  {
    "id": "15937",
    "nome": "CGTN",
    "key": "cgtn",
@@ -18315,6 +18290,32 @@
    "pos": "16E"
   },
   {
+   "id": "4332",
+   "nome": "TV Koper-Capodistria",
+   "key": "tv koper capodistria",
+   "paese": "Slovenia",
+   "genere": "Generalista",
+   "lingue": [
+    "Italiano"
+   ],
+   "ris": "SD",
+   "stato": "parziale",
+   "cas": [],
+   "bouquet": [
+    "Max TV",
+    "Total TV"
+   ],
+   "sito": "",
+   "agg": "2026-11-13",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "16E"
+  },
+  {
    "id": "17317",
    "nome": "Nova 24 TV",
    "key": "nova 24 tv",
@@ -18427,31 +18428,6 @@
    ],
    "sito": "http://www.mariavision.com/",
    "agg": "2024-07-01",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "16E"
-  },
-  {
-   "id": "13430",
-   "nome": "N1 Serbia HD",
-   "key": "n1 serbia",
-   "paese": "Serbia",
-   "genere": "Generalista",
-   "lingue": [
-    "Serbo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Total TV"
-   ],
-   "sito": "",
-   "agg": "2026-03-02",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -20704,30 +20680,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2023-06-01",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
-   "id": "23752",
-   "nome": "GNC",
-   "key": "gnc",
-   "paese": "",
-   "genere": "Religione",
-   "lingue": [
-    "Inglese",
-    "Russo"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-03-12",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -24359,6 +24311,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-07-23",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
+   "id": "23752",
+   "nome": "GNC",
+   "key": "gnc",
+   "paese": "",
+   "genere": "Religione",
+   "lingue": [
+    "Russo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2025-07-01",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
