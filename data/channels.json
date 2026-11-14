@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-14 05:55",
+  "aggiornato": "2026-11-14 18:41",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -24420,14 +24420,15 @@
    "paese": "Germania",
    "genere": "Commedia",
    "lingue": [
-    "Tedesco"
+    "Tedesco",
+    "Inglese"
    ],
    "ris": "SD",
    "stato": "chiaro",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.comedycentral.de/",
-   "agg": "2022-02-19",
+   "agg": "2026-11-14",
    "ricezione": "buona",
    "nota": "solo di notte",
    "ms": "",
