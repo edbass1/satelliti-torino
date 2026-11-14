@@ -1,11 +1,63 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-13 06:02",
+  "aggiornato": "2026-11-14 05:55",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-13",
+   "pos": "28.2E",
+   "satellite": "Astra 2E",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Quest Red",
+   "paese": "Regno Unito",
+   "bouquet": "Sky Digital",
+   "ris": "",
+   "key": "quest red",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-13",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Aastha TV International",
+   "paese": "India",
+   "bouquet": "",
+   "ris": "",
+   "key": "aastha tv international",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-13",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Sanskar TV",
+   "paese": "India",
+   "bouquet": "",
+   "ris": "",
+   "key": "sanskar tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-13",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "NTD TV (New Tang Dynasty TV)",
+   "paese": "",
+   "bouquet": "Sky Digital",
+   "ris": "",
+   "key": "ntd tv new tang dynasty tv",
+   "in_lista": false
+  },
   {
    "data": "2026-11-12",
    "pos": "13E",
@@ -17,19 +69,6 @@
    "bouquet": "",
    "ris": "",
    "key": "gnc",
-   "in_lista": true
-  },
-  {
-   "data": "2026-11-10",
-   "pos": "28.2E",
-   "satellite": "Astra 2E",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Food Network",
-   "paese": "Regno Unito",
-   "bouquet": "",
-   "ris": "",
-   "key": "food network",
    "in_lista": true
   },
   {

@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-13 06:02",
+  "aggiornato": "2026-11-14 05:55",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -31,7 +31,7 @@
    "nome": "Astra 28.2°E",
    "satelliti": "Astra 2E/2F/2G",
    "lon": 28.2,
-   "canali": 228,
+   "canali": 227,
    "hd": 80,
    "uhd": 0,
    "parziali": 0
@@ -7515,7 +7515,8 @@
    "paese": "India",
    "genere": "Generalista",
    "lingue": [
-    "Inglese"
+    "Inglese",
+    "Hindi"
    ],
    "ris": "SD",
    "stato": "chiaro",
@@ -10123,31 +10124,6 @@
    "pos": "28.2E"
   },
   {
-   "id": "2280",
-   "nome": "NTD TV (New Tang Dynasty TV)",
-   "key": "ntd tv new tang dynasty tv",
-   "paese": "U.S.A.",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "http://www.ntdtv.com/",
-   "agg": "2024-04-27",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
    "id": "1463",
    "nome": "TV Warehouse",
    "key": "tv warehouse",
@@ -10601,31 +10577,6 @@
    "pos": "28.2E"
   },
   {
-   "id": "7565",
-   "nome": "Food Network",
-   "key": "food network",
-   "paese": "Regno Unito",
-   "genere": "Cucina",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "http://www.foodnetwork.co.uk/",
-   "agg": "2026-01-22",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
    "id": "7566",
    "nome": "Food Network +1",
    "key": "food network 1",
@@ -10667,6 +10618,31 @@
    ],
    "sito": "http://www.questtv.co.uk/quest-red/",
    "agg": "2026-02-03",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "7565",
+   "nome": "Food Network",
+   "key": "food network",
+   "paese": "Regno Unito",
+   "genere": "Cucina",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [
+    "Sky Digital"
+   ],
+   "sito": "http://www.foodnetwork.co.uk/",
+   "agg": "2026-01-15",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
