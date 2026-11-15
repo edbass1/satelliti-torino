@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-14 18:41",
+  "aggiornato": "2026-11-15 19:30",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-15",
+   "pos": "9E",
+   "satellite": "Eutelsat 9B",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Teleclub Italia",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "teleclub italia",
+   "in_lista": false
+  },
   {
    "data": "2026-11-13",
    "pos": "28.2E",

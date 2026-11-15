@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-14 18:41",
+  "aggiornato": "2026-11-15 19:30",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -81,8 +81,8 @@
    "nome": "Eutelsat 9°E",
    "satelliti": "Eutelsat 9B",
    "lon": 9.0,
-   "canali": 296,
-   "hd": 219,
+   "canali": 295,
+   "hd": 218,
    "uhd": 0,
    "parziali": 1
   },
@@ -28227,29 +28227,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2022-07-03",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "mis",
-   "isi": 21,
-   "pls": "Root+8",
-   "pubblico": null,
-   "pos": "9E"
-  },
-  {
-   "id": "23072",
-   "nome": "Teleclub Italia",
-   "key": "teleclub italia",
-   "paese": "Italia",
-   "genere": "Varie",
-   "lingue": [
-    "Italiano"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-09-10",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",
