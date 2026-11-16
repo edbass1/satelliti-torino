@@ -1,11 +1,50 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-16 05:45",
+  "aggiornato": "2026-11-16 22:40",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-16",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "TRM H24",
+   "paese": "Italia",
+   "bouquet": "",
+   "ris": "",
+   "key": "trm h24",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-16",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "OSN",
+   "paese": "Emirati Arabi Uniti",
+   "bouquet": "",
+   "ris": "",
+   "key": "osn",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-16",
+   "pos": "7W",
+   "satellite": "Nilesat 301",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "OSN",
+   "paese": "Emirati Arabi Uniti",
+   "bouquet": "",
+   "ris": "",
+   "key": "osn",
+   "in_lista": true
+  },
   {
    "data": "2026-11-15",
    "pos": "9E",

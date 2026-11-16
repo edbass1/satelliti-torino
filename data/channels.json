@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-16 05:45",
+  "aggiornato": "2026-11-16 22:40",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -71,7 +71,7 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 234,
+   "canali": 235,
    "hd": 139,
    "uhd": 1,
    "parziali": 5
@@ -21836,6 +21836,29 @@
    "bouquet": [],
    "sito": "http://arabic.cctv.com/",
    "agg": "2025-03-07",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
+   "id": "23171",
+   "nome": "TRM H24",
+   "key": "trm h24",
+   "paese": "Italia",
+   "genere": "Regionale",
+   "lingue": [
+    "Italiano"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-16",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -44274,6 +44297,29 @@
    "pos": "7W"
   },
   {
+   "id": "18842",
+   "nome": "OSN",
+   "key": "osn",
+   "paese": "Emirati Arabi Uniti",
+   "genere": "Presentazioni",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "https://www.osn.com/",
+   "agg": "2026-11-16",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
+  },
+  {
    "id": "11210",
    "nome": "Oman TV HD",
    "key": "oman tv",
@@ -44611,29 +44657,6 @@
    "sito": "",
    "agg": "2025-04-12",
    "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "18842",
-   "nome": "OSN",
-   "key": "osn",
-   "paese": "Emirati Arabi Uniti",
-   "genere": "Presentazioni",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "https://www.osn.com/",
-   "agg": "2026-11-05",
-   "ricezione": "buona",
    "nota": "",
    "ms": "",
    "isi": null,
