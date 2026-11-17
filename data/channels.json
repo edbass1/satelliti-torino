@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-16 22:40",
+  "aggiornato": "2026-11-17 07:31",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -91,8 +91,8 @@
    "nome": "Eutelsat 7°E",
    "satelliti": "Eutelsat 7C",
    "lon": 7.0,
-   "canali": 25,
-   "hd": 18,
+   "canali": 24,
+   "hd": 17,
    "uhd": 0,
    "parziali": 0
   },
@@ -101,8 +101,8 @@
    "nome": "Astra 4.8°E",
    "satelliti": "Astra 4A / SES 5",
    "lon": 4.8,
-   "canali": 45,
-   "hd": 17,
+   "canali": 44,
+   "hd": 16,
    "uhd": 0,
    "parziali": 0
   },
@@ -31311,29 +31311,6 @@
    "pos": "9E"
   },
   {
-   "id": "15119",
-   "nome": "Manoto HD",
-   "key": "manoto",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [
-    "Farsi"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-04-21",
-   "ricezione": "difficile",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7E"
-  },
-  {
    "id": "22512",
    "nome": "AVA Max HD",
    "key": "ava max",
@@ -32604,29 +32581,6 @@
    "paese": "Ucraina",
    "genere": "Generalista",
    "lingue": [],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-06-28",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "4.8E"
-  },
-  {
-   "id": "24167",
-   "nome": "Tviy Serial",
-   "key": "tviy serial",
-   "paese": "Ucraina",
-   "genere": "Varie",
-   "lingue": [
-    "Ucraino"
-   ],
    "ris": "HD",
    "stato": "chiaro",
    "cas": [],

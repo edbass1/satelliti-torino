@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-16 22:40",
+  "aggiornato": "2026-11-17 07:31",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-16",
+   "pos": "42E",
+   "satellite": "Türksat 4A",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "On4 TV",
+   "paese": "Turchia",
+   "bouquet": "",
+   "ris": "",
+   "key": "on4 tv",
+   "in_lista": true
+  },
   {
    "data": "2026-11-16",
    "pos": "13E",
@@ -18,6 +31,32 @@
    "ris": "",
    "key": "trm h24",
    "in_lista": true
+  },
+  {
+   "data": "2026-11-16",
+   "pos": "7E",
+   "satellite": "Eutelsat 7C",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Manoto HD",
+   "paese": "",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "manoto",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-16",
+   "pos": "4.8E",
+   "satellite": "Astra 4A",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Tviy Serial",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "tviy serial",
+   "in_lista": false
   },
   {
    "data": "2026-11-16",
@@ -1174,32 +1213,6 @@
    "bouquet": "",
    "ris": "",
    "key": "guneydogu tv",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-17",
-   "pos": "5W",
-   "satellite": "Eutelsat 5 West B",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "TeleFoggia",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "telefoggia",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-17",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Dijlah HD",
-   "paese": "Iraq",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "dijlah",
    "in_lista": true
   }
  ]
