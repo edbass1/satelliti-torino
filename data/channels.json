@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-18 06:54",
+  "aggiornato": "2026-11-19 06:54",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -41,7 +41,7 @@
    "nome": "Astra 23.5°E",
    "satelliti": "Astra 3B/3C",
    "lon": 23.5,
-   "canali": 24,
+   "canali": 25,
    "hd": 8,
    "uhd": 0,
    "parziali": 0
@@ -71,7 +71,7 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 235,
+   "canali": 234,
    "hd": 139,
    "uhd": 1,
    "parziali": 5
@@ -121,8 +121,8 @@
    "nome": "Eutelsat 5°W",
    "satelliti": "Eutelsat 5 West B",
    "lon": -5.0,
-   "canali": 101,
-   "hd": 83,
+   "canali": 102,
+   "hd": 84,
    "uhd": 1,
    "parziali": 2
   },
@@ -6990,9 +6990,9 @@
    "pos": "28.2E"
   },
   {
-   "id": "5934",
-   "nome": "Clubland TV",
-   "key": "clubland tv",
+   "id": "12202",
+   "nome": "NOW Christmas",
+   "key": "now christmas",
    "paese": "Regno Unito",
    "genere": "Musica",
    "lingue": [
@@ -7001,11 +7001,9 @@
    "ris": "SD",
    "stato": "chiaro",
    "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
+   "bouquet": [],
    "sito": "",
-   "agg": "2025-12-27",
+   "agg": "2026-11-19",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -11980,6 +11978,29 @@
    "bouquet": [],
    "sito": "http://www.1plus1.ua/",
    "agg": "2025-03-06",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "23.5E"
+  },
+  {
+   "id": "23553",
+   "nome": "We-Ukraine",
+   "key": "we ukraine",
+   "paese": "Ucraina",
+   "genere": "Generalista",
+   "lingue": [
+    "Ucraino"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-18",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -23775,29 +23796,6 @@
    "pos": "13E"
   },
   {
-   "id": "21816",
-   "nome": "BogBlagTV",
-   "key": "bogblagtv",
-   "paese": "U.S.A.",
-   "genere": "Religione",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "https://bogblag.tv/",
-   "agg": "2026-04-19",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
    "id": "19742",
    "nome": "Sterk TV HD",
    "key": "sterk tv",
@@ -33983,6 +33981,29 @@
    "bouquet": [],
    "sito": "",
    "agg": "2024-07-04",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "mis",
+   "isi": 9,
+   "pls": "Gold+131070",
+   "pubblico": null,
+   "pos": "5W"
+  },
+  {
+   "id": "6000",
+   "nome": "TeleFoggia",
+   "key": "telefoggia",
+   "paese": "Italia",
+   "genere": "Varie",
+   "lingue": [
+    "Italiano"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "http://www.telefoggia.tv/",
+   "agg": "2026-11-17",
    "ricezione": "buona",
    "nota": "",
    "ms": "mis",

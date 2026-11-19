@@ -1,11 +1,76 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-18 06:54",
+  "aggiornato": "2026-11-19 06:54",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-19",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "NOW Christmas",
+   "paese": "Regno Unito",
+   "bouquet": "",
+   "ris": "",
+   "key": "now christmas",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-19",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Clubland TV",
+   "paese": "",
+   "bouquet": "Sky Digital",
+   "ris": "",
+   "key": "clubland tv",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-18",
+   "pos": "23.5E",
+   "satellite": "Astra 3C",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "We-Ukraine",
+   "paese": "Ucraina",
+   "bouquet": "",
+   "ris": "",
+   "key": "we ukraine",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-18",
+   "pos": "13E",
+   "satellite": "Hot Bird 13F",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "BogBlagTV",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "bogblagtv",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-17",
+   "pos": "5W",
+   "satellite": "Eutelsat 5 West B",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "TeleFoggia",
+   "paese": "Italia",
+   "bouquet": "",
+   "ris": "",
+   "key": "telefoggia",
+   "in_lista": true
+  },
   {
    "data": "2026-11-16",
    "pos": "42E",
