@@ -1,11 +1,37 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-19 06:54",
+  "aggiornato": "2026-11-20 20:39",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-20",
+   "pos": "4.8E",
+   "satellite": "Astra 4A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Pryamiy",
+   "paese": "Ucraina",
+   "bouquet": "",
+   "ris": "",
+   "key": "pryamiy",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-20",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "ViewMedia Promo",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "viewmedia promo",
+   "in_lista": true
+  },
   {
    "data": "2026-11-19",
    "pos": "28.2E",

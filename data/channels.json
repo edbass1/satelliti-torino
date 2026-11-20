@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-19 06:54",
+  "aggiornato": "2026-11-20 20:39",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -131,7 +131,7 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 430,
+   "canali": 431,
    "hd": 236,
    "uhd": 0,
    "parziali": 0
@@ -32615,6 +32615,29 @@
    "pos": "4.8E"
   },
   {
+   "id": "16667",
+   "nome": "Pryamiy",
+   "key": "pryamiy",
+   "paese": "Ucraina",
+   "genere": "Generalista",
+   "lingue": [
+    "Ucraino"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-20",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "4.8E"
+  },
+  {
    "id": "25131",
    "nome": "Espreso TV HD",
    "key": "espreso tv",
@@ -32675,29 +32698,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2025-02-01",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "4.8E"
-  },
-  {
-   "id": "16667",
-   "nome": "Pryamiy",
-   "key": "pryamiy",
-   "paese": "Ucraina",
-   "genere": "Generalista",
-   "lingue": [
-    "Ucraino"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2025-01-17",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -35971,6 +35971,27 @@
    "pls": "Gold+50416",
    "pubblico": null,
    "pos": "5W"
+  },
+  {
+   "id": "26113",
+   "nome": "ViewMedia Promo",
+   "key": "viewmedia promo",
+   "paese": "",
+   "genere": "Presentazioni",
+   "lingue": [],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-20",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "7W"
   },
   {
    "id": "24686",
