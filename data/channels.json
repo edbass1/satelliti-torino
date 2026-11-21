@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-20 20:39",
+  "aggiornato": "2026-11-21 06:38",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -71,8 +71,8 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 234,
-   "hd": 139,
+   "canali": 233,
+   "hd": 138,
    "uhd": 1,
    "parziali": 5
   },
@@ -22731,27 +22731,6 @@
    "id": "25034",
    "nome": "Sports First",
    "key": "sports first",
-   "paese": "U.S.A.",
-   "genere": "Sport",
-   "lingue": [],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2025-03-08",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
-   "id": "25035",
-   "nome": "Bare Knuckles Fighting Championship",
-   "key": "bare knuckles fighting championship",
    "paese": "U.S.A.",
    "genere": "Sport",
    "lingue": [],
