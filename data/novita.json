@@ -1,11 +1,115 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-21 06:38",
+  "aggiornato": "2026-11-21 19:43",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-21",
+   "pos": "13E",
+   "satellite": "Hot Bird 13F",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Kentron TV",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "kentron tv",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-21",
+   "pos": "13E",
+   "satellite": "Hot Bird 13G",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Glorious TV",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "glorious tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-21",
+   "pos": "0.8W",
+   "satellite": "Intelsat 10-02",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Romania TV",
+   "paese": "Romania",
+   "bouquet": "",
+   "ris": "",
+   "key": "romania tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-21",
+   "pos": "0.8W",
+   "satellite": "Thor 5",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Al Jazeera English",
+   "paese": "Qatar",
+   "bouquet": "Allente & Focus Sat & Direct One",
+   "ris": "",
+   "key": "al jazeera english",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-21",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "OSM Health",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "osm health",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-21",
+   "pos": "30W",
+   "satellite": "Hispasat 30W-6",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Al Bayyinah TV",
+   "paese": "Libia",
+   "bouquet": "",
+   "ris": "",
+   "key": "al bayyinah tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-21",
+   "pos": "30W",
+   "satellite": "Hispasat 30W-6",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Hispan TV",
+   "paese": "Iran",
+   "bouquet": "",
+   "ris": "",
+   "key": "hispan tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-21",
+   "pos": "30W",
+   "satellite": "Hispasat 30W-6",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Hadi TV 3",
+   "paese": "non definito",
+   "bouquet": "",
+   "ris": "",
+   "key": "hadi tv 3",
+   "in_lista": true
+  },
   {
    "data": "2026-11-20",
    "pos": "13E",
@@ -563,19 +667,6 @@
    "bouquet": "",
    "ris": "",
    "key": "telesur english",
-   "in_lista": true
-  },
-  {
-   "data": "2026-11-06",
-   "pos": "19.2E",
-   "satellite": "Astra 1P",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "CNBC Europe",
-   "paese": "Regno Unito",
-   "bouquet": "",
-   "ris": "",
-   "key": "cnbc europe",
    "in_lista": true
   },
   {

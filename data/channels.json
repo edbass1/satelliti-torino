@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-21 06:38",
+  "aggiornato": "2026-11-21 19:43",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -24,7 +24,7 @@
    "canali": 32,
    "hd": 16,
    "uhd": 1,
-   "parziali": 1
+   "parziali": 2
   },
   {
    "pos": "28.2E",
@@ -34,7 +34,7 @@
    "canali": 227,
    "hd": 80,
    "uhd": 0,
-   "parziali": 0
+   "parziali": 2
   },
   {
    "pos": "23.5E",
@@ -54,7 +54,7 @@
    "canali": 211,
    "hd": 103,
    "uhd": 0,
-   "parziali": 2
+   "parziali": 8
   },
   {
    "pos": "16E",
@@ -64,7 +64,7 @@
    "canali": 62,
    "hd": 31,
    "uhd": 0,
-   "parziali": 3
+   "parziali": 4
   },
   {
    "pos": "13E",
@@ -72,9 +72,9 @@
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
    "canali": 233,
-   "hd": 138,
+   "hd": 137,
    "uhd": 1,
-   "parziali": 5
+   "parziali": 8
   },
   {
    "pos": "9E",
@@ -114,7 +114,7 @@
    "canali": 24,
    "hd": 11,
    "uhd": 0,
-   "parziali": 0
+   "parziali": 1
   },
   {
    "pos": "5W",
@@ -131,18 +131,18 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 431,
+   "canali": 430,
    "hd": 236,
    "uhd": 0,
-   "parziali": 0
+   "parziali": 1
   },
   {
    "pos": "30W",
    "nome": "Hispasat 30°W",
    "satelliti": "Hispasat 30W-5/30W-6",
    "lon": -30.0,
-   "canali": 13,
-   "hd": 8,
+   "canali": 16,
+   "hd": 9,
    "uhd": 0,
    "parziali": 0
   }
@@ -231,7 +231,7 @@
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-10-26",
+   "agg": "2026-11-21",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -5771,7 +5771,7 @@
     "Francese"
    ],
    "ris": "SD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.tv5.org/",
@@ -9800,7 +9800,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [
     "Sky Digital"
@@ -11212,7 +11212,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [
     "Sky Digital"
@@ -13798,7 +13798,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "",
@@ -14265,7 +14265,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "",
@@ -14288,7 +14288,7 @@
     "Francese"
    ],
    "ris": "SD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.france24.com/fr/",
@@ -14314,7 +14314,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.france24.com/en/",
@@ -14885,7 +14885,7 @@
     "Inglese"
    ],
    "ris": "SD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://europe.cnn.com/CNNI/",
@@ -17075,7 +17075,7 @@
     "Inglese"
    ],
    "ris": "SD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.skynewsinternational.com/",
@@ -18767,7 +18767,7 @@
     "Serbo"
    ],
    "ris": "SD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.dmsat.tv/",
@@ -20686,6 +20686,29 @@
    "pos": "13E"
   },
   {
+   "id": "21550",
+   "nome": "Glorious TV",
+   "key": "glorious tv",
+   "paese": "",
+   "genere": "Religione",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-21",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
    "id": "11185",
    "nome": "KBS World HD",
    "key": "kbs world",
@@ -20718,7 +20741,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "",
@@ -22105,12 +22128,12 @@
     "Italiano",
     "Inglese"
    ],
-   "ris": "HD",
+   "ris": "SD",
    "stato": "chiaro",
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-11-07",
+   "agg": "2026-11-21",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -22298,7 +22321,7 @@
     "Francese"
    ],
    "ris": "SD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.tv5.org/",
@@ -22324,7 +22347,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "",
@@ -23722,27 +23745,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2024-11-07",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "13E"
-  },
-  {
-   "id": "9110",
-   "nome": "Kentron TV",
-   "key": "kentron tv",
-   "paese": "Armenia",
-   "genere": "Varie",
-   "lingue": [],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2025-06-06",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -32851,14 +32853,15 @@
    "paese": "Romania",
    "genere": "Generalista",
    "lingue": [
-    "Romeno"
+    "Romeno",
+    "Inglese"
    ],
    "ris": "HD",
    "stato": "chiaro",
    "cas": [],
    "bouquet": [],
    "sito": "",
-   "agg": "2026-03-14",
+   "agg": "2026-11-21",
    "ricezione": "difficile",
    "nota": "",
    "ms": "",
@@ -33303,7 +33306,7 @@
     "Francese"
    ],
    "ris": "SD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "http://www.tv5.org/",
@@ -36232,29 +36235,6 @@
    "bouquet": [],
    "sito": "http://www.almasirah.tv/",
    "agg": "2025-04-12",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "26148",
-   "nome": "OSM Health",
-   "key": "osm health",
-   "paese": "",
-   "genere": "Salute",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-09-18",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
@@ -45313,7 +45293,7 @@
     "Inglese"
    ],
    "ris": "HD",
-   "stato": "chiaro",
+   "stato": "parziale",
    "cas": [],
    "bouquet": [],
    "sito": "",
@@ -45964,6 +45944,75 @@
    "bouquet": [],
    "sito": "",
    "agg": "2025-03-08",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "30W"
+  },
+  {
+   "id": "12769",
+   "nome": "Al Bayyinah TV",
+   "key": "al bayyinah tv",
+   "paese": "Libia",
+   "genere": "Varie",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "HD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "http://www.albayyinah.tv/",
+   "agg": "2026-11-21",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "30W"
+  },
+  {
+   "id": "9403",
+   "nome": "Hispan TV",
+   "key": "hispan tv",
+   "paese": "Iran",
+   "genere": "Generalista",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "http://www.hispantv.com/",
+   "agg": "2026-11-21",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "30W"
+  },
+  {
+   "id": "9804",
+   "nome": "Hadi TV 3",
+   "key": "hadi tv 3",
+   "paese": "",
+   "genere": "Religione",
+   "lingue": [
+    "Arabo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-21",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
