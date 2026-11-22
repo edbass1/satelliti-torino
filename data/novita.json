@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-21 19:43",
+  "aggiornato": "2026-11-22 06:02",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -1305,32 +1305,6 @@
    "ris": "",
    "key": "5 select",
    "in_lista": false
-  },
-  {
-   "data": "2026-10-22",
-   "pos": "28.2E",
-   "satellite": "Astra 2G",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Bloomberg UK HD",
-   "paese": "Regno Unito",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "bloomberg uk",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-22",
-   "pos": "28.2E",
-   "satellite": "Astra 2G",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "GB News HD",
-   "paese": "Regno Unito",
-   "bouquet": "",
-   "ris": "HD",
-   "key": "gb news",
-   "in_lista": true
   }
  ]
 }
