@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-22 20:03",
+  "aggiornato": "2026-11-23 06:45",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -11,7 +11,7 @@
    "nome": "Türksat 42°E",
    "satelliti": "Türksat 3A/4A/5B/6A",
    "lon": 42.0,
-   "canali": 210,
+   "canali": 209,
    "hd": 124,
    "uhd": 1,
    "parziali": 0
@@ -1204,29 +1204,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-04-17",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "42E"
-  },
-  {
-   "id": "25897",
-   "nome": "Unknown Russia",
-   "key": "unknown russia",
-   "paese": "Russia",
-   "genere": "Documentari",
-   "lingue": [
-    "Russo"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-11-07",
    "ricezione": "buona",
    "nota": "",
    "ms": "",

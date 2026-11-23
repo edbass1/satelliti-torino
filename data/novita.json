@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-22 20:03",
+  "aggiornato": "2026-11-23 06:45",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-22",
+   "pos": "42E",
+   "satellite": "Turksat 6A",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Unknown Russia",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "unknown russia",
+   "in_lista": false
+  },
   {
    "data": "2026-11-21",
    "pos": "13E",
@@ -511,7 +524,7 @@
    "bouquet": "",
    "ris": "",
    "key": "unknown russia",
-   "in_lista": true
+   "in_lista": false
   },
   {
    "data": "2026-11-07",
@@ -1279,32 +1292,6 @@
    "ris": "",
    "key": "al salam",
    "in_lista": true
-  },
-  {
-   "data": "2026-10-23",
-   "pos": "28.2E",
-   "satellite": "Astra 2F",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "5 Drama (UK)",
-   "paese": "Regno Unito",
-   "bouquet": "",
-   "ris": "",
-   "key": "5 drama uk",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-23",
-   "pos": "28.2E",
-   "satellite": "Astra 2F",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "5 Select",
-   "paese": "",
-   "bouquet": "Sky Digital",
-   "ris": "",
-   "key": "5 select",
-   "in_lista": false
   }
  ]
 }
