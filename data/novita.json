@@ -1,11 +1,37 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-23 06:45",
+  "aggiornato": "2026-11-24 00:25",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-23",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Libya G+",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "libya g",
+   "in_lista": false
+  },
+  {
+   "data": "2026-11-23",
+   "pos": "7W",
+   "satellite": "Eutelsat 7 West A",
+   "tipo": "uscita",
+   "chiuso": true,
+   "nome": "Injaz TV",
+   "paese": "",
+   "bouquet": "",
+   "ris": "",
+   "key": "injaz tv",
+   "in_lista": false
+  },
   {
    "data": "2026-11-22",
    "pos": "42E",
@@ -416,11 +442,11 @@
    "tipo": "entrata",
    "chiuso": false,
    "nome": "Libya G+",
-   "paese": "Libia",
+   "paese": "",
    "bouquet": "",
    "ris": "",
    "key": "libya g",
-   "in_lista": true
+   "in_lista": false
   },
   {
    "data": "2026-11-10",
@@ -459,7 +485,7 @@
    "bouquet": "",
    "ris": "",
    "key": "injaz tv",
-   "in_lista": true
+   "in_lista": false
   },
   {
    "data": "2026-11-07",
@@ -1240,58 +1266,6 @@
    "ris": "",
    "key": "new vision tv",
    "in_lista": false
-  },
-  {
-   "data": "2026-10-24",
-   "pos": "13E",
-   "satellite": "Hot Bird 13G",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "TBN Russia",
-   "paese": "Russia",
-   "bouquet": "",
-   "ris": "",
-   "key": "tbn russia",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-24",
-   "pos": "7E",
-   "satellite": "Eutelsat 7C",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Persiana Global",
-   "paese": "Francia",
-   "bouquet": "",
-   "ris": "",
-   "key": "persiana global",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-24",
-   "pos": "7E",
-   "satellite": "Eutelsat 7C",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "Persiana Travel",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "persiana travel",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-24",
-   "pos": "7W",
-   "satellite": "Eutelsat 7 West A",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Al Salam",
-   "paese": "Iraq",
-   "bouquet": "",
-   "ris": "",
-   "key": "al salam",
-   "in_lista": true
   }
  ]
 }

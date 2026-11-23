@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-23 06:45",
+  "aggiornato": "2026-11-24 00:25",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -131,8 +131,8 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 430,
-   "hd": 236,
+   "canali": 428,
+   "hd": 235,
    "uhd": 0,
    "parziali": 1
   },
@@ -45423,29 +45423,6 @@
    "pos": "7W"
   },
   {
-   "id": "26214",
-   "nome": "Injaz TV",
-   "key": "injaz tv",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-11-08",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
    "id": "25913",
    "nome": "Libya Hasad TV",
    "key": "libya hasad tv",
@@ -45483,29 +45460,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2026-11-07",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "26098",
-   "nome": "Libya G+",
-   "key": "libya g",
-   "paese": "Libia",
-   "genere": "Generalista",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "HD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-11-10",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
