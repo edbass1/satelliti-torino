@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-24 09:23",
+  "aggiornato": "2026-11-24 22:56",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -131,7 +131,7 @@
    "nome": "Nilesat 7°W",
    "satelliti": "Nilesat / Eutelsat 7 West A",
    "lon": -7.0,
-   "canali": 428,
+   "canali": 427,
    "hd": 235,
    "uhd": 0,
    "parziali": 1
@@ -36143,29 +36143,6 @@
    "bouquet": [],
    "sito": "",
    "agg": "2025-04-12",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "7W"
-  },
-  {
-   "id": "26028",
-   "nome": "Saher Allayaly",
-   "key": "saher allayaly",
-   "paese": "",
-   "genere": "Varie",
-   "lingue": [
-    "Arabo"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [],
-   "sito": "",
-   "agg": "2026-07-07",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
