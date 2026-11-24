@@ -1,11 +1,89 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-24 00:25",
+  "aggiornato": "2026-11-24 09:23",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-24",
+   "pos": "0.8W",
+   "satellite": "Thor 5",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Sverigekanalen",
+   "paese": "Svezia",
+   "bouquet": "",
+   "ris": "",
+   "key": "sverigekanalen",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-24",
+   "pos": "0.8W",
+   "satellite": "Thor 5",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Kanal 10 Sweden HD",
+   "paese": "Svezia",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "kanal 10 sweden",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-24",
+   "pos": "0.8W",
+   "satellite": "Thor 5",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Visjon Norge HD",
+   "paese": "Norvegia",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "visjon norge",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-24",
+   "pos": "0.8W",
+   "satellite": "Thor 5",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Kanal 10 Norge HD",
+   "paese": "Norvegia",
+   "bouquet": "",
+   "ris": "HD",
+   "key": "kanal 10 norge",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-24",
+   "pos": "0.8W",
+   "satellite": "Thor 5",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Vision Sverige",
+   "paese": "Svezia",
+   "bouquet": "",
+   "ris": "",
+   "key": "vision sverige",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-24",
+   "pos": "0.8W",
+   "satellite": "Thor 5",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Bedehuskanalen",
+   "paese": "Norvegia",
+   "bouquet": "",
+   "ris": "",
+   "key": "bedehuskanalen",
+   "in_lista": true
+  },
   {
    "data": "2026-11-23",
    "pos": "7W",
