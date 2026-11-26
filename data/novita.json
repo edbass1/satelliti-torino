@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-24 22:56",
+  "aggiornato": "2026-11-26 07:51",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -1318,58 +1318,6 @@
    "ris": "",
    "key": "tv5 monde info",
    "in_lista": true
-  },
-  {
-   "data": "2026-10-26",
-   "pos": "42E",
-   "satellite": "Turksat 6A",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "Al Ekhbaria",
-   "paese": "",
-   "bouquet": "",
-   "ris": "",
-   "key": "al ekhbaria",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-26",
-   "pos": "28.2E",
-   "satellite": "Astra 2E",
-   "tipo": "uscita",
-   "chiuso": true,
-   "nome": "BBC One West HD",
-   "paese": "",
-   "bouquet": "Sky Digital",
-   "ris": "HD",
-   "key": "bbc one west",
-   "in_lista": false
-  },
-  {
-   "data": "2026-10-26",
-   "pos": "28.2E",
-   "satellite": "Astra 2G",
-   "tipo": "entrata",
-   "chiuso": false,
-   "nome": "Ary One World",
-   "paese": "Pakistan",
-   "bouquet": "",
-   "ris": "",
-   "key": "ary one world",
-   "in_lista": true
-  },
-  {
-   "data": "2026-10-26",
-   "pos": "28.2E",
-   "satellite": "Astra 2G",
-   "tipo": "uscita",
-   "chiuso": false,
-   "nome": "New Vision TV",
-   "paese": "",
-   "bouquet": "Sky Digital",
-   "ris": "",
-   "key": "new vision tv",
-   "in_lista": false
   }
  ]
 }
