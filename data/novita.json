@@ -1,11 +1,63 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-26 07:51",
+  "aggiornato": "2026-11-27 21:42",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-27",
+   "pos": "28.2E",
+   "satellite": "Astra 2F",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Together",
+   "paese": "Regno Unito",
+   "bouquet": "",
+   "ris": "",
+   "key": "together",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-27",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Sanskar TV",
+   "paese": "India",
+   "bouquet": "Sky Digital",
+   "ris": "",
+   "key": "sanskar tv",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-27",
+   "pos": "28.2E",
+   "satellite": "Astra 2G",
+   "tipo": "uscita",
+   "chiuso": false,
+   "nome": "Aastha TV International",
+   "paese": "India",
+   "bouquet": "Sky Digital",
+   "ris": "",
+   "key": "aastha tv international",
+   "in_lista": true
+  },
+  {
+   "data": "2026-11-27",
+   "pos": "23.5E",
+   "satellite": "Astra 3C",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "Belle Amie",
+   "paese": "Serbia",
+   "bouquet": "",
+   "ris": "",
+   "key": "belle amie",
+   "in_lista": true
+  },
   {
    "data": "2026-11-24",
    "pos": "19.2E",

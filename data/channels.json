@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-26 07:51",
+  "aggiornato": "2026-11-27 21:42",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -41,7 +41,7 @@
    "nome": "Astra 23.5°E",
    "satelliti": "Astra 3B/3C",
    "lon": 23.5,
-   "canali": 26,
+   "canali": 27,
    "hd": 8,
    "uhd": 0,
    "parziali": 1
@@ -7384,31 +7384,6 @@
    "pos": "28.2E"
   },
   {
-   "id": "3228",
-   "nome": "Sanskar TV",
-   "key": "sanskar tv",
-   "paese": "India",
-   "genere": "Cultura",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "http://www.sanskartv.info/",
-   "agg": "2024-10-15",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
    "id": "16360",
    "nome": "Euronews English",
    "key": "euronews english",
@@ -7477,32 +7452,6 @@
    "agg": "2024-10-15",
    "ricezione": "buona",
    "nota": "solo di giorno",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
-   "id": "3398",
-   "nome": "Aastha TV International",
-   "key": "aastha tv international",
-   "paese": "India",
-   "genere": "Generalista",
-   "lingue": [
-    "Inglese",
-    "Hindi"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "http://www.aasthatv.com/",
-   "agg": "2024-10-15",
-   "ricezione": "buona",
-   "nota": "",
    "ms": "",
    "isi": null,
    "pls": "",
@@ -8603,6 +8552,29 @@
    "sito": "",
    "agg": "2025-11-30",
    "ricezione": "difficile",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "17095",
+   "nome": "Together",
+   "key": "together",
+   "paese": "Regno Unito",
+   "genere": "Talk show",
+   "lingue": [
+    "Inglese"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "",
+   "agg": "2026-11-27",
+   "ricezione": "buona",
    "nota": "",
    "ms": "",
    "isi": null,
@@ -10049,6 +10021,50 @@
    "pos": "28.2E"
   },
   {
+   "id": "3398",
+   "nome": "Aastha TV International",
+   "key": "aastha tv international",
+   "paese": "India",
+   "genere": "Generalista",
+   "lingue": [
+    "Hindi"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "http://www.aasthatv.com/",
+   "agg": "2026-11-26",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
+   "id": "3228",
+   "nome": "Sanskar TV",
+   "key": "sanskar tv",
+   "paese": "India",
+   "genere": "Cultura",
+   "lingue": [],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "http://www.sanskartv.info/",
+   "agg": "2026-11-26",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "28.2E"
+  },
+  {
    "id": "14083",
    "nome": "High Street TV 2",
    "key": "high street tv 2",
@@ -11077,31 +11093,6 @@
    "pos": "28.2E"
   },
   {
-   "id": "17095",
-   "nome": "Together",
-   "key": "together",
-   "paese": "Regno Unito",
-   "genere": "Talk show",
-   "lingue": [
-    "Inglese"
-   ],
-   "ris": "SD",
-   "stato": "chiaro",
-   "cas": [],
-   "bouquet": [
-    "Sky Digital"
-   ],
-   "sito": "",
-   "agg": "2026-06-07",
-   "ricezione": "buona",
-   "nota": "",
-   "ms": "",
-   "isi": null,
-   "pls": "",
-   "pubblico": null,
-   "pos": "28.2E"
-  },
-  {
    "id": "35",
    "nome": "Challenge",
    "key": "challenge",
@@ -11886,6 +11877,29 @@
    "bouquet": [],
    "sito": "http://www.jsm.org/",
    "agg": "2026-07-02",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "23.5E"
+  },
+  {
+   "id": "4553",
+   "nome": "Belle Amie",
+   "key": "belle amie",
+   "paese": "Serbia",
+   "genere": "Regionale",
+   "lingue": [
+    "Serbo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "http://www.belleamie.co.yu/",
+   "agg": "2026-11-27",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
