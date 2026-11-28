@@ -1,11 +1,24 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-27 21:42",
+  "aggiornato": "2026-11-28 20:34",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
  "eventi": [
+  {
+   "data": "2026-11-28",
+   "pos": "13E",
+   "satellite": "Hot Bird 13F",
+   "tipo": "entrata",
+   "chiuso": false,
+   "nome": "BogBlagTV",
+   "paese": "U.S.A.",
+   "bouquet": "",
+   "ris": "",
+   "key": "bogblagtv",
+   "in_lista": true
+  },
   {
    "data": "2026-11-27",
    "pos": "28.2E",
@@ -390,11 +403,11 @@
    "tipo": "uscita",
    "chiuso": true,
    "nome": "BogBlagTV",
-   "paese": "",
+   "paese": "U.S.A.",
    "bouquet": "",
    "ris": "",
    "key": "bogblagtv",
-   "in_lista": false
+   "in_lista": true
   },
   {
    "data": "2026-11-17",

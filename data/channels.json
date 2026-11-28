@@ -1,7 +1,7 @@
 {
  "meta": {
   "fonte": "KingOfSat (it.kingofsat.net)",
-  "aggiornato": "2026-11-27 21:42",
+  "aggiornato": "2026-11-28 20:34",
   "luogo": "Torino (45.07°N, 7.69°E)",
   "fuso": "Europe/Rome"
  },
@@ -71,7 +71,7 @@
    "nome": "Hotbird 13°E",
    "satelliti": "Hot Bird 13F/13G",
    "lon": 13.0,
-   "canali": 233,
+   "canali": 234,
    "hd": 137,
    "uhd": 1,
    "parziali": 9
@@ -23782,6 +23782,29 @@
    "bouquet": [],
    "sito": "http://www.angeltv.org/",
    "agg": "2024-11-07",
+   "ricezione": "buona",
+   "nota": "",
+   "ms": "",
+   "isi": null,
+   "pls": "",
+   "pubblico": null,
+   "pos": "13E"
+  },
+  {
+   "id": "21816",
+   "nome": "BogBlagTV",
+   "key": "bogblagtv",
+   "paese": "U.S.A.",
+   "genere": "Religione",
+   "lingue": [
+    "Russo"
+   ],
+   "ris": "SD",
+   "stato": "chiaro",
+   "cas": [],
+   "bouquet": [],
+   "sito": "https://bogblag.tv/",
+   "agg": "2026-11-28",
    "ricezione": "buona",
    "nota": "",
    "ms": "",
